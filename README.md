@@ -1,2 +1,6 @@
 # creditcar
-Este proyecto es una plataforma web diseñada para conectar a dealers de automóviles con consumidores finales a través del método de financiamiento "in house".
+La página web que estamos desarrollando es un intermediario para conectar a los clientes interesados en comprar un automóvil con los dealers que ofrecen financiamiento "in house" para la adquisición de vehículos. El objetivo de la página es facilitar la búsqueda de los vehículos que los clientes desean, mientras que al mismo tiempo ayuda a los dealers a llegar a nuevos clientes y vender más vehículos.
+
+La página permitirá a los dealers publicar ofertas de vehículos que están disponibles para la venta, incluyendo información sobre el modelo, la marca, el año de fabricación, el millaje, la transmisión, el color y el precio. Los clientes podrán buscar vehículos según sus preferencias, utilizando filtros para refinar la búsqueda en función de sus necesidades. Además, la página contará con un motor de recomendaciones que sugerirá vehículos que se ajusten a los intereses y preferencias de los clientes.
+
+Los clientes podrán seleccionar los vehículos que les interesen y contactar directamente a los dealers para obtener más información o concertar una visita para ver y probar el vehículo. La página no manejará ninguna transacción financiera, sino que simplemente brindará la plataforma para que los clientes y los dealers se comuniquen y negocien los términos de la venta.
