@@ -1,0 +1,126 @@
+.Section1-CarBackground{
+    box-sizing: border-box;
+    width: 100%;
+    object-fit: cover;
+}
+.CarSeeker{
+    width: 1455px;
+}
+.Section1-Search{
+    background-color: black;
+    position: absolute;
+    z-index: 200;
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: solid var(--c2) 2px;
+    width: 75%;
+    height: 24%;
+    top: 600px;
+    left: 180px;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.SearchAdvance{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    padding: 0 30px;
+    width: 40%;
+    
+}
+.Section2-title-compare{
+    display: flex;
+    flex-flow: wrap row;
+    margin: 0 0 0 -2.5px;
+}
+.title-relation h2{
+    margin: 0 0 0 391px;
+    color: var(--c1);
+}
+.title-relation img{
+    width: 600px;
+}
+.compare button{
+   margin: -0.1px 0 0 1200px;
+   border: none;
+   background-color: var(--c1);
+   height: 55px;
+   color: var(--w);
+
+}
+.Circles{
+    margin: 50px 0 0 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Circles1,.Circles2,.Circles3,.Circles4,.Circles5{
+    width: 20px;
+    height: 20px;
+    background-color: var(--c1);
+    border-radius: 100px;
+    margin-left: 10px;
+}
+.compare img{
+    position: absolute;
+    z-index: -200;
+    right: 0;
+
+}
+
+.Section2{
+    margin: 160px 0 100px 0;
+}
+.CarrouselProducts{
+    margin: 40px 0 0 0;
+    width: 100%;
+}
+.Cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0 80px;
+    
+}
+.Cardsproducts{
+    width: 275px;
+    height: 515px;
+    margin: 0 0 40px 30px;
+    border-bottom: solid var(--c1) 4px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ImageCarProduct{
+    width: 275px;
+    height: 310px;
+    overflow: hidden;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.Locate{
+    margin: -20px 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+.Locate img{
+    margin: 0 5px 0 0;
+
+}
+.ButtonShowMore a{
+    background-color: var(--c1);
+    border: 40px;
+    text-decoration: none;
+    color: var(--w);
+    border-radius: 30px;
+    padding: 8px 16px; 
+
+}
+.ButtonShowMore{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0 0;
+}

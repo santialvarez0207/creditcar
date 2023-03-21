@@ -1,0 +1,108 @@
+.BodyNav{
+    background-color: var(--sw);
+    display: flex;
+    flex-flow: row wrap;
+
+    top: 0;
+    width: 100%;
+    height: 60px;
+    border-bottom: 4px var(--c2) solid;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: relative;
+    z-index: 200;
+}
+.NavFirstHalf{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+    width: 50%;
+    box-sizing:border-box;
+    align-items: center;
+}
+.Search a{
+    color: var(--b);
+    text-decoration: none;
+    font-weight: 500;
+    
+
+    border-radius: 30px;
+    padding: 8px 16px; 
+    
+
+}
+.Credit a{
+    color: var(--b);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 8px 16px; 
+   
+    
+
+}
+.Compare a{
+    color: var(--b);
+    text-decoration: none;
+    font-weight: 500;
+    
+    border-radius: 30px;
+    padding: 8px 16px; 
+
+
+}
+.Announce a{
+    color: var(--b);
+    text-decoration: none;
+    font-weight: 500;
+    
+    
+}
+.Log-in a:hover,.Search a:hover,.Credit a:hover,.Compare a:hover,.Announce a:hover{  
+    background-color:#1fadff;
+    filter: invert(100%);
+    transition: all .1s ease-in;
+    border-radius: 30px;
+    padding: 8px 16px; 
+}
+.NavSecondHalf{
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    padding-right: 20px;
+    width: 50%;
+    box-sizing:border-box;
+    align-items: center;
+}
+.Log-in a{
+    color: var(--b);
+    
+    font-weight: 500;
+    
+
+    border-radius: 30px;
+    padding: 8px 16px; 
+}
+.router{
+    min-height: 100vh;
+}
+.BodyFooter{
+    background-color: var(--w);
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap row;
+    width: 100%;
+    height: 25px;
+    border-top: 4px var(--c2) solid;
+}
+.Logotipo{
+    display: flex;
+    align-items: center;
+}
+.BodyFooter div ol li{
+    list-style: none;
+    font-size: 18px;
+    margin: 0 0 0 -40px;
+}
+
