@@ -8,13 +8,18 @@
     --g: #79747E;
   }
   
+  h2{
+    font-size:22px;
+  }
+  h3{
+    font-size:20px;
+  }
   a , p ,input,button {
   font-size:18px; 
   }
   
   *{
     font-family: 'Roboto';
-  
   }
 
   html{
