@@ -24,7 +24,7 @@
     color: var(--b);
     text-decoration: none;
     font-weight: 500;
-    font-size: 20px;
+    
 
     border-radius: 30px;
     padding: 8px 16px; 
@@ -35,7 +35,6 @@
     color: var(--b);
     text-decoration: none;
     font-weight: 500;
-    font-size: 20px;
     border-radius: 30px;
     padding: 8px 16px; 
    
@@ -46,7 +45,7 @@
     color: var(--b);
     text-decoration: none;
     font-weight: 500;
-    font-size: 20px;
+    
     border-radius: 30px;
     padding: 8px 16px; 
 
@@ -56,7 +55,7 @@
     color: var(--b);
     text-decoration: none;
     font-weight: 500;
-    font-size: 20px;
+    
     
 }
 a:hover{  
@@ -80,7 +79,7 @@ a:hover{
     color: var(--b);
     
     font-weight: 500;
-    font-size: 20px;
+    
 
     border-radius: 30px;
     padding: 8px 16px; 
@@ -97,7 +96,7 @@ a:hover{
     flex-flow: wrap row;
     z-index: 200;
     width: 100%;
-    height: 60px;
+    height: 25px;
     border-top: 4px var(--c2) solid;
 }
 .Logotipo{
@@ -106,6 +105,8 @@ a:hover{
 }
 .BodyFooter div ol li{
     list-style: none;
+    font-size: 18px;
+    margin: 0 0 0 -40px;
 }
 
 .Pene{
