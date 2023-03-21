@@ -1,0 +1,189 @@
+.Section1-CarBackground{
+    box-sizing: border-box;
+    width: 100%;
+    object-fit: cover;
+}
+.Carhome{
+    width: 1456px;
+}
+.Section1-Search{
+    background-color: black;
+    position: absolute;
+    z-index: 200;
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: solid var(--c2) 2px;
+    width: 75%;
+    height: 24%;
+    top: 600px;
+    left: 180px;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.SearchAdvance{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    padding: 0 30px;
+    width: 40%;
+    
+}
+.Section2{
+    width: 100%;
+    margin: 160px 0 0 0;
+}
+.TitlePopular, .Section4-titleAboutUs{
+    display: grid;
+    grid-template-areas: auto auto;
+    padding: 0 0 0 670px; 
+}
+.TitlePopular h2, .Section4-titleAboutUs div h2{
+    margin:0 0 2px 30px;
+    color: var(--c1);
+}
+.CarrouselProducts{
+    margin: 40px 0 0 0;
+    width: 100%;
+}
+.Cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    
+}
+.Cardsproducts{
+    width: 275px;
+    height: 515px;
+    border-bottom: solid var(--c1) 4px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ImageCarProduct{
+    width: 275px;
+    height: 310px;
+    overflow: hidden;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.Locate{
+    margin: -20px 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+.Locate img{
+    margin: 0 5px 0 0;
+
+}
+.ButtonShowMore a{
+    background-color: var(--c1);
+    border: 40px;
+    text-decoration: none;
+    color: var(--w);
+    border-radius: 30px;
+    padding: 8px 16px; 
+
+}
+.ButtonShowMore{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0 0;
+}
+.Circles{
+    margin: 30px 0 0 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Circles1,.Circles2,.Circles3,.Circles4,.Circles5{
+    width: 20px;
+    height: 20px;
+    background-color: var(--c1);
+    border-radius: 100px;
+    margin-left: 10px;
+}
+.Section3{
+    margin-top: 90px;
+}
+.titleChooseme{
+    width: 100%;
+
+}
+.titleChooseme img{
+   margin-left: -5px;    
+}
+.TitleChoose{
+    color: var(--c1);
+    margin: 0 0 -15px 635px;
+}
+.Section3-Funtion-CarVector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 85px 0;
+}
+.Funtion{
+    margin: 30px 60px 0 0;
+    width: 450px;
+}
+.CarFuntion{
+    margin-top: 30px;
+    height: 130px;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--sw);
+    border-bottom: solid var(--c1) 2px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Icon-Funtion{
+    background-color: var(--c1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    margin: 0 20px 0 5px;
+    width: 80px;
+    height: 80px;
+}
+.Text-Funtion{
+    width: 320px;
+}
+.Section4-Mision-Vision{
+    margin: 90px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    align-items: center;
+}
+.Vision, .Mision{
+    width: 320px;
+    height: 400px;
+    background-color: var(--sw);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    border-bottom: solid var(--c1) 4px;
+    border-radius: 15px;
+    margin: 0 0 60px 0;
+    
+}
+.Vision h2,.Mision h2{
+    text-align: center;
+    color:var(--c1);
+    Margin: 0 0 -40px 0;
+}
+.Vision p, .Mision p{
+    text-align: center;
+    width: 250px;
+}
+.Photo-Background{
+    position:absolute;
+    z-index: -200;
+}
