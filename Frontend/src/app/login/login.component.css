@@ -1,0 +1,42 @@
+
+section{
+    margin: 150px auto;
+    height: 350px;
+    width: 400px;
+    background-color: var(--w);
+ 
+    padding-bottom: 12px;
+    padding-top: 0;
+    text-align: center;
+    box-shadow: 2px 5px 15px 0 black;
+    border-radius: 10px;
+
+}
+
+.img{
+    background-color: var(--c1);
+    margin-bottom: 3px;
+    padding-right:298px;
+    display: block;
+  
+}
+
+h1{
+    margin: 0;
+    padding: 10px 0 20px;
+    text-align: center;
+    font-size:22px;
+    color: (--b);
+}
+
+label{
+ margin:0;
+ padding:0;
+font-weight:bold;
+display: block;
+}
+
+input{
+width: 90%;
+margin-bottom: 30x;
+}
