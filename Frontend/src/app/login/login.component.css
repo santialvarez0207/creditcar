@@ -1,57 +1,64 @@
 
 section{
     margin: 150px auto;
-    height: 400px;
+    height: 430px;
     width: 400px;
     background-color: var(--w);
-    padding-bottom: 12px;
-    padding-top: 0;
+    padding: 1px 3px 12px 1px ;
     text-align: center;
-    box-shadow: 2px 5px 15px 0 black;
-    border-radius: 10px;
-
+    box-shadow: 2px 5px 15px 0 var(--b);
+    background-origin: padding-box;
 }
 
 .img{
-    background-color: var(--c1);
+    
     margin-bottom: 3px;
-    padding-right:298px;
-    padding-top: 10px;
+    padding:10px 300px 0 0; 
+    background-color: var(--c1);
     display: block;
+    border-color: black ;
   
 }
 
 h1{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px 2px 10px;
     text-align: center;
     font-size:22px;
     color: (--b);
-    border: 2px red solid;
+    text-shadow: 1px 1px 10px var(--b);
     display: inline-block;
 }
 
 label{
- margin-left: 28px;
- padding:0;
-font-weight:bold;
-display:block;
-text-align: left;
+  margin-left: 28px;
+  padding:0;
+  font-weight:bold;
+  display:block;
+  text-align: left;
 }
 
 input{
-width: 85%;
-margin-bottom: 30x;
-padding: 3px;
-border-radius: 4px;
-border-color: var(--b) ;
+  width: 85%;
+  margin:0 0 10px 0;
+  padding: 3px;
+  border-radius: 4px;
+  border-color: var(--b) ;
 }
 
 button{
-   margin-top: 10px;
+   margin:10px 0 0 0;
    padding: 6px;
    background-color: var(--c1);
    border-color: var(--c1);
    border-radius: 15px;
+   cursor: pointer;
+}
+.olv{
+    margin:7px;
+    
+}
 
+.cuenta{
+  border: 3px green solid;
 }
