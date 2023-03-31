@@ -139,6 +139,14 @@
     height: 300px;
     padding: 30px 90px;
 }
+.ModalContact{
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+
+}
 .ModalBox:nth-child(1) h2{
     color: var(--c1);
     width: 100%;
@@ -196,13 +204,17 @@
     margin-right: 70px;
 }
 .rectangle2{
-    width: 691px; 
+    width: 691px;
     display: flex;
     color: var(--w);
     clip-path: polygon(0% 0%, 98% 0%, 92% 100%, 0% 100%);
     background-color: var(--c1);
     justify-content: end;
     cursor: pointer;
+}
+.visto1{
+    top: 0 !important;
+    display: none;
 }
 .rectangle2 h3{
     margin: 0 70px 0 0;

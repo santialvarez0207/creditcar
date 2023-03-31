@@ -21,5 +21,15 @@ export class ProductComponent implements OnInit {
         this.contador=0
     }
   }
+  Dropdown(){
+    if(this.contador==0){
+        document.querySelector("#Dropdown")?.classList.add("visto1"),
+        this.contador=1}
+
+    else{
+        document.querySelector("#Dropdown")?.classList.remove("visto1"),
+        this.contador=0
+    }
+  }
 
 }
