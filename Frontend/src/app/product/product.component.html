@@ -1,211 +1,231 @@
-<section class="Section1">
-    <div class="section1-backgroundCar">
-        <img class="CarProduct" src="../../assets/Audi.svg" alt="">
+<section class="Modal" id="MyModal">
+    <div class="ModalBox">
+        <div>
+            <h2>¡Aquí estan los datos actualizados para ti!</h2>
+        </div>
+        <div>
+            <h3>Telefono:</h3>
+            <h3></h3>
+            <h3>Celular:</h3>
+            <h3></h3>
+            <h3>Correo electronico:</h3>
+            <h3></h3>
+        </div>
+        <div class="ButtonModal">
+            <button (click)="Hidden()" class="CloseModal">Cerrar</button>
+        </div>
     </div>
-    <div class="section1-Photo-InfoImportant">
-        <div class="Photo">
-            <div class="Bigphoto">
-                <img src="../../assets/Audi.svg" alt="">
-            </div>
-            <div class="Content-MaskChangePhoto">
-                <div class="MaskChangePhoto">
-                    <img src="../../assets/AudiSecondPhoto.svg" alt="">
+</section>
+<div class="DivMax">
+    <section class="Section1">
+        <div class="section1-backgroundCar">
+            <img class="CarProduct" src="../../assets/Audi.svg" alt="">
+        </div>
+        <div class="section1-Photo-InfoImportant">
+            <div class="Photo">
+                <div class="Bigphoto">
+                    <img src="../../assets/Audi.svg" alt="">
                 </div>
-                <div class="MaskChangePhoto">
-                    <img src="../../assets/AudiThirtPhoto.svg" alt="">
-                </div>
-                <div class="MaskChangePhoto">
-                    <img src="../../assets/AudifourthPhoto.svg" alt="">
-                </div>
-                <div class="MaskChangePhoto">
-                    <img src="../../assets/AudififthPhoto.svg" alt="">
-                </div>
+                <div class="Content-MaskChangePhoto">
+                    <div class="MaskChangePhoto">
+                        <img src="../../assets/AudiSecondPhoto.svg" alt="">
+                    </div>
+                    <div class="MaskChangePhoto">
+                        <img src="../../assets/AudiThirtPhoto.svg" alt="">
+                    </div>
+                    <div class="MaskChangePhoto">
+                        <img src="../../assets/AudifourthPhoto.svg" alt="">
+                    </div>
+                    <div class="MaskChangePhoto">
+                        <img src="../../assets/AudififthPhoto.svg" alt="">
+                    </div>
 
+                </div>
+            </div>
+            <div class="InfoImportant">
+                <div class="InfoImp1">
+                    <h2>Concesionario:</h2>
+                    <h2>Covert Chrysler Jeep Ram</h2>
+                </div>
+                <div class="InfoImp2">
+                    <h2>Nombre:</h2>
+                    <h2>Audi R8 Coupe Rojo y Negro</h2>
+                </div>
+                <div class="InfoImp3">
+                    <h2>Precio:</h2>
+                    <h2>$23'000.000</h2>
+                </div>
+                <div class="InfoImp4">
+                    <h2>Ubicación:</h2>
+                    <h2>California, Minesota</h2>
+                </div>
+                <div class="button"><button (click)="Hidden()" class="ContactDealer">
+                        <h2>Contactar</h2>
+                    </button></div>
             </div>
         </div>
-        <div class="InfoImportant">
-            <div class="InfoImp1">
-                <h2>Concesionario:</h2>
-                <h2>Covert Chrysler Jeep Ram</h2>
+    </section>
+    <section class="Section2">
+        <div>
+            <div class="Especification-Section2">
+                <div class="Especification-title1">
+                    <h2>Especificaciones</h2>
+                    <div class="rectangle"></div>
+                </div>
             </div>
-            <div class="InfoImp2">
-                <h2>Nombre:</h2>
-                <h2>Audi R8 Coupe Rojo y Negro</h2>
+            <div class="Especification-details-Section2">
+                <ol class="Details">
+                    <li class="EachDetail">
+                        <p>Millaje:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Color del exterior:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Consumo:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Tipo de combustible</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Tracción:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Color del interior:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Motor:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Transmisión:</p>
+                        <p></p>
+                    </li>
+                </ol>
             </div>
-            <div class="InfoImp3">
-                <h2>Precio:</h2>
-                <h2>$23'000.000</h2>
-            </div>
-            <div class="InfoImp4">
-                <h2>Ubicación:</h2>
-                <h2>California, Minesota</h2>
-            </div>
-            <div class="button"><button class="ContactDealer">
-                    <h2>Contactar</h2>
-                </button></div>
         </div>
-    </div>
-</section>
-<section class="Section2">
-    <div>
-        <div class="Especification-Section2">
-            <div class="Especification-title1">
-                <h2>Especificaciones</h2>
-                <div class="rectangle"></div>
+    </section>
+    <section class="section2-SpecificationMoreDetails">
+        <div class="SpecificationMoreDetails">
+            <div class="dropdown-details">
+                <div class="rectangle2">
+                    <h3>Consumo</h3>
+                </div>
+                <ol class="Details">
+                    <li class="EachDetail">
+                        <p>Consumo combinado:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Consumo en ciudad:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Consumo en carretera:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Tamaño del tanque de combustible</p>
+                        <p></p>
+                    </li>
+                </ol>
+            </div>
+            <div class="dropdown-details">
+                <div class="rectangle2">
+                    <h3>Desempeño</h3>
+                </div>
+                <ol class="Details">
+                    <li class="EachDetail">
+                        <p>Transmisión:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Tracción:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Motor:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Potencia:</p>
+                        <p></p>
+                    </li>
+                </ol>
+            </div>
+            <div class="dropdown-details">
+                <div class="rectangle2">
+                    <h3>Seguridad</h3>
+                </div>
+                <ol class="Details">
+                    <li class="EachDetail">
+                        <p>Camara de retroceso:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Monitoreo de puntos ciegos:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Velocidad automatica adaptable:</p>
+                        <p></p>
+                    </li>
+                </ol>
             </div>
         </div>
-        <div class="Especification-details-Section2">
-            <ol class="Details">
-                <li class="EachDetail">
-                    <p>Millaje:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Color del exterior:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Consumo:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Tipo de combustible</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Tracción:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Color del interior:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Motor:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Transmisión:</p>
-                    <p></p>
-                </li>
-            </ol>
-        </div>
-    </div>
-</section>
-<section class="section2-SpecificationMoreDetails">
-    <div class="SpecificationMoreDetails">
-        <div class="dropdown-details">
-            <div class="rectangle2">
-                <h3>Consumo</h3>
+        <div class="SpecificationMoreDetails">
+            <div class="dropdown-detailsC">
+                <div class="rectangle2">
+                    <h3>Medidas</h3>
+                </div>
+                <ol class="Details">
+                    <li class="EachDetail">
+                        <p>Puertas:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Volumen de carga:</p>
+                        <p></p>
+                    </li>
+                </ol>
             </div>
-            <ol class="Details">
-                <li class="EachDetail">
-                    <p>Consumo combinado:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Consumo en ciudad:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Consumo en carretera:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Tamaño del tanque de combustible</p>
-                    <p></p>
-                </li>
-            </ol>
-        </div>
-        <div class="dropdown-details">
-            <div class="rectangle2">
-                <h3>Desempeño</h3>
+            <div class="dropdown-details">
+                <div class="rectangle2">
+                    <h3>Adicionales</h3>
+                </div>
+                <ol class="Details">
+                    <li class="EachDetail">
+                        <p>Asientos calefaccionados:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Bluetooth:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Encendido remoto:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Sist. de navegación:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Techo corredizo/escotillo:</p>
+                        <p></p>
+                    </li>
+                    <li class="EachDetail">
+                        <p>Tercera fila de asientos:</p>
+                        <p></p>
+                    </li>
+                </ol>
             </div>
-            <ol class="Details">
-                <li class="EachDetail">
-                    <p>Transmisión:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Tracción:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Motor:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Potencia:</p>
-                    <p></p>
-                </li>
-            </ol>
         </div>
-        <div class="dropdown-details">
-            <div class="rectangle2">
-                <h3>Seguridad</h3>
-            </div>
-            <ol class="Details">
-                <li class="EachDetail">
-                    <p>Camara de retroceso:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Monitoreo de puntos ciegos:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Velocidad automatica adaptable:</p>
-                    <p></p>
-                </li>
-            </ol>
-        </div>
-    </div>
-    <div class="SpecificationMoreDetails">
-        <div class="dropdown-detailsC">
-            <div class="rectangle2">
-                <h3>Medidas</h3>
-            </div>
-            <ol class="Details">
-                <li class="EachDetail">
-                    <p>Puertas:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Volumen de carga:</p>
-                    <p></p>
-                </li>
-            </ol>
-        </div>
-        <div class="dropdown-details">
-            <div class="rectangle2">
-                <h3>Adicionales</h3>
-            </div>
-            <ol class="Details">
-                <li class="EachDetail">
-                    <p>Asientos calefaccionados:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Bluetooth:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Encendido remoto:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Sist. de navegación:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Techo corredizo/escotillo:</p>
-                    <p></p>
-                </li>
-                <li class="EachDetail">
-                    <p>Tercera fila de asientos:</p>
-                    <p></p>
-                </li>
-            </ol>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
