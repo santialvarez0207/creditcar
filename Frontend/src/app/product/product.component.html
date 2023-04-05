@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="Especification-details-Section2">
-                <ol class="Details">
+                <ol>
                     <li class="EachDetail">
                         <p>Millaje:</p>
                         <p></p>
@@ -114,11 +114,11 @@
     <section class="section2-SpecificationMoreDetails">
         <div class="SpecificationMoreDetails">
             <div class="dropdown-details">
-                <div class="rectangle2">
+                <div class="rectangle2" (click)="Dropdown('DropdownFun4')">
                     <h3>Consumo</h3>
                 </div>
-                <ol class="Details">
-                    <li class="EachDetail">
+                <ol class="Details" id="DropdownFun4">
+                    <li class="EachDetail" >
                         <p>Consumo combinado:</p>
                         <p></p>
                     </li>
@@ -136,11 +136,11 @@
                     </li>
                 </ol>
             </div>
-            <div class="dropdown-details">
-                <div class="rectangle2">
+            <div class="dropdown-details" >
+                <div class="rectangle2" (click)="Dropdown('DropdownFun3')">
                     <h3>Desempeño</h3>
                 </div>
-                <ol class="Details">
+                <ol class="Details" id="DropdownFun3"> 
                     <li class="EachDetail">
                         <p>Transmisión:</p>
                         <p></p>
@@ -160,10 +160,10 @@
                 </ol>
             </div>
             <div class="dropdown-details">
-                <div class="rectangle2">
+                <div class="rectangle2"  (click)="Dropdown('DropdownFun2')">
                     <h3>Seguridad</h3>
                 </div>
-                <ol class="Details">
+                <ol class="Details" id="DropdownFun2">
                     <li class="EachDetail">
                         <p>Camara de retroceso:</p>
                         <p></p>
@@ -180,11 +180,11 @@
             </div>
         </div>
         <div class="SpecificationMoreDetails">
-            <div class="dropdown-detailsC">
+            <div class="dropdown-detailsC" (click)="Dropdown('DropdownFun1')">
                 <div class="rectangle2">
                     <h3>Medidas</h3>
                 </div>
-                <ol class="Details" >
+                <ol class="Details" id="DropdownFun1">
                     <li class="EachDetail">
                         <p>Puertas:</p>
                         <p></p>
@@ -196,10 +196,10 @@
                 </ol>
             </div>
             <div class="dropdown-details">
-                <div class="rectangle2" (click)="Dropdown()">
+                <div class="rectangle2" (click)="Dropdown('DropdownFun')">
                     <h3>Adicionales</h3>
                 </div>
-                <ol class="Details" id="#Dropdown">
+                <ol class="Details" id="DropdownFun">
                     <li class="EachDetail">
                         <p>Asientos calefaccionados:</p>
                         <p></p>
