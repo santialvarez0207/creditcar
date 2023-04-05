@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SeekerComponent } from './seeker/seeker.component';
-import { RegisterComponent } from './register/register.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HomeComponent,
     SeekerComponent,
-    RegisterComponent
+    ProductComponent
   ],
   imports: [
     BrowserModule,

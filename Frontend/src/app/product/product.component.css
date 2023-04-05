@@ -1,0 +1,241 @@
+.Section1{
+    width: 100%;
+}
+.section1-backgroundCar{
+    width: 100%;
+    height: 600px;
+}
+.CarProduct{
+    object-fit: cover;
+    object-position: 0 -800px;
+    width: 100%;
+    height: 600px;
+}
+.section1-Photo-InfoImportant{
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    top: 300px;
+}
+.Bigphoto{
+    width: 100%;
+    filter: drop-shadow(-6px 6px 6px rgba(0, 0, 0, 0.3));
+}
+.Bigphoto img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.MaskChangePhoto {
+    width: 100px;
+    height: 101px;
+    margin: 10px 0 0 8px;
+}
+.MaskChangePhoto img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.Content-MaskChangePhoto{
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row wrap;
+}
+.Photo{
+    padding: 50px;
+    margin: 0 0 0 70px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 30%;
+}
+.InfoImportant{
+    margin-top: 220px;
+    width: 58.3%;
+}
+.InfoImp1{
+    width: 691px; 
+    padding: 0 0 0 60px;
+    display: flex;
+    margin: 15px 0 0 98px;
+    color: var(--w);
+    background-color:var(--c1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, );
+}
+.InfoImp1 h2{
+    margin-top: 12px;
+}
+.InfoImp2{
+    width: 614px;
+    padding: 0 0 2px 50px;
+    display: flex;
+    margin: 15px 0 0 185px;
+    color: var(--w);
+    background-color:var(--c1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.InfoImp2 h2{
+    margin-top: 12px;
+}
+.InfoImp3{
+    width: 549px;
+    padding: 0 0 2px 50px;
+    display: flex;
+    color: var(--w);
+    margin: 15px 0 0 250px;
+    background-color:var(--c1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.InfoImp3 h2{
+    margin-top: 12px;
+}
+.InfoImp4{
+    width: 479px;
+    padding: 0 0 2px 50px;
+    display: flex;
+    color: var(--w);
+    margin: 15px 0 0 320px;
+    background-color:var(--c1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.InfoImp4 h2{
+    margin-top: 12px;
+}
+.ContactDealer{
+    margin: 25px 0 0 520px;
+    background-color: var(--c1);
+    border-radius: 40px;
+    border: none;
+    padding: 0 20px 0 20px;
+    color: var(--w);
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
+
+}
+.Modal{
+    background-color: rgba(246, 246, 246, 0.90);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 700;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.ModalBox{
+    position: absolute;
+    background-color: var(--w);
+    border-bottom: solid var(--c1) 4px;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+    padding: 30px 90px;
+}
+.ModalContact{
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+
+}
+.ModalBox:nth-child(1) h2{
+    color: var(--c1);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.ButtonModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 65px;
+    
+}
+.CloseModal{
+    cursor: pointer;
+    color: var(--w);
+    background-color: var(--c1);
+    border: none;
+    padding: 11px 30px;
+    border-radius: 30px;
+}
+.visto{
+    display: flex !important;
+}
+.ContactDealer h2{
+    margin: 15px 0;
+}
+.Section2{
+    margin: 420px 0 0 0;
+}
+.rectangle{
+    width: 680px;
+    height: 30px;
+    clip-path: polygon(0% 42%, 98% 42%, 92% 100%, 0% 100%);
+    background-color: var(--c1);
+}
+.Especification-Section2{
+    width: 660px;
+}
+.Especification-title1 h2{
+    display: flex;
+    justify-content: end;
+    margin-bottom: -10px;
+    color: var(--c1);
+}
+.Details, .DetailsC{
+    list-style: none;
+}
+.dropdown-detailsC{
+    height: 36%;
+}
+
+.SpecificationMoreDetails:nth-child(1){
+    margin-right: 70px;
+}
+.rectangle2{
+    width: 691px;
+    display: flex;
+    color: var(--w);
+    clip-path: polygon(0% 0%, 98% 0%, 92% 100%, 0% 100%);
+    background-color: var(--c1);
+    justify-content: end;
+    cursor: pointer;
+}
+.visto1{
+    top: 0 !important;
+    display: none;
+}
+.rectangle2 h3{
+    margin: 0 70px 0 0;
+}
+.section2-SpecificationMoreDetails{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 80px;
+}
+.Especification-title1 h2{
+    display: flex;
+    justify-content: end;
+    margin-bottom: -10px;
+    color: var(--c1);
+}
+.pene{
+    --c1: #E05200;
+    --c2: #FF8C49;
+    --r: #D13333;
+    --w: #F2F0F0;
+    --sw:#F6F6F6;
+    --b: #0D1311;
+    --g: #79747E;
+  }

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const customerSchema = new Schema(
+const dealerSchema = new Schema(
   {
     name:  String,
     email: String,
@@ -26,4 +26,4 @@ const customerSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Customer", customerSchema);
+module.exports = mongoose.model("Dealer", dealerSchema);

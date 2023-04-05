@@ -7,12 +7,12 @@
     width: 1456px;
 }
 .Section1-Search{
-    background-color: black;
+    background-color: var(--sw);
     position: absolute;
     z-index: 200;
     display: flex;
     flex-flow: row wrap;
-    border-bottom: solid var(--c2) 2px;
+    border-bottom: solid var(--c2) 4px;
     width: 75%;
     height: 24%;
     top: 600px;
@@ -20,6 +20,39 @@
     overflow-y: hidden;
     box-sizing: border-box;
     border-radius: 5px;
+}
+.Advance-New-Used p{
+    margin-bottom: 8px;
+}
+.New-Used{
+    width: 100px;
+}
+.Advance-Brand p{
+    margin-bottom: 8px;
+}
+.Advance-Model p{
+    margin-bottom: 8px;
+}
+.Advance-Price p{
+    margin-bottom: 8px;
+    margin-top: 2px;
+}
+.Advance-Distance p{
+    margin-bottom: 8px;
+    margin-top: 2px;
+}
+.Zip-input{
+    margin:30px 10px 0 0;
+    width: 70px;
+}
+.Search-button{
+   padding: 5px 10px;
+   border-radius: 15px;
+   background-color: var(--c1);
+   color: var(--w);
+   border: none;
+   cursor: pointer;
+   text-decoration: none;
 }
 .SearchAdvance{
     display: grid;
