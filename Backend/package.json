@@ -2,13 +2,15 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "intermediario para conectar a los clientes interesados en comprar un automóvil con los dealers que ofrecen financiamiento",
-  "main": "server.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
   },
   "author": "santiago alvarez",
-  "license": "EZCO",
+  "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "mongoose": "^7.0.2"
   }
