@@ -1,0 +1,363 @@
+.Allcontent{
+    width: max-content;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.Slider1{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 520px;
+    transition:all .5s ease-in-out
+}
+.visto{
+    transition:all .5 ease-in; 
+    margin-left: -200px;
+}
+.visto1{
+    transition:all .5 ease-in; 
+    margin-left: -850px;
+}
+.visto2{
+    transition:all .5 ease-in; 
+    margin-left: -1550px;
+}
+.visto3{
+    transition:all .5 ease-in; 
+    margin-left: -2250px;
+}
+.visto4{
+    transition:all .5 ease-in; 
+    margin-left: -2950px;
+}
+.visto5{
+    transition:all .5 ease-in; 
+    margin-left: -3650px;
+}
+.visto6{
+    transition:all .5 ease-in; 
+    margin-left: -4350px;
+}
+.visto7{
+    transition:all .5 ease-in; 
+    margin-left: -5050px;
+}
+.Slider2{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition:all .5 ease-in; 
+
+}
+.Slider3{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Slider4{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Slider5{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Slider6{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Slider7{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Slider8{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Slider9{
+    width: 500px;
+    height: 600px;
+    max-height:fit-content;
+    margin: 100px;
+    border-radius: 15px;
+    border-bottom: var(--c1) solid 4px;
+    background-color:var(--sw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Logotipo{
+    margin: 30px 0 50px 0;
+}
+.Title1{
+    color: var(--c1);
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+.Title2{
+    color: var(--c1);
+    margin: 15px 0 ;
+}
+.Input-Label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.Input-Label2{
+    
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-weight:bolder ;
+    color: var(--c1);
+}
+.Input-Label input{
+    border-radius: 5px;
+    
+}
+.NextModule0{
+    width: 100%;
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+.NextModule0 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 0 20px;
+}
+.NextModule1 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 110px 20px;
+}
+.NextModule3 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 80px 20px;
+}
+.NextModule4 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 25px 20px;
+}
+.NextModule5 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 10px 20px;
+}
+.NextModule6 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 200px 20px;
+}
+.NextModule7 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 200px 20px;
+}
+.NextModule8 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 140px 20px;
+}
+.NextModule9 button{
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin: 140px 20px;
+}
+.ButtonContract button{
+    border: none;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin:10px;
+}
+.ButtonResidence button{
+    border: none;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin:20px;
+}
+.ButtonCredit1 button{
+    border: none;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--c1);
+    color: var(--w);
+    border-radius: 20px;
+    margin:10px
+}
+.SliderBar{
+
+    -webkit-appearance: none; 
+  appearance: none;
+  width: 300px;
+  height: 6px; 
+  background: #d3d3d3; 
+  outline: none; 
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  }
+.SliderBar::-moz-range-thumb {
+    width: 25px; 
+    height: 25px;
+    background: var(--c1);
+    cursor: pointer;
+    border: none; 
+    border-radius: 100px;
+  }
+.SlideOcult{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+.SideOcult1{
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    filter: blur(4px);
+    background-color: rgba(246, 246, 246, 0.6);;
+    z-index: 200;
+}
+.Pene{
+    --c1: #E05200;
+    --c2: #FF8C49;
+    --r: #D13333;
+    --w: #F2F0F0;
+    --sw:#F6F6F6;
+    --b: #0D1311;
+    --g: #79747E;
+}
+  
