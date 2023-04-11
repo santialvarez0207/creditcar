@@ -4,11 +4,11 @@ const store = require("./store_dealer");
 
 function addDealer(body){
     return new Promise((resolve, reject) => {
-
+        console.log(body)
         if(!body){
             return reject("no hay datos")
         }
-        if(store.getDealer({name: body.name, email: body.email})==null){
+
         fecha = new Date();
         let dealer = {
             user:  body.user,
@@ -22,18 +22,29 @@ function addDealer(body){
         };
         store.addDealer(dealer)
         return resolve("Dealer agregado correctamente")
-        }
-        else{
-            return reject("ya existe el usuario")
-        }
+
     })
 
 }
 
 
 
-function checkDealer(user,contraseña){
-    
+async function checkDealer(user, contraseña){
+    try {
+        let dealer = await store.getDealer({user: user, password: contraseña});
+        if(user && contraseña && dealer != null){
+            let sesion = {
+                user: dealer.user,
+                id: dealer.id,
+                session: true
+            };
+            return sesion;
+        } else {
+            throw new Error("datos incorrectos");
+        }
+    } catch (error) {
+        throw error;
+    }
 }
 
 
