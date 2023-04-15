@@ -58,73 +58,22 @@
             <div><img src="../../assets/Separator.svg" alt=""></div>
         </div>
         <div class="CarrouselProducts">
-            <div class="Cards">
-                <div class="Cardsproducts">
+            <div class="Cards" >
+                <div class="Cardsproducts" *ngFor="let Card of Cards">
                     <div class="ImageProduct">
                         <div class="ImageCarProduct">
                             <img src="../../assets/Audi.svg" alt="">
                         </div>
                         <div class="textCards">
-                            <p>$23'000.000</p>
+                            <p>{{Card.name}}</p>
                         </div>
                         <div class="textCards">
-                            <p>Audi R8 Coupe</p>
+                            <p>{{Card.price}}</p>
                         </div>
                         <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                            <p class="Textlocate">California, minesota</p>
+                            <p class="Textlocate">{{Card.way.state}},{{Card.way.city}}</p>
                         </div>
-                        <div class="ButtonShowMore"><a routerLink="/product">Ver más</a></div>
-                    </div>
-                </div>
-                <div class="Cardsproducts">
-                    <div class="ImageProduct">
-                        <div class="ImageCarProduct">
-                            <img src="../../assets/Audi.svg" alt="">
-                        </div>
-                        <div class="textCards">
-                            <p>$23'000.000</p>
-                        </div>
-                        <div class="textCards">
-                            <p>Audi R8 Coupe</p>
-                        </div>
-                        <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                            <p class="Textlocate">California, minesota</p>
-                        </div>
-                        <div class="ButtonShowMore"><a routerLink="/product">Ver más</a></div>
-                    </div>
-                </div>
-                <div class="Cardsproducts">
-                    <div class="ImageProduct">
-                        <div class="ImageCarProduct">
-                            <img src="../../assets/Audi.svg" alt="">
-                        </div>
-                        <div class="textCards">
-                            <p>$23'000.000</p>
-                        </div>
-                        <div class="textCards">
-                            <p>Audi R8 Coupe</p>
-                        </div>
-                        <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                            <p class="Textlocate">California, minesota</p>
-                        </div>
-                        <div class="ButtonShowMore"><a routerLink="/product">Ver más</a></div>
-                    </div>
-                </div>
-                <div class="Cardsproducts">
-                    <div class="ImageProduct">
-                        <div class="ImageCarProduct">
-                            <img src="../../assets/Audi.svg" alt="">
-                        </div>
-                        <div class="textCards">
-                            <p>$23'000.000</p>
-                        </div>
-                        <div class="textCards">
-                            <p>Audi R8 Coupe</p>
-                        </div>
-                        <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                            <p class="Textlocate">California, minesota</p>
-                        </div>
-                        <div class="ButtonShowMore"><a routerLink="/product">Ver más</a></div>
+                        <div class="ButtonShowMore"><a href="{{Card.url}}">Ver más</a></div>
                     </div>
                 </div>
                 <div class="Circles">
@@ -132,7 +81,6 @@
                     <div class="Circles2"></div>
                     <div class="Circles3"></div>
                     <div class="Circles4"></div>
-                    <div class="Circles5"></div>
                 </div>
             </div>
         </div>

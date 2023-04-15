@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { card } from '../model/card-home';
+import { Especifications1 } from '../model/product'
 
 @Component({
   selector: 'app-product',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
   contador:number = 1;
+
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,6 @@
+export interface perfilCar {
+    name:string,
+    price:string,
+    way:{state:string,city:string},
+    url:string,
+}
