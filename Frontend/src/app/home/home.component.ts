@@ -20,8 +20,4 @@ export class HomeComponent implements OnInit {
     
   }
 
-  SecondRouterLink(){
-    window.location.replace('http://localhost:4200/product');
-  }
-
 }

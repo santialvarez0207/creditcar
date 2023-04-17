@@ -4,7 +4,7 @@
     object-fit: cover;
 }
 .CarSeeker{
-    width: 1455px;
+    width:100%;
 }
 .Section1-Search{
     background-color: var(--sw);
