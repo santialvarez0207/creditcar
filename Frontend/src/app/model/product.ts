@@ -1,4 +1,6 @@
-export interface Especifications1{
+import { PerfilCar } from "./search";
+
+export interface Specifications1{
     mileage:string,
     outsideColor:string,
     consumption:string,
@@ -7,34 +9,43 @@ export interface Especifications1{
     insidecolour:string,
     engine:string,
     transmission:string,
-    
 }
-export interface Especifications2{
+export interface Specifications2{
     Combinedconsumption:string,
     Consumptioncity:string,
     Consumptionroad:string,
     tanksize:string,      
 }
-export interface Especifications3{
+export interface Specifications3{
     Transmission:string,
     Traction:string,
     Engine:string,
     Power:string,
 }
-export interface Especifications4{
+export interface Specifications4{
     Reversingcamera:string,
     Blindspot:string,
     Adaptivespeed:string,
 }
-export interface Especifications5{
+export interface Specifications5{
     doors:string;
     cargovolume:string;
 }
-export interface Especifications6{
+export interface Specifications6{
     Heatedseats:string,
     Bluetooth:string,
     remotestart:string,
     Systemnavigation:string,
     SunroofHatch:string,
     hatch:string,
+}
+
+export interface Car{
+    information:PerfilCar;
+    pspecifications: Specifications1,
+    consumption:Specifications2,
+    performace:Specifications3,
+    security:Specifications4,
+    measures:Specifications5,
+    additional:Specifications6,
 }
