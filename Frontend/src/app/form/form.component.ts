@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormSliderService } from '../service/form-slider.service';
 
 @Component({
   selector: 'app-form',
@@ -6,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+ 
 
-  constructor() { }
+  constructor(private FormSliderService:FormSliderService ) { }
 
   ngOnInit(): void {
-  
+    this.FormSliderService.configureSlider();
   }
+
   Moveit(reason:string, vistos:string){
     let reason2 = document.querySelector(`#${reason}`);
     
@@ -20,5 +23,14 @@ export class FormComponent implements OnInit {
     }
     else{
       reason2?.classList.add(`${vistos}`)}
+  }
+
+  Dissapear(){
+    let reason3=document.querySelector('#CardsSlides');
+    if(reason3?.classList.contains("visto8")){
+      reason3.classList.remove("visto8");
+    }else{
+      reason3?.classList.add("visto8");
+    }
   }
 }

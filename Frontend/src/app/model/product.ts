@@ -1,10 +1,3 @@
-
-export interface perfilCar {
-    dealer:string,
-    name:string,
-    price:string,
-    way:{state:string,city:string},
-}
 export interface Especifications1{
     mileage:string,
     outsideColor:string,
@@ -20,7 +13,7 @@ export interface Especifications2{
     Combinedconsumption:string,
     Consumptioncity:string,
     Consumptionroad:string,
-    tanksize:string,
+    tanksize:string,      
 }
 export interface Especifications3{
     Transmission:string,

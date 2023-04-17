@@ -3,25 +3,25 @@
 
     </div>
     
-<section class="Allcontent">
+<section class="Allcontent" id="CardsSlides">
     <div class="Slider1" id="Slider1">
         <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
         <div class="Title1"><h2>¿Cuanto es el monto inicial?</h2></div>
-        <div class="Input-Label">
+        <form class="Input-Label">
             <label for="">Monto</label>
             <input type="text">
-        </div>
+        </form>
         <div class="Title2"><h2>¿Qué precio tiene el vehículo?</h2></div>
-        <div class="Input-Label">
+        <form class="Input-Label">
             <label for="">Precio</label>
             <input type="text">
-        </div>
+        </form>
         <div class="NextModule0"><button (click)="Moveit('Slider1','visto')">Continuar</button></div>
     </div>
     <div class="Slider2">
         <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
         <div class="Title1"><h2>¿Cuanto dinero desea financiar?</h2></div>
-        <div class="Value"><h2 id="RangeValue">25000</h2></div>
+        <div class="Value"><h2 id="RangeValue">0</h2></div>
         <div class="SliderValue"><input class="SliderBar" type="range" min="1000" max="50000" id="RangeSlide"></div>
         <div class=""><p>($1,000 min hasta $50,000 Max)</p></div>
         <div class="NextModule1"><button (click)="Moveit('Slider1','visto')">Volver</button><button (click)="Moveit('Slider1','visto1')">Continuar</button></div>
@@ -55,46 +55,46 @@
     <div class="Slider6">
         <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
         <div class="Title1"><h2>¿Cuales son tu ingresos anuales?</h2></div>
-        <div class="Input-Label">
+        <form class="Input-Label">
             <label for="">Ingresos</label>
             <input type="text">
-        </div>
+        </form>
         <div class="NextModule6"><button (click)="Moveit('Slider1','visto4')">Volver</button><button (click)="Moveit('Slider1','visto5')">Continuar</button></div>
     </div>
     <div class="Slider7">
         <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
         <div class="Title1"><h2>¿Cuál es tu codigo Zip?</h2></div>
-        <div class="Input-Label">
+        <form class="Input-Label">
             <label for="">Zip</label>
             <input type="text">
-        </div>
+        </form>
         <div class="NextModule7"><button (click)="Moveit('Slider1','visto5')">Volver</button><button (click)="Moveit('Slider1','visto6')">Continuar</button></div>
     </div>
     <div class="Slider8">
         <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
         <div class="Title1"><h2>¿Cuál es tu dirección?</h2></div>
-        <div class="Input-Label">
+        <form class="Input-Label">
             <label for="">Dirección</label>
             <input type="text">
-        </div>
-        <div class="Input-Label2">
+        </form>
+        <form class="Input-Label2" id="">
             <label for="">Ciudad</label>
             <input type="text">
-        </div>
+        </form>
         <div class="NextModule8" ><button (click)="Moveit('Slider1','visto6')">Volver</button><button (click)="Moveit('Slider1','visto7')">Continuar</button></div>
     </div>
     <div class="Slider9">
         <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
         <div class="Title1"><h2>¿Cuál es tu número de telefono y correo electronico?</h2></div>
-        <div class="Input-Label">
+        <form class="Input-Label">
             <label for="">Celular</label>
             <input type="text">
-        </div>
-        <div class="Input-Label2">
+        </form>
+        <form class="Input-Label2">
             <label for="">Correo electronico</label>
             <input type="text">
-        </div>
-        <div class="NextModule9"><button routerLink="/home">Consigue tu pre-financiamiento</button><button (click)="Moveit('Slider1','visto7')">Volver</button></div>
+        </form>
+        <div class="NextModule9"><button (click)="Dissapear()">Consigue tu pre-financiamiento</button><button (click)="Moveit('Slider1','visto7')">Volver</button></div>
     </div>
 </section>
 

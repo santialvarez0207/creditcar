@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { card } from '../model/card-home';
+import { perfilCar } from '../model/search';
 import { Especifications1 } from '../model/product'
 
 @Component({
