@@ -41,7 +41,8 @@ export interface Specifications6{
 }
 
 export interface Car{
-    information:PerfilCar;
+    _id: string,
+    information:PerfilCar,
     pspecifications: Specifications1,
     consumption:Specifications2,
     performace:Specifications3,
