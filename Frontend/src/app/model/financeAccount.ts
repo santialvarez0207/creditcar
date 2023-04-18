@@ -13,10 +13,12 @@ export class DataFinance{
     city:String;
     cellphone:String;
     email:String;
+    name:string;
+    password:string;
 
     constructor(_id:String = "",amount:String = "", price:String = "", amountfinance:String ="",
     typeofresidence:String="", credit:String = "", typeofcontract:String="", income:String = "",  zip:String = "",
-     address:String = "",city:String = "", cellphone:String = "", email:String = "" ){
+     address:String = "",city:String = "", cellphone:String = "", email:String = "", name:string = "", password:string = ""){
         
         this._id = _id;
         this.amount = amount;
@@ -25,11 +27,13 @@ export class DataFinance{
         this.typeofresidence = typeofresidence; 
         this.credit = credit;
         this.typeofcontract = typeofcontract;
-        this.income = income;  
+        this.income = income;
         this.zip = zip;
         this.address = address;
         this.city = city;
         this.cellphone = cellphone;
         this.email = email;
+        this.name = name;
+        this.password = password;
     }
 }

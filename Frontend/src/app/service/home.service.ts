@@ -8,18 +8,16 @@ import { PerfilCar } from '../model/search';
 })
 export class HomeService {
 
-  SelectedPerfilCar!: PerfilCar;
-  Cars: PerfilCar[] = [];
+  SelectedPerfilCar: PerfilCar;
 
   private apiUrl = 'http://localhost:3000/api/dealer/check'; 
 
   constructor(private http: HttpClient) { 
-  
+    this.SelectedPerfilCar = new PerfilCar();
   }
 
   GetRecommendedCars() {
-
-    return this.http.get(this.apiUrl) as unknown as PerfilCar[];
+    return this.http.get<PerfilCar[]>(this.apiUrl);
   }
 
 }

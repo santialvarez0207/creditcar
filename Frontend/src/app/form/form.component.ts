@@ -26,11 +26,23 @@ export class FormComponent implements OnInit {
   }
 
   Dissapear(){
-    let reason3=document.querySelector('#CardsSlides');
+    let reason3 = document.querySelector('#CardsSlides');
+    
     if(reason3?.classList.contains("visto8")){
       reason3.classList.remove("visto8");
+      
     }else{
       reason3?.classList.add("visto8");
+      
+      
+    }
+  }
+  show(){
+    let reason4 = document.querySelector('#results1');
+    if(reason4?.classList.contains("visto9")){
+      reason4?.classList.remove("visto9");
+    }else{
+      reason4?.classList.add("visto9");
     }
   }
 }

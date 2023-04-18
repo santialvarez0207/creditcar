@@ -68,30 +68,83 @@ export class Specifications3{
 
 }
 }
-export interface Specifications4{
-    Reversingcamera:string,
-    Blindspot:string,
-    Adaptivespeed:string,
+export class Specifications4{
+    Reversingcamera:string;
+    Blindspot:string;
+    Adaptivespeed:string;
+
+    constructor(Reversingcamera:string = "",
+        Blindspot:string = "",
+        Adaptivespeed:string = ""){
+    
+    this.Reversingcamera = Reversingcamera;
+    this.Blindspot = Blindspot;
+    this.Adaptivespeed = Adaptivespeed;
+
 }
-export interface Specifications5{
+}
+export class Specifications5{
     doors:string;
     cargovolume:string;
+    
+    constructor(doors:string = "",
+        cargovolume:string = ""){
+
+    this.doors = doors;
+    this.cargovolume = cargovolume;
+
 }
-export interface Specifications6{
-    Heatedseats:string,
-    Bluetooth:string,
-    remotestart:string,
-    Systemnavigation:string,
-    SunroofHatch:string,
-    hatch:string,
+}
+export class Specifications6{
+    Heatedseats:string;
+    Bluetooth:string;
+    remotestart:string;
+    Systemnavigation:string;
+    SunroofHatch:string;
+    hatch:string;
+
+    constructor(Heatedseats:string = "",
+        Bluetooth:string = "",
+        remotestart:string = "",
+        Systemnavigation:string = "",
+        SunroofHatch:string = "",
+        hatch:string = ""){
+    
+    this.Heatedseats = Heatedseats;
+    this.Bluetooth = Bluetooth;
+    this.remotestart = remotestart;
+    this.Systemnavigation = Systemnavigation;
+    this.SunroofHatch = SunroofHatch;
+    this.hatch = hatch;
+
+}
 }
 
-export interface Car{
+export class Car{
     information:PerfilCar;
-    pspecifications: Specifications1,
-    consumption:Specifications2,
-    performace:Specifications3,
-    security:Specifications4,
-    measures:Specifications5,
-    additional:Specifications6,
+    pspecifications: Specifications1;
+    consumption:Specifications2;
+    performace:Specifications3;
+    security:Specifications4;
+    measures:Specifications5;
+    additional:Specifications6;
+
+    
+    constructor(information:PerfilCar,
+        pspecifications: Specifications1,
+        consumption:Specifications2,
+        performace:Specifications3,
+        security:Specifications4,
+        measures:Specifications5,
+        additional:Specifications6){
+    
+    this.information = information;
+    this.pspecifications = pspecifications;
+    this.consumption = consumption;
+    this.performace = performace;
+    this.security = security;
+    this.measures = measures;
+    this.additional = additional;
+
+    }
 }

@@ -10,9 +10,9 @@ import { HomeService } from '../service/home.service';
 export class HomeComponent implements OnInit {
 
   Cards:PerfilCar[] = [];
-  
+
   constructor(private homeService:HomeService) { 
-    this.Cards = homeService.GetRecommendedCars();
+   homeService.GetRecommendedCars().subscribe(( res ) => { this.Cards = res});
 
   }
 

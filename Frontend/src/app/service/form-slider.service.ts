@@ -8,12 +8,12 @@ import { FinancingComponent } from '../financing/financing.component';
 })
 export class FormSliderService {
 
-  SelectedDataFinance!: DataFinance;
-  dataFinance:DataFinance[] = [];
+  /*SelectedDataFinance!: DataFinance;
+  dataFinance:DataFinance[] = [];*/
 
-  private apiUrl = 'http://localhost:3000/api/dealer/check';
+  /*private apiUrl = 'http://localhost:3000/api/dealer/check';*/
 
-  constructor(private http: HttpClient) { 
+  constructor(/*private http: HttpClient*/) { 
 
   }
   
@@ -28,7 +28,7 @@ export class FormSliderService {
     };
   }
 
-  PostAccountFinance(dataFinance:DataFinance){
+  /*PostAccountFinance(dataFinance:DataFinance){
     return this.http.post(this.apiUrl, dataFinance);
   }
 
@@ -38,5 +38,5 @@ export class FormSliderService {
 
   deleteAccountFinance(_id:String){
     return this.http.delete(this.apiUrl + `/${_id}`);
-  }
+  }*/
 }
