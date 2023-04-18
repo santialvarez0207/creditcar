@@ -1,12 +1,12 @@
 
 .contenedor {
   position: absolute;
-  margin: 50px 230px;
+  margin: 50px 150px;
   height: 480px;
   width: 65%;
   border-radius: 20px;
   background:var(--sw);
-  border: 3px rebeccapurple solid;
+  border: 2px var(--c1) solid;
  }
 .item {
   position: absolute;
@@ -24,7 +24,7 @@
 }
 
 .img {
-  border: 3px #000  solid;
+ 
   width: 63%;
   height: 25%;
   margin-top: 5%;
@@ -33,18 +33,16 @@
 
 .texto h2 {
   font-size: 30px;
-  color: rgb(0, 0, 0);
+  color: var(--sw);
   line-height: 1;
   text-align: left;
   margin-left: 40px;
-  border: 3px #000 ridge;
   margin-top: 30%;
 }
 
 .texto p {
   font-size: 16px;
   margin: 20px 0;
-  border: 3px aqua solid; 
 }
 
 .contenedor .login-section {
@@ -63,16 +61,17 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  border: 3px rgb(9, 255, 0) solid;
 
 }
-
+.login-section .form-box.register{
+transform: translate(430px);
+}
 .login-section .form-box h2 {
   text-align: center;
   font-size: 2em;
   margin-top: -5%;
   padding-bottom: 10%;
-  border: 1px #000 solid;
+ 
 }
 
 .inpunt-box label {
@@ -81,7 +80,7 @@
   font-size: 16px;
   font-weight: 500px;
   pointer-events: none;
-  border: #000 solid;
+ 
   margin-left: 3.5%;
 }
 
