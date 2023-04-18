@@ -5,7 +5,7 @@
     width: 65%;
     border-radius: 20px;
     background: var(--sw);
-    border: 3px rebeccapurple solid;
+    border: 3px var(--c1) solid;
 }
 
 .item {
@@ -24,7 +24,7 @@
 }
 
 .img {
-    border: 3px #000 solid;
+  
     width: 63%;
     height: 25%;
     margin-top: 5%;
@@ -37,14 +37,14 @@
     line-height: 1;
     text-align: left;
     margin-left: 40px;
-    border: 3px #000 ridge;
+   
     margin-top: 30%;
 }
 
 .texto p {
     font-size: 16px;
     margin: 20px 0;
-    border: 3px aqua solid;
+   
 }
 
 .contenedor .register-section {
@@ -63,14 +63,13 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    border: 3px rgb(9, 255, 0) solid;
+ 
 
 }
 
 .register-section .form-box h1 {
     text-align: center;
     font-size: 2em;
-    border: #f0e006 solid;
     margin-top: 3%;
 
 
