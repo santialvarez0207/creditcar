@@ -1,92 +1,158 @@
-.formulario{
-    margin: 30px auto;
-    height: auto;
-    width: 480px;
-    background-color: var(--w);
-    padding: 1px 3px 12px 1px ;
-    text-align: center;
-    box-shadow: 2px 5px 15px 0 var(--b);
-    background-origin: padding-box;
-    border-radius: 2%;
+.contenedor {
+    position: absolute;
+    margin: 50px 230px;
+    height: 490px;
+    width: 65%;
+    border-radius: 20px;
+    background: var(--sw);
+    border: 3px rebeccapurple solid;
 }
 
-.img{
-
-    margin-bottom: 3px;
-    padding:12px 380px 0 0; 
-    background-color: var(--c1);
-    display: block;
-    border-color: black ;
+.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53%;
+    height: 100%;
+    color: rgb(221, 227, 231);
+    background: var(--c1);
+    border-radius: 15px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
-h1{
-    font-size: 2em;
-    margin: 0.67em 0;
+.img {
+    border: 3px #000 solid;
+    width: 63%;
+    height: 25%;
+    margin-top: 5%;
+    object-fit: contain;
 }
 
-label{
-    margin-left:28px;
-    padding:0;
-    font-weight:400;
-    display:block;
+.texto h2 {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    line-height: 1;
     text-align: left;
-    font-size: 15px;
+    margin-left: 40px;
+    border: 3px #000 ridge;
+    margin-top: 30%;
 }
 
-input[type="text"],
-input[type="password"]{
-
-    width: 85%;
-    margin:0 0 15px 0;
-    padding: 7px;
-    border-radius: 6px;
-    opacity: 0.9;
-    border: 1px var(--b) solid;
-    outline: none;
-    transition:  all 0.4s;
-}
- input::placeholder{
- font-size: 14px;
-  }
-
-  input:focus{
-  border: 1px var(--c1)solid;
-  }
-
-  input:hover{
-    border: 1px var(--c1) solid;
-  }
- button{
-    background-color: var(--c1);
-    margin: 15px 0 0 0;
-    width: 38%;
-    padding: 10px;
-    border: none;
-    border-radius: 7px;
-    color: var(--w);
-    font-weight: bold;
-    cursor: pointer;
-    
-  
- }
-
-button:hover{
-    background:var(--c2);
-  color: var(--b);
+.texto p {
+    font-size: 16px;
+    margin: 20px 0;
+    border: 3px aqua solid;
 }
 
-p{
+.contenedor .register-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    color: var(--b);
+}
+
+.register-section .form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 3px rgb(9, 255, 0) solid;
+
+}
+
+.register-section .form-box h1 {
     text-align: center;
- color: var(--b);
+    font-size: 2em;
+    border: #f0e006 solid;
+    margin-top: 3%;
+
+
 }
 
-a{
-    text-decoration: none;
-    color: var(--c1);
-    font-weight: 600;
+.inpunt-box label {
+    top: 50%;
+    left: 0;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 3.5%;
+}
+
+.form-box.inpunt-box {
+    padding-top: 30px;
+    width: 340px;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+
+}
+
+.inpunt-box input {
+    width: 90%;
+    height: 80%;
+    outline: none;
+    padding: 7px;
+    margin-bottom: 15px;
+    margin-left: 3%;
+    border-radius: 6px;
+    border: 1px var(--b) solid;
+    transition: all .6s;
+    opacity: 0.9;
+
+}
+
+.inpunt-box input::placeholder {
+    font-size: 14px;
+    font-family: 'Times New Roman';
+}
+
+.inpunt-box input:focus {
+    border: 1px var(--c1)solid;
+}
+
+.inpunt-box input:hover {
+    border: 1px var(--c1)solid;
+}
+
+.button {
+    background: var(--c1);
+    width: 80%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--w);
+    margin: 8px 0 0 10%;
+    transition: all 0.2s;
 }
-a:hover{
-    text-decoration-line:underline;
 
+.button:hover {
+    background-color: var(--c2);
+    color: var(--b);
+}
+
+.iniciar-sesion {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px;
+}
+
+.iniciar-sesion p a {
+    color: var(--c1);
+    font-weight: 600px;
+    text-decoration: none;
+
+}
+
+.iniciar-sesion p :hover {
+    text-decoration: underline;
 }
