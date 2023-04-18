@@ -1,6 +1,6 @@
 
 export class DataFinance{
-
+    _id:String; 
     amount:String; 
     price:String;
     amountfinance:String;
@@ -14,10 +14,11 @@ export class DataFinance{
     cellphone:String;
     email:String;
 
-    constructor(amount:String = "", price:String = "", amountfinance:String ="",
+    constructor(_id:String = "",amount:String = "", price:String = "", amountfinance:String ="",
     typeofresidence:String="", credit:String = "", typeofcontract:String="", income:String = "",  zip:String = "",
      address:String = "",city:String = "", cellphone:String = "", email:String = "" ){
-
+        
+        this._id = _id;
         this.amount = amount;
         this.price = price;
         this.amountfinance = amountfinance;

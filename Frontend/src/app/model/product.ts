@@ -1,26 +1,72 @@
 import { PerfilCar } from "./search";
 
-export interface Specifications1{
-    mileage:string,
-    outsideColor:string,
-    consumption:string,
-    fueltype:string,
-    traction:string,
-    insidecolour:string,
-    engine:string,
-    transmission:string,
+export class Specifications1{
+    mileage:string;
+    outsideColor:string;
+    consumption:string;
+    fueltype:string;
+    traction:string;
+    insidecolour:string;
+    engine:string;
+    transmission:string;
+
+    constructor(mileage:string = "",
+        outsideColor:string = "",
+        consumption:string = "",
+        fueltype:string = "",
+        traction:string = "",
+        insidecolour:string = "",
+        engine:string = "",
+        transmission:string = ""){
+            
+            this.mileage = mileage;
+            this.outsideColor = outsideColor;
+            this.consumption = consumption;
+            this.fueltype = fueltype;
+            this.traction = traction;
+            this.insidecolour = insidecolour;
+            this.engine = engine;
+            this.transmission = transmission;
+
+    }
 }
-export interface Specifications2{
-    Combinedconsumption:string,
-    Consumptioncity:string,
-    Consumptionroad:string,
-    tanksize:string,      
+export class Specifications2{
+    Combinedconsumption:string;
+    Consumptioncity:string;
+    Consumptionroad:string;
+    tanksize:string;
+
+    constructor(Combinedconsumption:string = "",
+        Consumptioncity:string = "",
+        Consumptionroad:string = "",
+        tanksize:string = ""){
+            
+            this.Combinedconsumption = Combinedconsumption;
+            this.Consumptioncity = Consumptioncity;
+            this.Consumptionroad = Consumptionroad;
+            this.tanksize = tanksize;
+
+    }
+
+    
 }
-export interface Specifications3{
-    Transmission:string,
-    Traction:string,
-    Engine:string,
-    Power:string,
+export class Specifications3{
+    Transmission:string;
+    Traction:string;
+    Engine:string;
+    Power:string;
+
+    constructor(Transmission:string = "",
+        Traction:string = "",
+        Engine:string = "",
+        Power:string = ""){
+        
+        this.Transmission = Transmission;
+        this.Traction = Traction;
+        this.Engine = Engine;
+        this.Power = Power;
+
+}
 }
 export interface Specifications4{
     Reversingcamera:string,
