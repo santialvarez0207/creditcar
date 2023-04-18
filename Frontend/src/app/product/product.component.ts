@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Car } from '../model/product'
+import { ProductService } from '../service/product.service';
 
 @Component({
   selector: 'app-product',
@@ -7,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
   contador:number = 1;
-  constructor() { }
+
+  Cars:Car[] = [];
+  constructor(private productService:ProductService) {
+    this.Cars = productService.GetCars();
+   }
 
   ngOnInit(): void {
   }
+
   Hidden(){
     if(this.contador==0){
         document.querySelector("#MyModal")?.classList.add("visto"),
@@ -21,14 +28,15 @@ export class ProductComponent implements OnInit {
         this.contador=0
     }
   }
-  Dropdown(Pene:string){
-    let Pene2 = document.querySelector(`#${Pene}`);
+  
+  Dropdown(reason:string){
+    let reason2 = document.querySelector(`#${reason}`);
     
-    if(Pene2?.classList.contains("visto1")){
-      Pene2.classList.remove("visto1");
+    if(reason2?.classList.contains("visto1")){
+      reason2.classList.remove("visto1");
     }
     else{
-      Pene2?.classList.add("visto1")}
+      reason2?.classList.add("visto1")}
   }
 
 }

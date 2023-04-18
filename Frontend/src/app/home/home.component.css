@@ -4,7 +4,7 @@
     object-fit: cover;
 }
 .Carhome{
-    width: 1456px;
+    width: 100%;
 }
 .Section1-Search{
     background-color: var(--sw);

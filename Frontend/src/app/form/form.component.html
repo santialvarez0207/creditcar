@@ -1,0 +1,101 @@
+<div class="SidesOcult">
+    <div class="SideOcult1">
+
+    </div>
+    
+<section class="Allcontent" id="CardsSlides">
+    <div class="Slider1" id="Slider1">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿Cuanto es el monto inicial?</h2></div>
+        <form class="Input-Label">
+            <label for="">Monto</label>
+            <input type="text">
+        </form>
+        <div class="Title2"><h2>¿Qué precio tiene el vehículo?</h2></div>
+        <form class="Input-Label">
+            <label for="">Precio</label>
+            <input type="text">
+        </form>
+        <div class="NextModule0"><button (click)="Moveit('Slider1','visto')">Continuar</button></div>
+    </div>
+    <div class="Slider2">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿Cuanto dinero desea financiar?</h2></div>
+        <div class="Value"><h2 id="RangeValue">0</h2></div>
+        <div class="SliderValue"><input class="SliderBar" type="range" min="1000" max="50000" id="RangeSlide"></div>
+        <div class=""><p>($1,000 min hasta $50,000 Max)</p></div>
+        <div class="NextModule1"><button (click)="Moveit('Slider1','visto')">Volver</button><button (click)="Moveit('Slider1','visto1')">Continuar</button></div>
+    </div>
+    <div class="Slider3">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿En que tipo de residencia vives?</h2></div>
+        <div class="ButtonResidence"><button>Residencia propia</button></div>
+        <div class="ButtonResidence"><button>Residencia alquilada</button></div>
+        <div class="NextModule3"><button (click)="Moveit('Slider1','visto1')">Volver</button><button (click)="Moveit('Slider1','visto2')">Continuar</button></div>
+    </div>
+    <div class="Slider4">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿Cómo es tu credito?</h2></div>
+        <div class="ButtonCredit1"><button>Excelente(720 - 850)</button></div>
+        <div class="ButtonCredit1"><button>Bueno(680 - 719)</button></div>
+        <div class="ButtonCredit1"><button>Justo(640 - 679)</button></div>
+        <div class="ButtonCredit1"><button>Pobre(0 - 639)</button></div>
+        <div class="NextModule4"><button (click)="Moveit('Slider1','visto2')">Volver</button><button (click)="Moveit('Slider1','visto3')">Continuar</button></div>
+    </div>
+    <div class="Slider5">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿Qué tipo de contrato manejas?</h2></div>
+        <div class="ButtonContract"><button>Tiempo completo</button></div>
+        <div class="ButtonContract"><button>Mitad de tiempo</button></div>
+        <div class="ButtonContract"><button>Independiete</button></div>
+        <div class="ButtonContract"><button>Desempleado</button></div>
+        <div class="ButtonContract"><button>Otro</button></div>
+        <div class="NextModule5"><button (click)="Moveit('Slider1','visto3')">Volver</button><button (click)="Moveit('Slider1','visto4')">Continuar</button></div>
+    </div>
+    <div class="Slider6">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿Cuales son tu ingresos anuales?</h2></div>
+        <form class="Input-Label">
+            <label for="">Ingresos</label>
+            <input type="text">
+        </form>
+        <div class="NextModule6"><button (click)="Moveit('Slider1','visto4')">Volver</button><button (click)="Moveit('Slider1','visto5')">Continuar</button></div>
+    </div>
+    <div class="Slider7">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿Cuál es tu codigo Zip?</h2></div>
+        <form class="Input-Label">
+            <label for="">Zip</label>
+            <input type="text">
+        </form>
+        <div class="NextModule7"><button (click)="Moveit('Slider1','visto5')">Volver</button><button (click)="Moveit('Slider1','visto6')">Continuar</button></div>
+    </div>
+    <div class="Slider8">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿Cuál es tu dirección?</h2></div>
+        <form class="Input-Label">
+            <label for="">Dirección</label>
+            <input type="text">
+        </form>
+        <form class="Input-Label2" id="">
+            <label for="">Ciudad</label>
+            <input type="text">
+        </form>
+        <div class="NextModule8" ><button (click)="Moveit('Slider1','visto6')">Volver</button><button (click)="Moveit('Slider1','visto7')">Continuar</button></div>
+    </div>
+    <div class="Slider9">
+        <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+        <div class="Title1"><h2>¿Cuál es tu número de telefono y correo electronico?</h2></div>
+        <form class="Input-Label">
+            <label for="">Celular</label>
+            <input type="text">
+        </form>
+        <form class="Input-Label2">
+            <label for="">Correo electronico</label>
+            <input type="text">
+        </form>
+        <div class="NextModule9"><button (click)="Dissapear()">Consigue tu pre-financiamiento</button><button (click)="Moveit('Slider1','visto7')">Volver</button></div>
+    </div>
+</section>
+
+</div>

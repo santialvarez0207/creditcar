@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PerfilCar } from '../model/search';
+import { HomeService } from '../service/home.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  Cards:PerfilCar[] = [];
+  
+  constructor(private homeService:HomeService) { 
+    this.Cards = homeService.GetRecommendedCars();
+
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -1,0 +1,141 @@
+.SectionBackground{
+    width: 100%;
+    height: 600px;
+    overflow: hidden ;
+    
+}
+.backgroundFinancing{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+
+}
+.backgroundFinancing img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.DivUsual{
+    top: 400px;
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+}
+.BackgroundDifuse{
+    
+    position: absolute;
+
+    background-color: rgba(217, 217, 217, 0.6);
+    
+    width: 300px;
+    height: 70px;
+    z-index: -1;
+    filter: blur(10px);
+}
+.Logo-ButtonPreFinancing{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Logo-ButtonPreFinancing img{
+    width: 200px;
+    height: auto;
+}
+.ButtonPrefinancing{
+    margin: 10px 0 0 0;
+    background-color: var(--c1);
+    padding: 10px 50px;
+    text-decoration: none;
+    color: var(--w);
+    cursor: pointer;
+    border-radius: 15px;
+}
+.SectionInfoDest{
+    display: flex;
+
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: var(--w);
+    border-bottom: var(--c1) Solid 5px;
+    border-top: var(--c1) Solid 5px;
+    margin: 100px 0 0 0;
+    overflow: hidden;
+}
+.InfoDest-title-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+b{
+    color: var(--c1);
+}
+.title{
+    text-align: center;
+}
+.text{
+    text-align: center;
+}
+.SectionInfoCards{
+    margin: 120px 0 150px 0;
+    width: 100%;
+    height: 50%;
+}
+.DivInfoCards{
+    width: 100%;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+}
+.Card{
+    width: 250px;
+    height: 320px;
+    text-align: center;
+    border-bottom: var(--c1) solid 5px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--sw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Card-icon{
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c1);
+    width: 120px;
+    height: 120px;
+    border-radius: 300px;
+}
+.Card-icon img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.Card-text{
+    height: 60px;
+}
+
+.pene{
+    --c1: #E05200;
+    --c2: #FF8C49;
+    --r: #D13333;
+    --w: #F2F0F0;
+    --sw:#F6F6F6;
+    --b: #0D1311;
+    --g: #79747E;
+  }
