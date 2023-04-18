@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { DataFinance } from '../model/financeAccount';
-
+import { FinancingComponent } from '../financing/financing.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormSliderService {
 
+  SelectedDataFinance!: DataFinance;
+  dataFinance:DataFinance[] = [];
+
   private apiUrl = 'http://localhost:3000/api/dealer/check';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+
+  }
   
   configureSlider() {
     const output = document.getElementById("RangeValue") as HTMLElement;
@@ -23,7 +28,15 @@ export class FormSliderService {
     };
   }
 
-  SendAccountFinance(dataFinance:DataFinance){
+  PostAccountFinance(dataFinance:DataFinance){
     return this.http.post(this.apiUrl, dataFinance);
+  }
+
+  PuttAccountFinance(dataFinance:DataFinance){
+    return this.http.put(this.apiUrl + `/${dataFinance._id}`, dataFinance);
+  }
+
+  deleteAccountFinance(_id:String){
+    return this.http.delete(this.apiUrl + `/${_id}`);
   }
 }
