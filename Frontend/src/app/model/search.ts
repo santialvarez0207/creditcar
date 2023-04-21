@@ -1,21 +1,21 @@
 export class PerfilCar {
-    _id:string;
-    name:string;
-    price:string;
-    way:{state:string,city:string};
-    url:string;
+    _id:String;
+    information:{
+        id_dealer:String;
+        name: String;
+        price: String;
+        way:{state: String, city: String};
+        url:String;
+    }
+    constructor(_id:String = "",information:{id_dealer:String;
+    name: String;
+    price: String;
+    way:{state: String, city: String};
+    url:String;}={id_dealer: "", name: "", price: "", way:{state: "", city: ""},url: ""}){
 
-    constructor(_id:string = "",
-        name:string = "",
-        price:string = "", 
-        way:{state:string,city:string} = {state:"",city:""},
-        url:string = ""){
-
+            this.information = information;
             this._id = _id;
-            this.name = name;
-            this.price = price;
-            this.way = way;
-            this.url = url;
         }
     
+
 }

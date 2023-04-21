@@ -3,17 +3,20 @@ const { Schema } = mongoose;
 
 const customerSchema = new Schema(
   {
-    name:  String,
-    last_name:  Number,
-    email:  String,
-    phone_number:  String,
-    location:  {
-        address:  String,
-        country: String,
-        city: String
-    },
-    contact_ids:  [String],
-    registration_date: Date
+    amount:String,
+    price:String,
+    amountfinance:String,
+    typeofresidence:String,
+    credit:String,
+    typeofcontract:String,
+    income:String,
+    zip:String,
+    address: String,
+    city: String,
+    cellphone: String,
+    email: String,
+    name: String,
+    password: String,
   },
   {
     versionKey: false,

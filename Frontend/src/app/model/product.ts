@@ -120,31 +120,150 @@ export class Specifications6{
 }
 }
 
-export class Car{
-    information:PerfilCar;
-    pspecifications: Specifications1;
-    consumption:Specifications2;
-    performace:Specifications3;
-    security:Specifications4;
-    measures:Specifications5;
-    additional:Specifications6;
-
-    
-    constructor(information:PerfilCar,
-        pspecifications: Specifications1,
-        consumption:Specifications2,
-        performace:Specifications3,
-        security:Specifications4,
-        measures:Specifications5,
-        additional:Specifications6){
-    
-    this.information = information;
-    this.pspecifications = pspecifications;
-    this.consumption = consumption;
-    this.performace = performace;
-    this.security = security;
-    this.measures = measures;
-    this.additional = additional;
-
+export class Car {
+    visits: number;
+    information: {
+      id_dealer: string;
+      name: string;
+      price: string;
+      way: { state: string; city: string };
+      url: string;
+    };
+    pspecifications: {
+      mileage: string;
+      outsideColor: string;
+      consumption: string;
+      fueltype: string;
+      traction: string;
+      insidecolour: string;
+      engine: string;
+      transmission: string;
+    };
+    consumption: {
+      Combinedconsumption: string;
+      Consumptioncity: string;
+      Consumptionroad: string;
+      tanksize: string;
+    };
+    performace: {
+      Transmission: string;
+      Traction: string;
+      Engine: string;
+      Power: string;
+    };
+    security: {
+      Reversingcamera: string;
+      Blindspot: string;
+      Adaptivespeed: string;
+    };
+    measures: {
+      doors: string;
+      cargovolume: string;
+    };
+    additional: {
+      Heatedseats: string;
+      Bluetooth: string;
+      remotestart: string;
+      Systemnavigation: string;
+      SunroofHatch: string;
+      hatch: string;
+    };
+  
+    constructor( visits: number = 0,
+         information: {
+        id_dealer: string;
+        name: string;
+        price: string;
+        way: { state: string; city: string };
+        url: string;
+        } = {
+        id_dealer: "",
+        name: "",
+        price: "",
+        way: { state: "", city: "" },
+        url: "",
+        },
+         pspecifications: {
+        mileage: string;
+        outsideColor: string;
+        consumption: string;
+        fueltype: string;
+        traction: string;
+        insidecolour: string;
+        engine: string;
+        transmission: string;
+        } = {
+        mileage: "",
+        outsideColor: "",
+        consumption: "",
+        fueltype: "",
+        traction: "",
+        insidecolour: "",
+        engine: "",
+        transmission: "",
+        },
+         consumption: {
+        Combinedconsumption: string;
+        Consumptioncity: string;
+        Consumptionroad: string;
+        tanksize: string;
+        } = {
+        Combinedconsumption: "",
+        Consumptioncity: "",
+        Consumptionroad: "",
+        tanksize: "",
+        },
+         performace: {
+        Transmission: string;
+        Traction: string;
+        Engine: string;
+        Power: string;
+        } = {
+        Transmission: "",
+        Traction: "",
+        Engine: "",
+        Power: "",
+        },
+         security: {
+        Reversingcamera: string;
+        Blindspot: string;
+        Adaptivespeed: string;
+        } = {
+        Reversingcamera: "",
+        Blindspot: "",
+        Adaptivespeed: "",
+        },
+         measures: {
+        doors: string;
+        cargovolume: string;
+        } = {
+        doors: "",
+        cargovolume: "",
+        },
+         additional: {
+        Heatedseats: string;
+        Bluetooth: string;
+        remotestart: string;
+        Systemnavigation: string;
+        SunroofHatch: string;
+        hatch: string;
+        } = {
+        Heatedseats: "",
+        Bluetooth: "",
+        remotestart: "",
+        Systemnavigation: "",
+        SunroofHatch: "",
+        hatch: "",
+        }
+    ) {
+      this.visits = visits;
+      this.information = information;
+      this.pspecifications = pspecifications;
+      this.consumption = consumption;
+      this.performace = performace;
+      this.security = security;
+      this.measures = measures;
+      this.additional = additional;
     }
-}
+  }
+  

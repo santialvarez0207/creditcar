@@ -1,9 +1,9 @@
-<div class="SidesOcult">
+<div class="SidesOcult" id="CardsSlides">
     <div class="SideOcult1">
 
     </div>
 
-    <section class="Allcontent" id="CardsSlides">
+    <section class="Allcontent" >
         <div class="Slider1" id="Slider1">
             <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
             <div class="Title1">
@@ -28,9 +28,11 @@
                 <h2>¿Cuanto dinero desea financiar?</h2>
             </div>
             <div class="Value">
-                <h2 class="Value" id="RangeValue">0</h2>
+                <h2 class="Value" id="RangeValue">1000</h2>
             </div>
-            <div class="SliderValue"><input class="SliderBar" type="range" min="1000" max="50000" id="RangeSlide"></div>
+            <div class="SliderValue">
+                <input class="SliderBar" type="range" min="1000" max="50000" id="RangeSlide" value="1000">
+            </div>
             <div class="">
                 <p>($1,000 min hasta $50,000 Max)</p>
             </div>
@@ -138,34 +140,34 @@
                 <label for="">Confirma contraseña</label>
                 <input type="password">
             </form>
-            <div class="NextModule7"><button (click)="Dissapear()"  (click)="show()">Consigue tu pre-financiamiento</button><button
-                    (click)="Moveit('Slider1','visto7')">Volver</button></div>
+            <div class="NextModule7"><button (click)="Dissapear()">Consigue tu pre-financiamiento</button><button
+                    (click)="Moveit('Slider1','visto5')">Volver</button></div>
         </div>
     </section>
-    <div class="ResultsBody" id="results1">
-        <div class="Content1">
-            <div class="Title3"><h2>Este es tu porcentaje</h2></div>
-            <div class="Percent"><p>2</p><p>%</p></div>
-            <div class="P3"><p>Según tu porcentaje te dejamos aquí los dealers más recomendados</p></div>
-        </div>
-        <div class="Content2">
-            <div class="cards">
-                <div class="Content3">
-                    <img src="../../assets/CarProduct.svg" alt="">
-                    <p>Covert Chrysler Jeep Ram</p>
-                </div>
-                <div class="Content3">
-                    <img src="../../assets/CarProduct.svg" alt="">
-                    <p>Covert Chrysler Jeep Ram</p>
-                </div>
-                <div class="Content3">
-                    <img src="../../assets/CarProduct.svg" alt="">
-                    <p>Covert Chrysler Jeep Ram</p>
-                </div>
-                <div class="Content3">
-                    <img src="../../assets/CarProduct.svg" alt="">
-                    <p>Covert Chrysler Jeep Ram</p>
-                </div>
+</div>
+<div class="ResultsBody" id="results1" >
+    <div class="Content1" >
+        <div class="Title3"><h2>Este es tu porcentaje</h2></div>
+        <div class="Percent"><p>2</p><p>%</p></div>
+        <div class="P3"><p>Según tu porcentaje te dejamos aquí los dealers más recomendados</p></div>
+    </div>
+    <div class="Content2">
+        <div class="cards">
+            <div class="Content3">
+                <img src="../../assets/CarProduct.svg" alt="">
+                <p>Covert Chrysler Jeep Ram</p>
+            </div>
+            <div class="Content3">
+                <img src="../../assets/CarProduct.svg" alt="">
+                <p>Covert Chrysler Jeep Ram</p>
+            </div>
+            <div class="Content3">
+                <img src="../../assets/CarProduct.svg" alt="">
+                <p>Covert Chrysler Jeep Ram</p>
+            </div>
+            <div class="Content3">
+                <img src="../../assets/CarProduct.svg" alt="">
+                <p>Covert Chrysler Jeep Ram</p>
             </div>
         </div>
     </div>

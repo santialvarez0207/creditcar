@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../model/product'
 import { ProductService } from '../service/product.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -10,12 +11,18 @@ import { ProductService } from '../service/product.service';
 export class ProductComponent implements OnInit {
   contador:number = 1;
 
-  Cars:Car[] = [];
-  constructor(private productService:ProductService) {
-    this.Cars = productService.GetCars();
+  Cars:Car = new Car();
+
+  constructor(private productService:ProductService, private activatedRoute:ActivatedRoute) {
+    
    }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => { 
+      var idsession= params['id'];
+
+      this.productService.GetCar(idsession).subscribe(( res ) => { this.Cars = res as Car});
+      })
   }
 
   Hidden(){

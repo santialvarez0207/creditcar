@@ -10,6 +10,7 @@ import { ProductComponent } from './product/product.component';
 import { FinancingComponent } from './financing/financing.component';
 import { FormComponent } from './form/form.component';
 import { AnnounceComponent } from './announce/announce.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { AnnounceComponent } from './announce/announce.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

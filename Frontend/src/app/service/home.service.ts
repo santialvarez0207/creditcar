@@ -10,7 +10,7 @@ export class HomeService {
 
   SelectedPerfilCar: PerfilCar;
 
-  private apiUrl = 'http://localhost:3000/api/dealer/check'; 
+  private apiUrl = 'http://localhost:3000/api/car/popular'; 
 
   constructor(private http: HttpClient) { 
     this.SelectedPerfilCar = new PerfilCar();

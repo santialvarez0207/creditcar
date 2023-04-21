@@ -8,15 +8,28 @@ import { FinancingComponent } from '../financing/financing.component';
 })
 export class FormSliderService {
 
-  /*SelectedDataFinance!: DataFinance;
-  dataFinance:DataFinance[] = [];*/
+  SelectedDataFinance: DataFinance;
 
-  /*private apiUrl = 'http://localhost:3000/api/dealer/check';*/
+  private apiUrl = 'http://localhost:3000/api/dealer/check';
 
-  constructor(/*private http: HttpClient*/) { 
+  constructor(private http: HttpClient) { 
+
+    this.SelectedDataFinance = new DataFinance();
 
   }
   
+  PostAccountFinance(dataFinance:DataFinance){
+    return this.http.post(this.apiUrl, dataFinance);
+  }
+
+  PuttAccountFinance(dataFinance:DataFinance){
+    return this.http.put(this.apiUrl + `/${dataFinance._id}`, dataFinance);
+  }
+
+  deleteAccountFinance(_id:String){
+    return this.http.delete(this.apiUrl + `/${_id}`);
+  }
+
   configureSlider() {
     const output = document.getElementById("RangeValue") as HTMLElement;
     const slider1 = document.querySelector("#RangeSlide") as HTMLInputElement;
@@ -28,15 +41,5 @@ export class FormSliderService {
     };
   }
 
-  /*PostAccountFinance(dataFinance:DataFinance){
-    return this.http.post(this.apiUrl, dataFinance);
-  }
-
-  PuttAccountFinance(dataFinance:DataFinance){
-    return this.http.put(this.apiUrl + `/${dataFinance._id}`, dataFinance);
-  }
-
-  deleteAccountFinance(_id:String){
-    return this.http.delete(this.apiUrl + `/${_id}`);
-  }*/
+ 
 }
