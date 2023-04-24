@@ -1,13 +1,14 @@
-
 .contenedor {
   position: absolute;
-  margin: 50px 150px;
+  margin: 50px 200px;
   height: 480px;
   width: 65%;
   border-radius: 20px;
-  background:var(--sw);
+  background: var(--sw);
   border: 2px var(--c1) solid;
- }
+  overflow: hidden;
+}
+
 .item {
   position: absolute;
   top: 0;
@@ -15,7 +16,7 @@
   width: 53%;
   height: 100%;
   color: rgb(221, 227, 231);
-  background:var(--c1);
+  background: var(--c1);
   border-radius: 15px;
   padding: 0 20px 0 20px;
   display: flex;
@@ -24,7 +25,7 @@
 }
 
 .img {
- 
+
   width: 63%;
   height: 25%;
   margin-top: 5%;
@@ -52,6 +53,7 @@
   width: calc(100% - 58%);
   height: 100%;
   color: var(--b);
+
 }
 
 .login-section .form-box {
@@ -63,15 +65,40 @@
   height: 100%;
 
 }
-.login-section .form-box.register{
-transform: translate(430px);
+
+.login-section .form-box.register {
+  transform: translateX(430px);
+  transition: transform .6s ease;
+  transition-delay: 0s;
+
 }
+
+.login-section.active .form-box.register {
+  transform: translateX(0px);
+  transition-delay: .7s;
+}
+
+.login-section .form-box.login {
+  transform: translateX(0px);
+  transition: transform .6s ease;
+  transition-delay: .7s;
+}
+
+.login-section.active .form-box.login {
+  transform: translateX(430px);
+  transition-delay: .0s;
+}
+
+
+
+
 .login-section .form-box h2 {
   text-align: center;
   font-size: 2em;
-  margin-top: -5%;
-  padding-bottom: 10%;
- 
+  margin-top: 3%;
+  padding-bottom: 4%;
+
+
 }
 
 .inpunt-box label {
@@ -80,7 +107,6 @@ transform: translate(430px);
   font-size: 16px;
   font-weight: 500px;
   pointer-events: none;
- 
   margin-left: 3.5%;
 }
 
@@ -92,6 +118,7 @@ transform: translate(430px);
   position: relative;
 
 }
+
 .inpunt-box input {
   width: 90%;
   height: 80%;
@@ -103,15 +130,17 @@ transform: translate(430px);
   margin-left: 3%;
   border-radius: 6px;
   border: 1px var(--b) solid;
-transition: all .4s;
+  transition: all .4s;
 }
-.inpunt-box input:focus{
+
+.inpunt-box input:focus {
   border: 1px var(--c1) solid;
-   }
-   .inpunt-box input:hover{
-    border: 1px var(--c1) solid;
-     }
-   
+}
+
+.inpunt-box input:hover {
+  border: 1px var(--c1) solid;
+}
+
 .remember-password {
   font-size: 14px;
   font-weight: 500;
@@ -130,7 +159,7 @@ transition: all .4s;
   text-decoration: underline;
 }
 
-.boton {
+.button {
   background: var(--c1);
   width: 80%;
   height: 45px;
@@ -140,26 +169,30 @@ transition: all .4s;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  color:var(--w);
+  color: var(--w);
   box-shadow: 600;
   margin-left: 10%;
   transition: all 0.2s;
 }
-.boton:hover{
+
+.button:hover {
   background-color: var(--c2);
   color: var(--b);
 }
-.crear-cuenta{
+
+.crear-cuenta {
   font-size: 14.5px;
   text-align: center;
   margin: 25px;
 }
-.crear-cuenta p a{
-  color:var(--c1) ;
+
+.crear-cuenta p a {
+  color: var(--c1);
   font-weight: 600px;
   text-decoration: none;
- 
+
 }
-.crear-cuenta p a:hover{
+
+.crear-cuenta p a:hover {
   text-decoration: underline;
 }

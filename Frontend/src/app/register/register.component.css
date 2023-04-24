@@ -54,6 +54,7 @@
     width: calc(100% - 58%);
     height: 100%;
     color: var(--b);
+    border: 3px blue solid;
 }
 
 .register-section .form-box {

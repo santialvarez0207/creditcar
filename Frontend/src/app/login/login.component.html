@@ -68,9 +68,11 @@
                   <label for=""><input type="checkbox">Recuerdame</label>
                   <a href="R">Olvidaste tu contraseña</a>
                </div>
-               <button class="boton">INICIAR SESIÓN</button>
+               <button class="button">INICIAR SESIÓN</button>
                <div class="crear-cuenta">
-                  <p>¿No tienes cuenta? <a routerLink="/Register" class="Register">  Crear Cuenta</a></p>
+                  <!--
+                  <p>¿No tienes cuenta? <a routerLink="/Register" class="Register">  Crear Cuenta</a></p>-->
+                  <p>¿No tienes cuenta? <a routerLink="#" class="Register">  Crear Cuenta</a></p>
                </div>
               
            
@@ -89,14 +91,11 @@
 
                </div>
               
-              
-              
                <div class="inpunt-box">
                   <label for="">Numero de Telefono</label>
                   <input type="text" required placeholder="Ej:3216546572">
 
                </div>
-
 
                <div class="inpunt-box">
                   <label for="">Correo electronico</label>
@@ -108,14 +107,23 @@
                   <input type="password" required>
 
                </div>
-               
-
+            <!--
                <button class="boton">REGISTRATE</button>
             
                <div class="iniciar-sesion">
+                  <p>¿Ya tienes cuenta?<a routerLink="#" class="login">Iniciar Sesión</a></p>
+                  
                   <p>¿Ya tienes cuenta?<a routerLink="/login" class="login">Iniciar Sesión</a></p>
+               
+               </div>-->
+               
+
+               <button class="button">REGISTRATE</button>
+               <div class="crear-cuenta">
+                  <!--
+                  <p>¿No tienes cuenta? <a routerLink="/Register" class="Register">  Crear Cuenta</a></p>-->
+                  <p>¿Ya tienes cuenta? <a routerLink="#" class="login"> Iniciar Sesión</a></p>
                </div>
-              
            
             </form>
 
