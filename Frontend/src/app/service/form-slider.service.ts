@@ -8,26 +8,16 @@ import { FinancingComponent } from '../financing/financing.component';
 })
 export class FormSliderService {
 
-  SelectedDataFinance!: DataFinance;
-  dataFinance:DataFinance[] = [];
+  SelectedDataFinance: DataFinance;
 
   private apiUrl = 'http://localhost:3000/api/dealer/check';
 
   constructor(private http: HttpClient) { 
 
+    this.SelectedDataFinance = new DataFinance();
+
   }
   
-  configureSlider() {
-    const output = document.getElementById("RangeValue") as HTMLElement;
-    const slider1 = document.querySelector("#RangeSlide") as HTMLInputElement;
-
-    slider1.oninput = function() {
-      const value = ((slider1.valueAsNumber - Number(slider1.min)) / (Number(slider1.max) - Number(slider1.min))) * 100;
-      slider1.style.background = `linear-gradient(to right, #6b8dff 0%, #ff2a5f ${value}%, #fff ${value}%, #fff 100%)`;
-      output.innerHTML = slider1.value;
-    };
-  }
-
   PostAccountFinance(dataFinance:DataFinance){
     return this.http.post(this.apiUrl, dataFinance);
   }
@@ -39,4 +29,17 @@ export class FormSliderService {
   deleteAccountFinance(_id:String){
     return this.http.delete(this.apiUrl + `/${_id}`);
   }
+
+  configureSlider() {
+    const output = document.getElementById("RangeValue") as HTMLElement;
+    const slider1 = document.querySelector("#RangeSlide") as HTMLInputElement;
+
+    slider1.oninput = function() {
+      const value = ((slider1.valueAsNumber - Number(slider1.min)) / (Number(slider1.max) - Number(slider1.min))) * 100;
+      slider1.style.background = `linear-gradient(to right, #6b8dff 0%, #ff2a5f ${value}%, #fff ${value}%, #fff 100%)`;
+      output.innerHTML = slider1.value;
+    };
+  }
+
+ 
 }

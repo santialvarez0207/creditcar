@@ -1,17 +1,13 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const DealerSchema = new Schema(
+const AdminSchema = new Schema(
   {
     user:  String,
     password: String,
     email: String,
     phone_number:  String,
-    location:  {
-        address:  String,
-        country: String,
-        city: String
-    },
+    permits: [String],
     contact_ids:  [String],
     registration_date: Date,
 
@@ -34,4 +30,4 @@ const DealerSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Dealer", DealerSchema);
+module.exports = mongoose.model("Admin", DealerSchema);

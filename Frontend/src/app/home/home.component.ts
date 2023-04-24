@@ -5,14 +5,17 @@ import { HomeService } from '../service/home.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: [HomeService]
 })
 export class HomeComponent implements OnInit {
 
   Cards:PerfilCar[] = [];
-  
+
   constructor(private homeService:HomeService) { 
-    this.Cards = homeService.GetRecommendedCars();
+    this.homeService.GetRecommendedCars().subscribe(( res ) => { this.Cards = res as PerfilCar[]
+    console.log(res)
+    });
 
   }
 

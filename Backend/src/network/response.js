@@ -1,8 +1,8 @@
 exports.success = function (req, res, message, status=200) {
-    res.status(status).send({
-        error: "",
-        body: message
-    })
+
+    res.status(status).send(
+        message
+    )
 }
 
 exports.error = function (req, res, message, details, status=400){

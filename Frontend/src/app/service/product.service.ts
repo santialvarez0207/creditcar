@@ -8,15 +8,17 @@ import { Car } from '../model/product';
 })
 export class ProductService {
 
-  SelectedCar!: Car;
-  Cars: Car[] = [];
+  SelectedCar: Car;
+  
+  private apiUrl = 'http://localhost:3000/api/car'; 
 
-  private apiUrl = 'http://localhost:3000/api/dealer/check'; 
-
-  constructor(private http: HttpClient) { 
-
+  constructor(private http: HttpClient) {
+    this.SelectedCar = new Car();
   }
   GetCars() {
-    return this.http.get(this.apiUrl) as unknown as Car[];
+    return this.http.get<Car[]>(this.apiUrl);
+  }
+  GetCar(id:string) {
+    return this.http.get<Car>(this.apiUrl + `/${id}`);
   }
 }

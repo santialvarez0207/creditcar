@@ -3,6 +3,7 @@
         <div class="Section1-CarBackground">
             <video class="Carhome" src="../../assets/pexels-pavel-danilyuk-6157913-1920x1080-30fps.mp4" autoplay muted loop></video>
         </div>
+        <div class="DivSearch">
         <div class="Section1-Search">
             <div class="SearchAdvance">
                 <div class="Advance-New-Used">
@@ -51,6 +52,7 @@
                 <p>¡No lo pienses más vamos a encontrar el auto indicado para ti y tu viaje!</p>
             </div>
         </div>
+    </div>
     </section>
     <section class="Section2">
         <div class="TitlePopular">
@@ -65,22 +67,16 @@
                             <img src="../../assets/Audi.svg" alt="">
                         </div>
                         <div class="textCards">
-                            <p>{{Card.name}}</p>
+                            <p>{{Card.information.name}}</p>
                         </div>
                         <div class="textCards">
-                            <p>{{Card.price}}</p>
+                            <p>{{Card.information.price}}</p>
                         </div>
                         <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                            <p class="Textlocate">{{Card.way.state}}, {{Card.way.city}}</p>
+                            <p class="Textlocate">{{Card.information.way.state}}, {{Card.information.way.city}}</p>
                         </div>
-                        <div class="ButtonShowMore"><a href="{{Card.url}}">Ver más</a></div>
+                        <div class="ButtonShowMore"><a routerLink="/product/{{Card._id}}">Ver más</a></div>
                     </div>
-                </div>
-                <div class="Circles">
-                    <div class="Circles1"></div>
-                    <div class="Circles2"></div>
-                    <div class="Circles3"></div>
-                    <div class="Circles4"></div>
                 </div>
             </div>
         </div>
