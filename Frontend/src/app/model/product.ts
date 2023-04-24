@@ -123,6 +123,7 @@ export class Specifications6{
 export class Car {
     visits: number;
     information: {
+      nameDealer:string;
       id_dealer: string;
       name: string;
       price: string;
@@ -171,12 +172,14 @@ export class Car {
   
     constructor( visits: number = 0,
          information: {
+        nameDealer:string;
         id_dealer: string;
         name: string;
         price: string;
         way: { state: string; city: string };
         url: string;
         } = {
+        nameDealer: "",
         id_dealer: "",
         name: "",
         price: "",

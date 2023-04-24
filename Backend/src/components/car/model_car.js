@@ -6,6 +6,7 @@ const CarSchema = new Schema(
   {
     visits: Number,
     information: {    
+        nameDealer: String,
         id_dealer: {type: 'String', required: true},
         name: String,
         price: String,
