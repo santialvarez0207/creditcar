@@ -6,6 +6,13 @@
 .Carhome{
     width: 100%;
 }
+.DivSearch{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: fit-content;
+}
 .Section1-Search{
     background-color: var(--sw);
     position: absolute;
@@ -15,8 +22,6 @@
     border-bottom: solid var(--c2) 4px;
     width: 75%;
     height: 24%;
-    top: 750px;
-    left: 180px;
     overflow-y: hidden;
     box-sizing: border-box;
     border-radius: 5px;
