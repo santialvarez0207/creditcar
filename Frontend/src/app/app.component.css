@@ -3,6 +3,11 @@
 }
 #User{
     display:none;
+    justify-content: center;
+    align-items: center;
+}
+i{
+    cursor: pointer;
 }
 .BodyNav{
     background-color: var(--sw);

@@ -9,9 +9,7 @@ export class AppComponent {
   title = 'Frontend';
   name:String = "";
   ngOnInit(): void {
-
-
-    
+      this.CheckUser()
   }
 
   CheckUser(){

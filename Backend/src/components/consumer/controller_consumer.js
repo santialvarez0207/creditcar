@@ -44,6 +44,7 @@ async function checkUser(email, password) {
                 id: user.id,
                 session: true
             };
+            console.log(sesion)
             return sesion;
         } else {
             throw new Error("datos incorrectos");

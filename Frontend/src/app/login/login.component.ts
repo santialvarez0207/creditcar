@@ -43,23 +43,22 @@ export class LoginComponent implements OnInit {
   });
 
   sendR():any{
-      var new_user: User = new User()
-
-      new_user.email = this.formRegister.value.email
-      new_user.password= this.formRegister.value.password
-      new_user.name = this.formRegister.value.name
-      new_user.cellphone= this.formRegister.value.cellphone
-
-      /*this.userService.postUser(new_user) .subscribe(res=>{
-        let usuarioTemporal = res as Temporal
-        localStorage.setItem('persona', JSON.stringify(usuarioTemporal));
-        window.location.replace("http://localhost:4200/porfile");
-      })*/
-
-
-      //window.location.replace("http://localhost:4200/about");
-    
-    //this.formRegistro.reset()
+      var new_user = new User();
+        new_user.email= this.formRegister.value.email
+        new_user.password= this.formRegister.value.password
+        new_user.name= this.formRegister.value.name
+        new_user.cellphone= this.formRegister.value.cellphone
+      
+      this.userService.createUser(new_user).subscribe(res => {
+        if (res) {
+          window.location.replace("http://localhost:4200/login");
+          
+        }else{
+          console.log("no existe el correo digitado")
+        }
+      })
+      this.formRegister.reset()
+  
   }
   sendL():any{
     let email = this.formLogin.value.email
@@ -71,7 +70,6 @@ export class LoginComponent implements OnInit {
       if (usuarioTemporal) {
         localStorage.setItem('User', JSON.stringify(usuarioTemporal));
         window.location.replace("http://localhost:4200/home");
-        //persona = JSON.parse(localStorage.getItem('persona'))
       
       }else{
         console.log("no existe el correo digitado")

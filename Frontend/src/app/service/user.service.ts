@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Temporal } from '../model/temporal';
+import { User } from '../model/customer';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +18,9 @@ export class UserService {
       .set('password', password);
     console.log(params);
     return this.http.get<Temporal>(this.apiUrl + "/check" , {params}); 
+  }
+  createUser(user: User){
+    return this.http.post(this.apiUrl, user);
   }
 }
 
