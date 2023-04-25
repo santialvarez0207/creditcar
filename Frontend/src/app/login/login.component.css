@@ -1,6 +1,15 @@
+section{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .contenedor {
   position: absolute;
-  margin: 50px 200px;
+  top: 20%;
   height: 480px;
   width: 65%;
   border-radius: 20px;
