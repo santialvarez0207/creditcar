@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../model/product';
-import { HomeService } from '../service/home.service';
+import { ProductService } from '../service/product.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { PerfilCar } from '../model/search';
 
 @Component({
   selector: 'app-seeker',
@@ -11,14 +10,14 @@ import { PerfilCar } from '../model/search';
 })
 export class SeekerComponent implements OnInit {
 
-  Cards:PerfilCar[] = [];
+  Cards:Car[] = [];
 
-  constructor(private homeService:HomeService, private activatedRoute:ActivatedRoute) {
+  constructor(private productService:ProductService, private activatedRoute:ActivatedRoute) {
 
    }
 
   ngOnInit(): void {
-    this.homeService.GetRecommendedCars().subscribe(( res ) => { this.Cards = res as PerfilCar[]
+    this.productService.GetCars().subscribe(( res ) => { this.Cards = res as Car[]
       console.log(res)
       });
   }
