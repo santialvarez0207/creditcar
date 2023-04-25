@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
     loginsec?.classList.remove('active')
    })
    
+
   }
 
 
