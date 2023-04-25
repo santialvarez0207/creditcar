@@ -1,10 +1,12 @@
 .Section1-CarBackground{
     box-sizing: border-box;
     width: 100%;
-    object-fit: cover;
+    
 }
 .Carhome{
     width: 100%;
+    object-fit: cover;
+    height: 700px;
 }
 .DivSearch{
     width: 100%;
@@ -64,7 +66,9 @@
     grid-template-columns:auto auto auto;
     padding: 0 30px;
     width: 40%;
-    
+}
+.Info-search{
+    width: 500px;
 }
 .Section2{
     width: 100%;

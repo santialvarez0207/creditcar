@@ -19,10 +19,7 @@ export class ProductService {
     return this.http.get<Car[]>(this.apiUrl);
   }
   GetCar(id:string) {
-    console.log(id);
-    let mensaje = this.http.get<Car>(this.apiUrl + `/${id}`);
-    console.log(mensaje);
+    return this.http.get<Car>(this.apiUrl + `/${id}`);
 
-    return mensaje;
   }
 }

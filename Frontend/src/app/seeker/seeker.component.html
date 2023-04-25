@@ -66,21 +66,22 @@
     </div>
     <div class="CarrouselProducts">
         <div class="Cards">
-            <div class="Cardsproducts">
+            <div class="Cardsproducts" *ngFor="let Card of Cards">
                 <div class="ImageProduct">
                     <div class="ImageCarProduct">
                         <img src="../../assets/Audi.svg" alt="">
                     </div>
                     <div class="textCards">
-                        <p>$23'000.000</p>
+                        <p>{{Card.information.name}}
+                        </p>
                     </div>
                     <div class="textCards">
-                        <p>Audi R8 Coupe</p>
+                        <p>{{Card.information.price}}</p>
                     </div>
                     <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                        <p class="Textlocate">California, minesota</p>
+                        <p class="Textlocate">{{Card.information.way.state}}, {{Card.information.way.city}}</p>
                     </div>
-                    <div class="ButtonShowMore"><a routerLink="/product">Ver más</a></div>
+                    <div class="ButtonShowMore"><a routerLink="/product/{{Card._id}}">Ver más</a></div>
                 </div>
             </div>
         </div>

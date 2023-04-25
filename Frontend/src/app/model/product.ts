@@ -171,7 +171,7 @@ export class Car {
     };
   
     constructor( visits: number = 0,
-         information: {
+        information: {
         nameDealer:string;
         id_dealer: string;
         name: string;
