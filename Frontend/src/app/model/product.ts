@@ -10,7 +10,8 @@ export class Specifications1{
     engine:string;
     transmission:string;
 
-    constructor(mileage:string = "",
+    constructor(
+        mileage:string = "",
         outsideColor:string = "",
         consumption:string = "",
         fueltype:string = "",
@@ -122,6 +123,7 @@ export class Specifications6{
 
 export class Car {
     visits: number;
+    _id:String;
     information: {
       nameDealer:string;
       id_dealer: string;
@@ -171,7 +173,8 @@ export class Car {
     };
   
     constructor( visits: number = 0,
-         information: {
+        _id:String = "",
+        information: {
         nameDealer:string;
         id_dealer: string;
         name: string;
@@ -259,6 +262,7 @@ export class Car {
         hatch: "",
         }
     ) {
+      this._id = _id;
       this.visits = visits;
       this.information = information;
       this.pspecifications = pspecifications;

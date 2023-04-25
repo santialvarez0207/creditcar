@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     loginsec?.classList.remove('active')
    })
    
+
   }
 
   formLogin = new FormGroup({

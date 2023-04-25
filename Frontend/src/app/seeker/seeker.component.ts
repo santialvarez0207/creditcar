@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Car } from '../model/product';
+import { ProductService } from '../service/product.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-seeker',
@@ -8,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeekerComponent implements OnInit {
 
-  constructor() { }
+  Cards:Car[] = [];
+
+  constructor(private productService:ProductService, private activatedRoute:ActivatedRoute) {
+
+   }
 
   ngOnInit(): void {
+    this.productService.GetCars().subscribe(( res ) => { this.Cards = res as Car[]
+      console.log(res)
+      });
   }
 
 }

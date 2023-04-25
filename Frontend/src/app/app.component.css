@@ -1,6 +1,9 @@
 .logo img{
     width:120px;
 }
+#User{
+    display:none;
+}
 .BodyNav{
     background-color: var(--sw);
     display: flex;

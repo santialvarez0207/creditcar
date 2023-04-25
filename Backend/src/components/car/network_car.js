@@ -17,6 +17,17 @@ router.post('/', (req, res) =>{
         })
 })
 
+router.get('/', (req, res) =>{
+    
+    controller.getCars()
+        .then((cars)=>{
+            response.success(req, res,cars,201)
+        })
+        .catch(()=>{
+            response.error(req, res,"no se obtuvieron los datos")
+        })
+})
+
 router.get('/popular', (req, res) =>{
     
     controller.getPopularCars()

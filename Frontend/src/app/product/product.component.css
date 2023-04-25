@@ -183,6 +183,8 @@
     height: 30px;
     clip-path: polygon(0% 42%, 98% 42%, 92% 100%, 0% 100%);
     background-color: var(--c1);
+    
+    
 }
 .Especification-Section2{
     width: 660px;
@@ -212,6 +214,7 @@ ol{
     background-color: var(--c1);
     justify-content: end;
     cursor: pointer;
+    
 }
 .Details{
     height: 0;
@@ -235,12 +238,4 @@ ol{
     margin-bottom: -10px;
     color: var(--c1);
 }
-.pene{
-    --c1: #E05200;
-    --c2: #FF8C49;
-    --r: #D13333;
-    --w: #F2F0F0;
-    --sw:#F6F6F6;
-    --b: #0D1311;
-    --g: #79747E;
-  }
+ 

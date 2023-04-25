@@ -8,21 +8,20 @@ import { Car } from '../model/product';
 })
 export class ProductService {
 
-  SelectedCar: Car;
+
   
   private apiUrl = 'http://localhost:3000/api/car'; 
 
   constructor(private http: HttpClient) {
-    this.SelectedCar = new Car();
+    
   }
   GetCars() {
-    return this.http.get<Car[]>(this.apiUrl);
+    let message = this.http.get<Car[]>(this.apiUrl);
+    console.log(message)
+    return message;
   }
   GetCar(id:string) {
-    console.log(id);
-    let mensaje = this.http.get<Car>(this.apiUrl + `/${id}`);
-    console.log(mensaje);
+    return this.http.get<Car>(this.apiUrl + `/${id}`);
 
-    return mensaje;
   }
 }

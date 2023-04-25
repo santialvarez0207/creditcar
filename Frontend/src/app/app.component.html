@@ -14,8 +14,12 @@
         </div>
     </div>
     <div class="NavSecondHalf">
-        <div class="Log-in">
+        <div class="Log-in" id="Log-in">
             <a routerLink="/login">Iniciar sesión</a>
+        </div>
+        <div class="Log-in" id="User">
+            <a routerLink="">{{name}}</a>
+            <i (click)="CloseSession()" class="material-icons">close</i>
         </div>
     </div>
 </nav>
