@@ -29,7 +29,8 @@ function addCar(body){
 
 async function getCar(id) {
     try {
-        let car = await store.getCar({id_: id});
+        let car = await store.getCar({_id: id});
+        console.log(car);
         return car
     } catch (error) {
         throw error;
