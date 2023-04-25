@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
    
     const loginsec=document.querySelector('.login-section')
     const loginlink=document.querySelector('.login-link')
-    const register=document.querySelector('.Register')
+    const register=document.querySelector('.Register-link')
     register?.addEventListener('click',()=>{
     loginsec?.classList.add('active')
    })
