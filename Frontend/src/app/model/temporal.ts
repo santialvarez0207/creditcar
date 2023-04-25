@@ -2,15 +2,15 @@ export class Temporal{
 
     constructor(
         id: string ="", 
-        user: string ="", 
+        name: string ="", 
         session: boolean = true,
 
       ) {
       this.id = id
-      this.user = user
+      this.name = name
       this.session = session
     }
-    user: string;
+    name: string;
     id: string;
     session: boolean;
   }

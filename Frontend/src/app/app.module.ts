@@ -11,7 +11,7 @@ import { FinancingComponent } from './financing/financing.component';
 import { FormComponent } from './form/form.component';
 import { AnnounceComponent } from './announce/announce.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   
   ],
   providers: [],

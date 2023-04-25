@@ -34,12 +34,13 @@ function addUser(body){
 
 
 
-async function checkUser(user, contraseña){
+async function checkUser(email, password) {
     try {
-        let user = await store.getUser({user: user, password: contraseña});
-        if(user && contraseña && user != null){
+        console.log(email,password)
+        let user = await store.getUser({email: email, password: password});
+        if(email && password && user != null){
             let sesion = {
-                user: user.user,
+                name: user.name,
                 id: user.id,
                 session: true
             };

@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 router.get('/check', (req, res) =>{
-    controller.checkUser(req.query.user, req.query.password)
+    controller.checkUser(req.query.email, req.query.password)
         .then((sesion)=>{
             response.success(req, res,sesion,201)
         })
