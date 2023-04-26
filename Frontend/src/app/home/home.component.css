@@ -1,12 +1,14 @@
 .Section1-CarBackground{
     box-sizing: border-box;
     width: 100%;
+    height: 584px;
+    border-bottom: 4px var(--c2) solid;
     
 }
 .Carhome{
     width: 100%;
     object-fit: cover;
-    height: 700px;
+    height: 580px;
 }
 .DivSearch{
     width: 100%;
@@ -95,6 +97,7 @@
     justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
+    padding: 0 50px;
     
 }
 .Cardsproducts{

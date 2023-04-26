@@ -3,17 +3,18 @@
 }
 .section1-backgroundCar{
     width: 100%;
-    height: 600px;
+    height: 524px;
+    border-bottom: 4px var(--c2) solid;
 }
 .CarProduct{
     object-fit: cover;
     object-position: 0 -800px;
     width: 100%;
-    height: 600px;
+    height: 524px;
 }
 .section1-Photo-InfoImportant{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap; 
     position: absolute;
     width: 100%;
     height: 400px;

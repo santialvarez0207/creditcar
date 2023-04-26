@@ -1,10 +1,13 @@
 .Section1-CarBackground{
     box-sizing: border-box;
     width: 100%;
-    object-fit: cover;
+    height: 524px;
+    border-bottom: 4px var(--c2) solid;
 }
 .CarSeeker{
     width:100%;
+    object-fit: cover;
+    height: 520px;
 }
 .Section1-Search{
     background-color: var(--sw);
@@ -15,7 +18,7 @@
     border-bottom: solid var(--c2) 4px;
     width: 75%;
     height: 24%;
-    top: 600px;
+    top: 480px;
     left: 180px;
     overflow-y: hidden;
     box-sizing: border-box;

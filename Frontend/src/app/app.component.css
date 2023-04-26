@@ -8,6 +8,7 @@
 }
 i{
     cursor: pointer;
+    margin: 0px 8px;
 }
 .BodyNav{
     background-color: var(--sw);
@@ -19,8 +20,8 @@ i{
     height: 60px;
     border-bottom: 4px var(--c2) solid;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    position: relative;
-    z-index: 200;
+    position: sticky;
+    z-index: 5000;
 }
 .NavFirstHalf{
     display: flex;
