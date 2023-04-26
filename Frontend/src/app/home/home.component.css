@@ -3,7 +3,7 @@
     width: 100%;
     height: 584px;
     border-bottom: 4px var(--c2) solid;
-    
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .Carhome{
     width: 100%;
