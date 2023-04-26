@@ -124,13 +124,15 @@
 }
 .CarrouselProducts{
     margin: 40px 0 0 0;
+    display: flex;
     width: 100%;
+
 }
 .Cards{
+    width: 100%;
+    justify-content: center;
     display: flex;
-    
-    flex-flow: row wrap;
-    padding: 0 80px;
+    flex-flow: row wrap; 
 }
 .Cardsproducts{
     width: 275px;

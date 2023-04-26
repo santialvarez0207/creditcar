@@ -66,8 +66,8 @@
     width: 100%;
     height: 300px;
     background-color: var(--w);
-    border-bottom: var(--c1) Solid 5px;
-    border-top: var(--c1) Solid 5px;
+    border-bottom: var(--c2) Solid 5px;
+    border-top: var(--c2) Solid 5px;
     margin: 100px 0 0 0;
     overflow: hidden;
 }
