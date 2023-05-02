@@ -26,5 +26,16 @@ router.post('/', (req, res) =>{
         })
 })
 
+router.get('/:id', (req, res) =>{
+    let id = req.params.id
+    controller.getUser(id)
+        .then((user)=>{
+            response.success(req, res,user,201)
+        })
+        .catch(()=>{
+            response.error(req, res,"no se obtuvieron los datos")
+        })
+})
+
 
 module.exports = router

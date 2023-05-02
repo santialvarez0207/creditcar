@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,8 +10,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Frontend';
   name:String = "";
+
+  idUser:string = ""; 
+
+  constructor(){
+
+  }
+
   ngOnInit(): void {
       this.CheckUser()
+      console.log(this.idUser, "hola")
   }
 
   CheckUser(){
@@ -17,6 +27,7 @@ export class AppComponent {
 
     if(x!=null){
       let User = JSON.parse(x);
+      this.idUser = User.id;
       if(User){
         this.name = User.name;
         let element = document.getElementById("User");
@@ -32,4 +43,5 @@ export class AppComponent {
     localStorage.removeItem("User");
     window.location.replace("http://localhost:4200/home");
   }
+
 }

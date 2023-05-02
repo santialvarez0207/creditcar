@@ -1,0 +1,84 @@
+<div class="Body">
+    <section class="Body-PerfilUser">
+        <div class="PerfilUser-CommonData">
+            <div>
+                <p>{{User.name}}</p>
+            </div>
+            <div>
+                <p>{{User.cellphone}}</p>
+            </div>
+            <img class="imgPerfil" src="" alt="">
+            <div>
+                <p>{{User.email}}</p>
+            </div>
+            <div>
+                <p>{{User.city}}</p>
+            </div>
+        </div>
+        <div class="PerfilUser-Nav">
+            <p class="Per" (click)="Hide(1)" id="#Sex">Datos personales</p>
+            <p class="Per" (click)="Hide(2)" id="#Sex1">Financiamiento</p>
+            <p class="Per" (click)="Hide(3)" id="#Sex2">Contraseña</p>
+        </div>
+        <div class="PerfilUser-totalinfo" id="Div1" *ngIf="visibleVar==1">
+            <div class="content">
+                <p>{{User.cellphone}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.address}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.city}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.email}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.zip}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+        </div>
+        <div class="PerfilUser-totalinfo" id="Div2" *ngIf="visibleVar==2">
+            <div class="content">
+                <p>{{User.amount}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.price}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.typeofcontract}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.typeofresidence}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.credit}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.income}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+        </div>
+        <div class="PerfilUser-totalinfo-Password" id="Div3" *ngIf="visibleVar==3"> 
+            <div class="totalinfo-h2">
+                <h2>Cambiar contraseña</h2>
+            </div>
+            <form class="password">
+                <label class="label" for="">Nueva contraseña</label>
+                <label  class="label" for="">Confirme contraseña</label>
+                <input class="inputPass" type="text" name="" id="">
+                <input class="inputPass" type="text" name="" id="">
+            </form>
+            <a>Cambiar</a>
+        </div>
+    </section>
+</div>

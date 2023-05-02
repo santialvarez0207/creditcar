@@ -7,7 +7,6 @@ async function getUser(parameter){
     return user
 }
 
-
 async function addUser(user){
     let Muser = new Model(user)
     await Muser.save()

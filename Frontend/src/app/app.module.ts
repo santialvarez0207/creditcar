@@ -12,6 +12,8 @@ import { FormComponent } from './form/form.component';
 import { AnnounceComponent } from './announce/announce.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PerfilUserComponent } from './perfil-user/perfil-user.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductComponent,
     FinancingComponent,
     FormComponent,
-    AnnounceComponent
+    AnnounceComponent,
+    PerfilUserComponent
   ],
   imports: [
     BrowserModule,

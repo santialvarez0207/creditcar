@@ -22,5 +22,9 @@ export class UserService {
   createUser(user: User){
     return this.http.post(this.apiUrl, user);
   }
+
+  getUser(id:string){
+    return this.http.get<User>(this.apiUrl + `/${id}`);
+  }
 }
 

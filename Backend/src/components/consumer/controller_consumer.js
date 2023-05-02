@@ -32,6 +32,15 @@ function addUser(body){
 
 }
 
+async function getUser(id) {
+    try {
+        let user = await store.getUser({_id: id});
+        console.log(user);
+        return user
+    } catch (error) {
+        throw error;
+    }
+}
 
 
 async function checkUser(email, password) {
@@ -57,5 +66,7 @@ async function checkUser(email, password) {
 
 module.exports = {
     addUser,
-    checkUser 
+    checkUser,
+    getUser,
+    
 }
