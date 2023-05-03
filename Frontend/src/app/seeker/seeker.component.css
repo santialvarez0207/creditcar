@@ -156,10 +156,23 @@
     margin: -20px 0 0 0;
     display: flex;
     flex-flow: row wrap;
+    padding-left: 10px;
 }
 .Locate img{
     margin: 0 5px 0 0;
 
+}
+.textCards img{
+    width: 26px;
+    margin-right: 6px;
+
+}
+.textCards{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding-left: 12px;
 }
 .ButtonShowMore a{
     background-color: var(--c1);

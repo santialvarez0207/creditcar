@@ -13,8 +13,9 @@ export class User{
         typeofcontract:String ="",
         income:String="",
         zip:String="",
-        address: String ="",
+        state: String ="",
         city: String="",
+        age:number = 0,
         _id: String=""
       ) {
         this.amount = amount;
@@ -25,14 +26,16 @@ export class User{
         this.typeofcontract= typeofcontract
         this.income = income
         this.zip= zip
-        this.address= address
+        this.state= state
         this.city= city
         this.cellphone = cellphone
         this.email = email
         this.name= name
         this.password= password
         this._id = _id
+        this.age = age
     }
+    age:number
     amount:String
     price:String
     amountfinance:String
@@ -41,7 +44,7 @@ export class User{
     typeofcontract:String
     income:String
     zip:String
-    address: String
+    state: String
     city: String
     cellphone: String
     email: String

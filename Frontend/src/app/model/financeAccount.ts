@@ -7,14 +7,14 @@ export class DataFinance{
     typeofresidence:string; 
     credit:string;
     typeofcontract:string;
-    income:string;  
+    income:number;  
     zip:string;
-    country: string
+    state: string
     city:string;
 
     constructor(age:number= 0, amount:number = 0, price:number = 0, amountfinance:number =0,
-    typeofresidence:string="", credit:string = "", typeofcontract:string="", income:string = "",  zip:string = "",
-    country: string = "",city:string = ""){
+    typeofresidence:string="", credit:string = "", typeofcontract:string="", income:number = 0,  zip:string = "",
+    state: string = "",city:string = ""){
         
         this.age = age; 
         this.amount = amount;
@@ -25,7 +25,7 @@ export class DataFinance{
         this.typeofcontract = typeofcontract;
         this.income = income;
         this.zip = zip;
-        this.country = country;
+        this.state = state;
         this.city = city;
     }
 }
@@ -35,6 +35,6 @@ export class infoDealer{
     _id: string = ""
     name: string = ""
     percent: number = 0
-    country: string = ""
+    state: string = ""
     city: string = ""
 }

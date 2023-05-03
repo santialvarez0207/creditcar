@@ -10,7 +10,7 @@ export class FormSliderService {
 
   SelectedDataFinance: DataFinance;
 
-  private apiUrl = 'http://localhost:3000/api/dealer/check';
+  private apiUrl = 'http://localhost:3000/api/dealer';
 
   constructor(private http: HttpClient) { 
 
@@ -52,10 +52,10 @@ export class FormSliderService {
       .set('typeofcontract', form.typeofcontract)
       .set('income', form.income)
       .set('zip', form.zip)
-      .set('country', form.country)
+      .set('country', form.state)
       .set('city', form.city)
 
-      return this.http.get<infoDealer[]>(this.apiUrl + "/check" , {params}); 
+      return this.http.get<infoDealer[]>(this.apiUrl + "/dealerProbability" , {params}); 
   }
  
 }

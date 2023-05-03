@@ -1,173 +1,149 @@
-<div class="SidesOcult" id="CardsSlides">
+     <div class="SidesOcult" id="CardsSlides">
     <div class="SideOcult1">
 
     </div>
 
-    <section class="Allcontent" >
-        <div class="Slider1" id="Slider1">
-            <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
-            <div class="Title1">
-                <h2>¿Cuanto es el monto inicial?</h2>
+    <section class="Allcontent">
+        <form [formGroup]="FinancingForm" (submit)="Send()">
+            <div class="Slider1" id="Slider1">
+                <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+                <div class="Title1">
+                    <h2>¿Cuanto es el monto inicial?</h2>
+                </div>
+                <div class="Input-Label">
+                    <label for="">Monto</label>
+                    <input type="number" formControlName="amount">
+                </div>
+                <div class="Title2">
+                    <h2>¿Qué precio tiene el vehículo?</h2>
+                </div>
+                <div class="Input-Label">
+                    <label for="">Precio</label>
+                    <input type="number" formControlName="price">
+                </div>
+                <div class="NextModule0"><a (click)="Moveit('Slider1','visto')">Continuar</a></div>
             </div>
-            <form class="Input-Label">
-                <label for="">Monto</label>
-                <input type="text">
-            </form>
-            <div class="Title2">
-                <h2>¿Qué precio tiene el vehículo?</h2>
+            <div class="Slider2">
+                <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+                <div class="Title1">
+                    <h2>¿Cuanto dinero desea financiar?</h2>
+                </div>
+                <div class="Value">
+                    <h2 class="Value" id="RangeValue">1000</h2>
+                </div>
+                <div class="SliderValue">
+                    <input formControlName="amountfinance" class="SliderBar" type="range" min="1000" max="50000"
+                        id="RangeSlide" value="1000">
+                </div>
+                <div class="">
+                    <p>($1,000 min hasta $50,000 Max)</p>
+                </div>
+                <div class="NextModule1"><a (click)="Moveit('Slider1','visto')">Volver</a><a
+                        (click)="Moveit('Slider1','visto1')">Continuar</a></div>
             </div>
-            <form class="Input-Label">
-                <label for="">Precio</label>
-                <input type="text">
-            </form>
-            <div class="NextModule0"><button (click)="Moveit('Slider1','visto')">Continuar</button></div>
-        </div>
-        <div class="Slider2">
-            <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
-            <div class="Title1">
-                <h2>¿Cuanto dinero desea financiar?</h2>
+            <div class="Slider3">
+                <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+                <div class="Title1">
+                    <h2>¿En que tipo de residencia vives?</h2>
+                </div>
+                <select formControlName="typeofresidence">
+                    <option value="">Residencia propia</option>
+                    <option value="">Residencia alquilada</option>
+                </select>
+                <div class="Title1">
+                    <h2>¿Cómo es tu credito?</h2>
+                </div>
+                <select class="aCredit1" formControlName="credit">
+                    <option value="">Excelente(720 - 850)</option>
+                    <option value="">Bueno(680 - 719)</option>
+                    <option value="">Justo(640 - 679)</option>
+                    <option value="">Pobre(0 - 639)</option>
+                </select>
+                <div class="Title1">
+                    <h2>¿Qué tipo de contrato manejas?</h2>
+                </div>
+                <select class="aContract" formControlName="typeofcontract">
+                    <option value="">Tiempo completo</option>
+                    <option value="">Mitad de tiempo</option>
+                    <option value="">Independiete</option>
+                    <option value="">Desempleado</option>
+                    <option value="">Otro </option>
+                </select>
+                <div class="NextModule3"><a (click)="Moveit('Slider1','visto1')">Volver</a><a
+                        (click)="Moveit('Slider1','visto2')">Continuar</a></div>
             </div>
-            <div class="Value">
-                <h2 class="Value" id="RangeValue">1000</h2>
-            </div>
-            <div class="SliderValue">
-                <input class="SliderBar" type="range" min="1000" max="50000" id="RangeSlide" value="1000">
-            </div>
-            <div class="">
-                <p>($1,000 min hasta $50,000 Max)</p>
-            </div>
-            <div class="NextModule1"><button (click)="Moveit('Slider1','visto')">Volver</button><button
-                    (click)="Moveit('Slider1','visto1')">Continuar</button></div>
-        </div>
-        <div class="Slider3">
-            <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
-            <div class="Title1">
-                <h2>¿En que tipo de residencia vives?</h2>
-            </div>
-            <select name="" id="">
-                <option value="">Residencia propia</option>
-                <option value="">Residencia alquilada</option>
-            </select>
-            <div class="Title1">
-                <h2>¿Cómo es tu credito?</h2>
-            </div>
-            <select class="ButtonCredit1" name="" id="">
-                <option value="">Excelente(720 - 850)</option>
-                <option value="">Bueno(680 - 719)</option>
-                <option value="">Justo(640 - 679)</option>
-                <option value="">Pobre(0 - 639)</option>
-            </select>
-            <div class="Title1">
-                <h2>¿Qué tipo de contrato manejas?</h2>
-            </div>
-            <select class="ButtonContract" name="" id="">
-                <option value="">Tiempo completo</option>
-                <option value="">Mitad de tiempo</option>
-                <option value="">Independiete</option>
-                <option value="">Desempleado</option>
-                <option value="">Otro </option>
-            </select>
-            <div class="NextModule3"><button (click)="Moveit('Slider1','visto1')">Volver</button><button
-                    (click)="Moveit('Slider1','visto2')">Continuar</button></div>
-        </div>
-        <div class="Slider4">
-            <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
-            <div class="Title1">
-                <h2>¿Cuales son tu ingresos anuales?</h2>
-            </div>
-            <form class="Input-Label">
-                <label for="">Ingresos</label>
-                <input type="text">
-            </form>
-            <div class="Title1">
-                <h2>¿Cuál es tu codigo Zip?</h2>
-            </div>
-            <form class="Input-Label">
-                <label for="">Zip</label>
-                <input type="text">
-            </form>
+            <div class="Slider4">
+                <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+                <div class="Title1">
+                    <h2>¿Cuales son tu ingresos anuales?</h2>
+                </div>
+                <div class="Input-Label">
+                    <label for="">Ingresos</label>
+                    <input formControlName="income" type="number">
+                </div>
+                <div class="Title1">
+                    <h2>¿Cuál es tu codigo Zip?</h2>
+                </div>
+                <div class="Input-Label">
+                    <label for="">Zip</label>
+                    <input formControlName="zip" type="text">
+                </div>
 
-            <div class="NextModule4"><button (click)="Moveit('Slider1','visto2')">Volver</button><button
-                    (click)="Moveit('Slider1','visto3')">Continuar</button></div>
-        </div>
-        <div class="Slider5">
-            <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
-            <div class="Title1">
-                <h2>¿Cuál es tu dirección?</h2>
+                <div class="NextModule4"><a (click)="Moveit('Slider1','visto2')">Volver</a><a
+                        (click)="Moveit('Slider1','visto3')">Continuar</a></div>
             </div>
-            <form class="Input-Label">
-                <label for="">Dirección</label>
-                <input type="text">
-            </form>
-            <form class="Input-Label2" id="">
-                <label for="">Ciudad</label>
-                <input type="text">
-            </form>
-
-            <div class="NextModule5"><button (click)="Moveit('Slider1','visto3')">Volver</button><button
-                    (click)="Moveit('Slider1','visto4')">Continuar</button></div>
-        </div>
-        <div class="Slider6">
-            <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
-            <div class="Title1">
-                <h2>Algunos datos más..</h2>
+            <div class="Slider5">
+                <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
+                <div class="Title1">
+                    <h2>¿Cuál es tu dirección?</h2>
+                </div>
+                <div class="Input-Label">
+                    <label for="">Estado</label>
+                    <input formControlName="state" type="text">
+                </div>
+                <div class="Input-Label2" id="">
+                    <label for="">Ciudad</label>
+                    <input formControlName="city" type="text">
+                </div>
+                <div class="Input-Label2" id="">
+                    <label for="">Edad</label>
+                    <input formControlName="age" type="number">
+                </div>
+                <div class="NextModule7">
+                    <a (click)="Moveit('Slider1','visto3')">Volver</a>
+                    <button (click)="Send()">Consigue tu pre-financiamiento</button>
+                </div>
             </div>
-            <form class="Input-Label">
-                <label for="">Celular</label>
-                <input type="text">
-            </form>
-            <form class="Input-Label">
-                <label for="">Correo electronico</label>
-                <input type="text">
-            </form>
-            <form class="Input-Label">
-                <label for="">Nombres y Apellidos</label>
-                <input type="text">
-            </form>
-            <div class="NextModule6"><button (click)="Moveit('Slider1','visto4')">Volver</button><button
-                    (click)="Moveit('Slider1','visto5')">Continuar</button></div>
-        </div>
-        <div class="Slider7">
-            <div class="Logotipo"><img src="../../assets/CreditCarLogotipo.svg" alt=""></div>
-            <div class="Title1">
-                <h2>¡Ya terminaste!</h2>
-            </div>
-            <form class="Input-Label">
-                <label for="">Contraseña</label>
-                <input type="password">
-            </form>
-            <form class="Input-Label">
-                <label for="">Confirma contraseña</label>
-                <input type="password">
-            </form>
-            <div class="NextModule7"><button (click)="Dissapear()">Consigue tu pre-financiamiento</button><button
-                    (click)="Moveit('Slider1','visto5')">Volver</button></div>
-        </div>
+        </form>
     </section>
 </div>
-<div class="ResultsBody" id="results1" >
-    <div class="Content1" >
-        <div class="Title3"><h2>Este es tu porcentaje</h2></div>
-        <div class="Percent"><p>2</p><p>%</p></div>
-        <div class="P3"><p>Según tu porcentaje te dejamos aquí los dealers más recomendados</p></div>
+<div class="ResultsBody" id="results1">
+    <div class="Content1">
+        <div class="Title3">
+            <h2>Este es tu porcentaje</h2>
+        </div>
+        <div class="P3">
+            <p>¡Muchas gracias por terminar el formulario! <br> <br> Hemos analizado todos lo datos que ingresaste y
+                 estos son los concesionarios con los que tienes una mayor probabilidad de que te acepten un finan
+                 ciamiento</p>
+        </div>
     </div>
     <div class="Content2">
-        <div class="cards">
+        <div class="cards" *ngFor="let dealer of dealers">
             <div class="Content3">
-                <img src="../../assets/CarProduct.svg" alt="">
-                <p>Covert Chrysler Jeep Ram</p>
-            </div>
-            <div class="Content3">
-                <img src="../../assets/CarProduct.svg" alt="">
-                <p>Covert Chrysler Jeep Ram</p>
-            </div>
-            <div class="Content3">
-                <img src="../../assets/CarProduct.svg" alt="">
-                <p>Covert Chrysler Jeep Ram</p>
-            </div>
-            <div class="Content3">
-                <img src="../../assets/CarProduct.svg" alt="">
-                <p>Covert Chrysler Jeep Ram</p>
+                <div class="percent-logo">
+                    <p class="percent">%{{dealer.percent}}</p>
+                    <img class="Logo" src="../../assets/DealerLogo.svg" alt="">
+                </div>
+                <div class="Content3-Stats">
+                    <div>
+                        <p>{{dealer.name}}</p>
+                    </div>
+                    <div class="Locate-div">
+                        <img  class="Ubi" src="../../assets/Locate.svg" alt="">
+                        <p>{{dealer.state}}, {{dealer.city}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

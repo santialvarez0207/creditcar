@@ -9,7 +9,7 @@ const DealerSchema = new Schema(
     phone_number:  String,
     location:  {
         address:  String,
-        country: String,
+        state: String,
         city: String
     },
     contact_ids:  [String],
@@ -23,7 +23,7 @@ const DealerSchema = new Schema(
         typeofresidence:String, 
         credit:String,
         typeofcontract:String,
-        income:String,  
+        income:Number,  
         zip:String,
     },
     percent: Number

@@ -72,7 +72,7 @@ function evaluateDealer(dealer,data){
         if(typeof objeto[key] ==="string"){
             if(objeto[key] != ""){
                 if(objeto[key] == data[key]){
-                    puntos += 1                 
+                    puntos += 1
                 }
                 puntosTotales += 1
             }
@@ -95,7 +95,7 @@ function evaluateDealer(dealer,data){
         _id: dealerO._id,
         name: dealerO.user,
         percent: porcentaje,
-        country: dealerO.location.country,
+        state: dealerO.location.state,
         city: dealerO.location.city
     }
     return respuesta
