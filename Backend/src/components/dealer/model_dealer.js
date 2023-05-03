@@ -17,16 +17,16 @@ const DealerSchema = new Schema(
 
     credit_requirements: {
         age: Number,
-        type_of_residence: String,
-        credit_status: String,
-        job_status: String,
-        annual_income: Number,
-        zip: Number,
-        vehicle_price: Number,
-        down_payment: Number,
-        down_payment_percentage: Number,
-        loan_term: Number,
-    }
+        amount:Number, 
+        price:Number,
+        amountfinance:Number,
+        typeofresidence:String, 
+        credit:String,
+        typeofcontract:String,
+        income:String,  
+        zip:String,
+    },
+    percent: Number
   },
   {
     versionKey: false,

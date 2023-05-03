@@ -12,8 +12,8 @@ async function addDealer(dealer){
     await Mdealer.save()
 }
 
-async function getDealers(){
-    let dealers = await Model.find()
+async function getDealers(parameter){
+    let dealers = await Model.find(parameter)
     return dealers
 }
 

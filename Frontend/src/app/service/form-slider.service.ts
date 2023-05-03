@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { DataFinance } from '../model/financeAccount';
+import { DataFinance, infoDealer } from '../model/financeAccount';
 import { FinancingComponent } from '../financing/financing.component';
 
 @Injectable({
@@ -22,14 +22,14 @@ export class FormSliderService {
     return this.http.post(this.apiUrl, dataFinance);
   }
 
-  PuttAccountFinance(dataFinance:DataFinance){
-    return this.http.put(this.apiUrl + `/${dataFinance._id}`, dataFinance);
+  PuttAccountFinance(dataFinance:DataFinance , id : string){
+    return this.http.put(this.apiUrl + `/${id}`, dataFinance);
   }
 
   deleteAccountFinance(_id:String){
     return this.http.delete(this.apiUrl + `/${_id}`);
   }
-
+  
   configureSlider() {
     const output = document.getElementById("RangeValue") as HTMLElement;
     const slider1 = document.querySelector("#RangeSlide") as HTMLInputElement;
@@ -41,5 +41,21 @@ export class FormSliderService {
     };
   }
 
+  dealersRecommended(form: DataFinance){
+    const params = new HttpParams()
+      .set('age', form.age)
+      .set('amount', form.amount)
+      .set('price', form.price)
+      .set('amountfinance', form.amountfinance)
+      .set('typeofresidence', form.typeofresidence)
+      .set('credit', form.credit)
+      .set('typeofcontract', form.typeofcontract)
+      .set('income', form.income)
+      .set('zip', form.zip)
+      .set('country', form.country)
+      .set('city', form.city)
+
+      return this.http.get<infoDealer[]>(this.apiUrl + "/check" , {params}); 
+  }
  
 }

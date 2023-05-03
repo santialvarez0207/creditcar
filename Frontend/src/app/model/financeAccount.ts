@@ -1,26 +1,22 @@
 
 export class DataFinance{
-    _id:String; 
-    amount:String; 
-    price:String;
-    amountfinance:String;
-    typeofresidence:String; 
-    credit:String;
-    typeofcontract:String;
-    income:String;  
-    zip:String;
-    address:String;
-    city:String;
-    cellphone:String;
-    email:String;
-    name:string;
-    password:string;
+    age: number;
+    amount:number; 
+    price:number;
+    amountfinance:number;
+    typeofresidence:string; 
+    credit:string;
+    typeofcontract:string;
+    income:string;  
+    zip:string;
+    country: string
+    city:string;
 
-    constructor(_id:String = "",amount:String = "", price:String = "", amountfinance:String ="",
-    typeofresidence:String="", credit:String = "", typeofcontract:String="", income:String = "",  zip:String = "",
-     address:String = "",city:String = "", cellphone:String = "", email:String = "", name:string = "", password:string = ""){
+    constructor(age:number= 0, amount:number = 0, price:number = 0, amountfinance:number =0,
+    typeofresidence:string="", credit:string = "", typeofcontract:string="", income:string = "",  zip:string = "",
+    country: string = "",city:string = ""){
         
-        this._id = _id;
+        this.age = age; 
         this.amount = amount;
         this.price = price;
         this.amountfinance = amountfinance;
@@ -29,11 +25,16 @@ export class DataFinance{
         this.typeofcontract = typeofcontract;
         this.income = income;
         this.zip = zip;
-        this.address = address;
+        this.country = country;
         this.city = city;
-        this.cellphone = cellphone;
-        this.email = email;
-        this.name = name;
-        this.password = password;
     }
+}
+
+
+export class infoDealer{
+    _id: string = ""
+    name: string = ""
+    percent: number = 0
+    country: string = ""
+    city: string = ""
 }

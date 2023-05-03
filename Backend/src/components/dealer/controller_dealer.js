@@ -18,7 +18,8 @@ function addDealer(body){
             location: body.location,
             contact_ids:  body.contact_ids,
             registration_date: fecha,
-            credit_requirements: body.credit_requirements
+            credit_requirements: body.credit_requirements,
+            percent: body.percent
         };
         store.addDealer(dealer)
         return resolve("Dealer agregado correctamente")
@@ -31,7 +32,7 @@ function addDealer(body){
 
 async function checkDealer(name, contraseña){
     try {
-        let dealer = await store.getDealer({name: name, password: contraseña});
+        let dealer = await store.getDealers({name: name, password: contraseña});
         if(name && contraseña && dealer != null){
             let sesion = {
                 name: dealer.name,
@@ -47,11 +48,63 @@ async function checkDealer(name, contraseña){
     }
 }
 
+async function recommendedDealers(city,data){
+    try {
+        let dealers = await store.getDealers({ 'location.city': { $in: [city, ""] } });
+        let dealersEvaluados = dealers.map((dealer) => {
+            return evaluateDealer(dealer,data)})
+        dealersEvaluados.sort((a, b) => b.percent - a.percent);
+        return dealersEvaluados
+     
+    } catch (error) {
+        throw error;
+    }
+}
 
+
+function evaluateDealer(dealer,data){
+    var puntos=0
+    var puntosTotales=0
+    let dealerO = dealer.toObject()
+    let objeto= dealerO.credit_requirements
+    Object.keys(objeto).forEach((key) => {
+        
+        if(typeof objeto[key] ==="string"){
+            if(objeto[key] != ""){
+                if(objeto[key] == data[key]){
+                    puntos += 1                 
+                }
+                puntosTotales += 1
+            }
+
+        }
+        console.log(objeto[key],key)
+        if(typeof objeto[key] ==="number"){
+            if(objeto[key] != 0){
+                if(objeto[key] <= data[key]){
+                    puntos += 1                 
+                }
+                puntosTotales += 1
+            }
+        }
+        
+    })
+    let porcentaje = ((puntos/puntosTotales)*100).toFixed(2)
+
+    let respuesta = {
+        _id: dealerO._id,
+        name: dealerO.user,
+        percent: porcentaje,
+        country: dealerO.location.country,
+        city: dealerO.location.city
+    }
+    return respuesta
+}
 
 
 
 module.exports = {
     addDealer,
-    checkDealer 
+    checkDealer,
+    recommendedDealers 
 }

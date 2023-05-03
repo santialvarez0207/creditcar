@@ -14,6 +14,27 @@ router.get('/check', (req, res) =>{
         })
 })
 
+router.get('/dealerProbability', (req, res) =>{
+    data={
+        'age': req.query.age, 
+        'amount': req.query.amount,
+        'price' : req.query.price,
+        'amountfinance' : req.query.amountfinance,
+        typeofresidence : req.query.typeofresidence, 
+        credit : req.query.credit,
+        typeofcontract : req.query.typeofcontract,
+        income : req.query.income,
+        zip : req.query.zip
+    }
+    controller.recommendedDealers(req.query.city, data)
+        .then((sesion)=>{
+            response.success(req, res,sesion,201)
+        })
+        .catch((e)=>{
+            response.error(req, res,"informacion incorrecta",e)
+        })
+})
+
 
 router.post('/', (req, res) =>{
     
