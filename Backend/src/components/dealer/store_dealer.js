@@ -8,6 +8,7 @@ async function getDealer(parameter){
 
 
 async function addDealer(dealer){
+    console.log("store")
     let Mdealer = new Model(dealer)
     await Mdealer.save()
 }

@@ -7,6 +7,7 @@ const DealerSchema = new Schema(
     password: String,
     email: String,
     phone_number:  String,
+    nit: String,
     location:  {
         address:  String,
         state: String,

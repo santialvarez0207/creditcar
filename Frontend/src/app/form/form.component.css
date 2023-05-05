@@ -28,7 +28,7 @@ form{
     align-items: center;
     margin-left: 520px;
     transition:all .5s ease-in-out;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .visto{
     transition:all .5 ease-in; 
@@ -74,7 +74,7 @@ form{
     flex-direction: column;
     align-items: center;
     transition:all .5 ease-in; 
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 
 }
 .Slider3{
@@ -88,7 +88,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .Slider4{
     min-width: 500px;
@@ -101,7 +101,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 
 }
 .Slider5{
@@ -115,7 +115,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .Slider6{
     min-width: 500px;
@@ -128,7 +128,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .Slider7{
     min-width: 500px;
@@ -141,7 +141,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 
 }
 
@@ -174,8 +174,8 @@ label{
 }
 input{
     border-radius: 5px;
-    
 }
+
 .NextModule0{
     width: 100%;
     margin: 60px 0;
@@ -191,6 +191,7 @@ input{
     color: var(--w);
     border-radius: 20px;
     margin: 0 20px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .NextModule1{
     margin-top:190px;
@@ -204,6 +205,7 @@ input{
     color: var(--w);
     border-radius: 20px;
     margin: 110px 20px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .NextModule3{
     margin-top: 30px;
@@ -217,6 +219,7 @@ input{
     color: var(--w);
     border-radius: 20px;
     margin: 40px 20px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .NextModule4{
     margin-top: 80px;
@@ -230,6 +233,7 @@ input{
     color: var(--w);
     border-radius: 20px;
     margin: 30px 20px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .NextModule7 a{
     padding: 8px 15px;
@@ -240,6 +244,7 @@ input{
     color: var(--w);
     border-radius: 20px;
     margin: 30px 20px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 
 }
 .NextModule7{
@@ -254,19 +259,20 @@ input{
     color: var(--w);
     border-radius: 20px;
     margin: 30px 20px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 
 select{
-    
     border: none;
-    padding: 8px 30px;
-    border: none;
+    padding: 8px 4px;
+    width: 200px;
     cursor: pointer;
     font-size: 16px;
     background-color: var(--c1);
-    color: var(--w);
+    color: var(--sw);
     border-radius: 5px;
-    margin:10px
+    margin:10px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .SliderBar{
 
@@ -318,7 +324,7 @@ select{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .Content1 div h2{
     color: var(--c1);
@@ -341,7 +347,7 @@ select{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 
 }
 .Content3{
@@ -355,7 +361,7 @@ select{
     background-color:var(--sw);
     display: flex;
     flex-direction: column;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .visto9{
     display:flex !important;

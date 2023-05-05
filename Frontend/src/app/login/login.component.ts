@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(private userService:UserService) {  }
 
   ngOnInit(): void {
-   
+    this.CheckUser();
     const loginsec=document.querySelector('.login-section')
     const loginlink=document.querySelector('.login-link')
     const register=document.querySelector('.Register-link')
@@ -28,6 +28,14 @@ export class LoginComponent implements OnInit {
    })
    
 
+  }
+
+  CheckUser(){
+    let x = localStorage.getItem("User");
+
+    if(x!=null){
+      window.location.replace("http://localhost:4200/home");
+    }
   }
 
   formLogin = new FormGroup({

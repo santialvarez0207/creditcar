@@ -20,11 +20,22 @@ export class PerfilUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.CheckUser();
+
     this.activatedRoute.params.subscribe(params => {
       var idsession = params['id'];
 
       this.userService.getUser(idsession).subscribe(( res ) => { this.User = res as User });
     })
+  }
+
+  CheckUser(){
+    let x = localStorage.getItem("User");
+
+    if(localStorage.length==0){
+      window.location.replace("http://localhost:4200/home");
+    }
   }
 
   Hide(visible:number){

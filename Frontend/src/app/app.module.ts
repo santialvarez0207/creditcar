@@ -13,6 +13,7 @@ import { AnnounceComponent } from './announce/announce.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PerfilUserComponent } from './perfil-user/perfil-user.component';
     FinancingComponent,
     FormComponent,
     AnnounceComponent,
-    PerfilUserComponent
+    PerfilUserComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

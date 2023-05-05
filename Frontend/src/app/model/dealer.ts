@@ -3,9 +3,10 @@ export class Dealer {
       password: String = ""
       email: String = ""
       phone_number:  String = ""
+      nit: String = "";
       location = {
           address:  String,
-          country: String,
+          state: String,
           city: String
       }
 
