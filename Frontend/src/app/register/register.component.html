@@ -9,35 +9,35 @@
          <form class="form-register-dealer" [formGroup]="formDealer" (submit)="Send()">
             <div class="forms-input">
                <label for="">Nombre de la empresa</label>
-               <input formControlName="user" type="text" class="input-dealer" placeholder="Manhattan Motors">
+               <input formControlName="user" type="text" class="input-dealer" placeholder="Manhattan Motors" required>
             </div>
             <div class="forms-input">
                <label for="">Email</label>
-               <input  formControlName="email" type="email" class="input-dealer" placeholder="jhon@example.com">
+               <input  formControlName="email" type="email" class="input-dealer" placeholder="jhon@example.com" required>
             </div>
             <div class="forms-input">
                <label for="">Número de telefono de la empresa</label>
-               <input formControlName="phone_number" type="text" class="input-dealer" placeholder="1234567891">
+               <input formControlName="phone_number" type="text" class="input-dealer" placeholder="1234567891" required>
             </div>
             <div class="forms-input">
                <label for="">Estado</label>
-               <input formControlName="state" type="text" class="input-dealer" placeholder="Colorado">
+               <input formControlName="state" type="text" class="input-dealer" placeholder="Colorado" required>
             </div>
             <div class="forms-input">
                <label for="">Ciudad</label>
-               <input formControlName="city" type="text" class="input-dealer" placeholder="Denver">
+               <input formControlName="city" type="text" class="input-dealer" placeholder="Denver" required>
             </div>
             <div class="forms-input">
                <label for="">TIN/NIT</label>
-               <input formControlName="nit" type="text" class="input-dealer" placeholder="123456">
+               <input formControlName="nit" type="text" class="input-dealer" placeholder="123456" required>
             </div>
             <div class="forms-input">
                <label for="">Contraseña</label>
-               <input formControlName="password" type="password" class="input-dealer" placeholder="Contraseña">
+               <input formControlName="password" type="password" class="input-dealer" placeholder="Contraseña" required>
             </div>
             <div class="forms-input">
                <label for="">Confirma Contraseña</label>
-               <input type="password" placeholder="Nueva Contraseña">
+               <input type="password" placeholder="Nueva Contraseña" required>
             </div>
             <div class="Button-Register-Dealer">
                <button [disabled]="!formDealer.valid">Crear cuenta</button>

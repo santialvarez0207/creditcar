@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProductComponent implements OnInit {
   contador:number = 1;
-
+  visibleVar:number = 1;
   Cars:Car = new Car();
 
   constructor(private productService:ProductService, private activatedRoute:ActivatedRoute) {
@@ -45,5 +45,18 @@ export class ProductComponent implements OnInit {
     else{
       reason2?.classList.add("visto1")}
   }
+  
+  Hide(visible:number){
+    this.visibleVar = visible;
+
+    let reason = document.getElementsByClassName("Per");
+    
+    for (let index = 0; index < reason.length; index++) {
+      reason[index].classList.remove('visto3');
+      
+    }
+    reason[visible-1].classList.add('visto3');
+  }
+
 
 }
