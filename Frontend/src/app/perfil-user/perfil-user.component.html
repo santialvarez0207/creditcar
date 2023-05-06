@@ -16,11 +16,11 @@
             </div>
         </div>
         <div class="PerfilUser-Nav">
-            <p class="Per" (click)="Hide(1)" id="#Sex">Datos personales</p>
-            <p class="Per" (click)="Hide(2)" id="#Sex1">Financiamiento</p>
-            <p class="Per" (click)="Hide(3)" id="#Sex2">Contraseña</p>
+            <p class="Per" (click)="Hide(1)" >Datos personales</p>
+            <p class="Per" (click)="Hide(2)" >Financiamiento</p>
+            <p class="Per" (click)="Hide(3)" >Contraseña</p>
         </div>
-        <div class="PerfilUser-totalinfo" id="Div1" *ngIf="visibleVar==1">
+        <div class="PerfilUser-totalinfo" *ngIf="visibleVar==1">
             <div class="content">
                 <p>{{User.cellphone}}</p>
                 <img src="../../assets/editicon.svg" alt="">
@@ -42,7 +42,7 @@
                 <img src="../../assets/editicon.svg" alt="">
             </div>
         </div>
-        <div class="PerfilUser-totalinfo" id="Div2" *ngIf="visibleVar==2">
+        <div class="PerfilUser-totalinfo" *ngIf="visibleVar==2">
             <div class="content">
                 <p>{{User.amount}}</p>
                 <img src="../../assets/editicon.svg" alt="">
@@ -68,7 +68,7 @@
                 <img src="../../assets/editicon.svg" alt="">
             </div>
         </div>
-        <div class="PerfilUser-totalinfo-Password" id="Div3" *ngIf="visibleVar==3"> 
+        <div class="PerfilUser-totalinfo-Password" *ngIf="visibleVar==3"> 
             <div class="totalinfo-h2">
                 <h2>Cambiar contraseña</h2>
             </div>

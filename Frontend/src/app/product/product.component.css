@@ -1,9 +1,12 @@
 .Section1{
     width: 100%;
+    height: 100%;
 }
 .section1-backgroundCar{
     width: 100%;
+    position: absolute;
     height: 524px;
+    z-index: -30;
     border-bottom: 4px var(--c2) solid;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -14,16 +17,58 @@
     height: 524px;
 }
 .section1-Photo-InfoImportant{
+    padding-top: 25px;
     display: flex;
-    flex-flow: row wrap; 
-    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row; 
     width: 100%;
-    height: 400px;
-    top: 300px;
+    height: fit-content;
+
+}
+.InfoImp{
+    width: 400px;
+    height: 60px;
+    padding: 2px 5px;
+    border-radius: 15px;
+    border-bottom: 4px var(--c1) solid;
+    background-color: var(--sw);
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 1);
+}
+.buttonO{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonO button{
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
+   border: 2px var(--c1) solid;
+   background-color: var(--w);
+   border-radius: 30px;
+   height: 55px;
+   padding: 8px 16px; 
+   color: var(--c1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+
+}
+.buttonO button:hover{
+    border: none;
+    background-color:#1fadff;
+    color: #000000;
+    filter: invert(100%);
+    transition: all .1s ease-in;
+    border-radius: 30px;
+    padding: 10px 18px;
 }
 .Bigphoto{
     width: 100%;
-    filter: drop-shadow(-6px 6px 6px rgba(0, 0, 0, 0.3));
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 1);
 }
 .Bigphoto img{
     object-fit: cover;
@@ -40,6 +85,7 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .Content-MaskChangePhoto{
     justify-content: space-between;
@@ -47,78 +93,20 @@
     flex-flow: row wrap;
 }
 .Photo{
-    padding: 50px;
-    margin: 0 0 0 70px;
     display: flex;
     flex-flow: row wrap;
     width: 30%;
 }
-.InfoImportant{
-    margin-top: 220px;
-    width: 58.3%;
-}
-.InfoImp1{
-    width: 691px; 
-    padding: 0 0 0 60px;
-    display: flex;
-    margin: 15px 0 0 98px;
-    color: var(--w);
-    background-color:var(--c1);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, );
-}
-.InfoImp1 h2{
-    margin-top: 12px;
-}
-.InfoImp2{
-    width: 614px;
-    padding: 0 0 2px 50px;
-    display: flex;
-    margin: 15px 0 0 185px;
-    color: var(--w);
-    background-color:var(--c1);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.InfoImp2 h2{
-    margin-top: 12px;
-}
-.InfoImp3{
-    width: 549px;
-    padding: 0 0 2px 50px;
-    display: flex;
-    color: var(--w);
-    margin: 15px 0 0 250px;
-    background-color:var(--c1);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.InfoImp3 h2{
-    margin-top: 12px;
-}
-.InfoImp4{
-    width: 479px;
-    padding: 0 0 2px 50px;
-    display: flex;
-    color: var(--w);
-    margin: 15px 0 0 320px;
-    background-color:var(--c1);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.InfoImp4 h2{
-    margin-top: 12px;
-}
+
+
 .ContactDealer{
-    margin: 25px 0 0 520px;
     background-color: var(--c1);
     border-radius: 40px;
     border: none;
     padding: 0 20px 0 20px;
     color: var(--w);
     cursor: pointer;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
-
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .Modal{
     background-color: rgba(246, 246, 246, 0.90);
@@ -134,7 +122,7 @@
 }
 .ModalBox{
     position: absolute;
-    background-color: var(--w);
+    background-color: var(--sw);
     border-bottom: solid var(--c1) 4px;
     border-radius: 15px;
     width: 300px;
@@ -155,6 +143,9 @@
     text-align: center;
     margin-bottom: 30px;
 }
+.Per{
+    padding: 6px 20px;
+}
 .ButtonModal{
     display: flex;
     justify-content: center;
@@ -174,75 +165,52 @@
 .visto{
     display: flex !important;
 }
-.ContactDealer h2{
-    margin: 15px 0;
-}
-.Section2{
-    margin: 420px 0 0 0;
-}
-.rectangle{
-    width: 680px;
-    height: 30px;
-    clip-path: polygon(0% 42%, 98% 42%, 92% 100%, 0% 100%);
-    background-color: var(--c1);
-    
-    
-}
-.Especification-Section2{
-    width: 660px;
-}
-.Especification-title1 h2{
+.details-items{
+    margin: 5vh 0 0 0;
+    width: 100%;
+    height: 500px;
     display: flex;
-    justify-content: end;
-    margin-bottom: -10px;
+    align-items: center;
+    flex-direction: column;
+}
+.TitleEspecfic{
     color: var(--c1);
 }
-ol{
-    list-style: none;
-}
-.dropdown-detailsC{
-    height: max-content;
-    margin-bottom:5px;
-}
-
-.SpecificationMoreDetails:nth-child(1){
-    margin-right: 70px;
-}
-.rectangle2{
-    width: 691px;
+.Nav-details-items{
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
+    background-color: var(--sw);
+    border-radius: 15px;
+    border-bottom: 4px var(--c1) solid;
+    width: 1200px;
     display: flex;
-    color: var(--w);
-    clip-path: polygon(0% 0%, 98% 0%, 92% 100%, 0% 100%);
-    background-color: var(--c1);
-    justify-content: end;
-    cursor: pointer;
-    
+    justify-content: space-around;
+    align-items: center;
 }
-.Details{
-    height: 0;
-    overflow: hidden;
-    transition: 1s height;
-}
-.visto1{
-    height: 200px!important;
-}
-.rectangle2 h3{
-    margin: 0 70px 0 0;
-}
-.section2-SpecificationMoreDetails{
-    display: flex;
-    flex-flow: row wrap;
-    margin-bottom: 30px;
-}
-.Especification-title1 h2{
-    display: flex;
-    justify-content: end;
-    margin-bottom: -10px;
-    color: var(--c1);
-}
-
 .visto3{
+    transition: all .2s ease-in;
     background-color: var(--c1);
     color: var(--sw);
     border-radius: 30px;
- }
+}
+.Squares-items{
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
+    margin-top: 50px;
+    width: fit-content;
+    display: grid;
+    justify-content: center;
+    padding: 0 25px 0 25px;
+    background-color: var(--sw);
+    border-radius: 15px;
+    border-bottom: 4px var(--c1) solid;
+    border-top: 4px var(--c1) solid ;
+}
+ol{
+    display: grid;
+    grid-template-columns: auto auto;
+    list-style: none;
+    justify-content:space-between;
+    align-items: center;
+}
+li{
+    width: 300px;
+}
