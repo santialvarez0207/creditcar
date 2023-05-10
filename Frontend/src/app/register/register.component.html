@@ -1,103 +1,47 @@
-<!--
-<section class="formulario">
-
-<img src="../../assets/Logotipoblanco.svg" class="img">
-
- <h1>Registrate </h1>
-  
-<div class="contenedor">
-
- <div class="input-contenedor">
-
-<label for="nom">Nombre de usuario</label>
-<input type="text" placeholder="Mombre del concecionario">
- </div>
-
- <div class="input-contenedor">
-
-     </div>
-
-     <div class="input-contenedor">
-
-        <label for="num">Numero de telefono</label>
-        <input type="text" placeholder="Ej:3218685165">
-         </div>
-
-         <div class="input-contenedor">
-
-            <label for="correo">Correo electronico</label>
-            <input type="text" placeholder="Ej:Tunombre@gmail.com">
-             </div>
-
-             <div class="input-contenedor">
-
-                <label for="Contraseña">Contraseña</label>
-                <input type="password">
-                 </div>
-
-
-                 <button>REGISTRATE</button>
-
-                 <p> ¿Ya tienes cuenta? <a routerLink="/login">Inicia sesión </a> <p>     
-</div>
-</section>
-
--->
-
 <section>
-   <div class="contenedor">
-      <div class="item">
-         <img src="../../assets/Logotipoblanco.svg" class="img">
-
-         <!--
-         <img src="../../assets/AudififthPhoto.svg" class="audi"> -->
-
-         <div class="texto">
-            <h2>BIENVENIDO <br><span>
-                  to our channel
-               </span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente debitis, excepturi numquam tenetur,
-               maiores harum suscipit, quia voluptatem quisquam in natus nulla delectus expedita ea! Eaque temporibus
-               quia velit repellat nobis explicabo ratione commodi? At velit aspernatur corrupti quasi quia?</p>
+      <div class="container-form-bar">
+         <div class="bar-logo">
+            <img src="../../assets/Logotipoblanco.svg" alt="">
          </div>
-      </div>
-      <div class="register-section">
-         <div class="form-box register">
-
-            <form action="">
-               <h1>REGISTRATE</h1>
-               <div class="inpunt-box">
-                  <label for="">Nombres y apellidos</label>
-                  <input type="text" required placeholder="Ej:Carlos Acevedo">
-
-               </div>
-
-               <div class="inpunt-box">
-                  <label for="">Numero de telefono</label>
-                  <input type="text" required placeholder="Ej:3218653421">
-
-               </div>
-
-               <div class="inpunt-box">
-                  <label for="">Correo electronico</label>
-                  <input type="email" required placeholder="Ej:Tunombre@gmail.com">
-
-               </div>
-
-               <div class="inpunt-box">
-                  <label for="">Contraseña</label>
-                  <input type="password" required>
-
-               </div>
-
-               <button class="button">REGISTRATE</button>
-               <div class="iniciar-sesion">
-                  <p>¿Ya tienes cuenta?<a routerLink="/login" class="login">Iniciar Sesión</a></p>
-               </div>
-            </form>
-
+         <div class="text">
+            <p>Complete todos los campos para ingresar de manera exitosa al consecionario</p> 
          </div>
-
+         <form class="form-register-dealer" [formGroup]="formDealer" (submit)="Send()">
+            <div class="forms-input">
+               <label for="">Nombre de la empresa</label>
+               <input formControlName="user" type="text" class="input-dealer" placeholder="Manhattan Motors" required>
+            </div>
+            <div class="forms-input">
+               <label for="">Email</label>
+               <input  formControlName="email" type="email" class="input-dealer" placeholder="jhon@example.com" required>
+            </div>
+            <div class="forms-input">
+               <label for="">Número de telefono de la empresa</label>
+               <input formControlName="phone_number" type="text" class="input-dealer" placeholder="1234567891" required>
+            </div>
+            <div class="forms-input">
+               <label for="">Estado</label>
+               <input formControlName="state" type="text" class="input-dealer" placeholder="Colorado" required>
+            </div>
+            <div class="forms-input">
+               <label for="">Ciudad</label>
+               <input formControlName="city" type="text" class="input-dealer" placeholder="Denver" required>
+            </div>
+            <div class="forms-input">
+               <label for="">TIN/NIT</label>
+               <input formControlName="nit" type="text" class="input-dealer" placeholder="123456" required>
+            </div>
+            <div class="forms-input">
+               <label for="">Contraseña</label>
+               <input formControlName="password" type="password" class="input-dealer" placeholder="Contraseña" required>
+            </div>
+            <div class="forms-input">
+               <label for="">Confirma Contraseña</label>
+               <input type="password" placeholder="Nueva Contraseña" required>
+            </div>
+            <div class="Button-Register-Dealer">
+               <button [disabled]="!formDealer.valid">Crear cuenta</button>
+            </div>
+         </form>
       </div>
-
-   </div>
+</section>

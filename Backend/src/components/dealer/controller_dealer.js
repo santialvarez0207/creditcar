@@ -4,7 +4,7 @@ const store = require("./store_dealer");
 
 function addDealer(body){
     return new Promise((resolve, reject) => {
-        console.log(body)
+        console.log("Controller")
         if(!body){
             return reject("no hay datos")
         }
@@ -14,6 +14,7 @@ function addDealer(body){
             user:  body.user,
             password: body.password,
             email: body.email,
+            nit: body.nit,
             phone_number:  body.phone_number,
             location: body.location,
             contact_ids:  body.contact_ids,

@@ -1,158 +1,90 @@
-.contenedor {
-    position: absolute;
-    margin: 50px 230px;
-    height: 490px;
-    width: 65%;
-    border-radius: 20px;
-    background: var(--sw);
-    border: 3px var(--c1) solid;
-}
-
-.item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 53%;
+section{
+    width: 100%;
     height: 100%;
-    color: rgb(221, 227, 231);
-    background: var(--c1);
-    border-radius: 15px;
-    padding: 0 20px 0 20px;
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    padding: 70px 0 30px 0;
 }
-
-.img {
-  
-    width: 63%;
-    height: 25%;
-    margin-top: 5%;
-    object-fit: contain;
+.container-form-bar{
+    width: 800px;
+    height: fit-content;
+    border: 4px var(--c1) solid;
+    max-height: fit-content;
+    border-radius: 15px;
+    padding-bottom: 30px;
 }
-
-.texto h2 {
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    line-height: 1;
-    text-align: left;
-    margin-left: 40px;
-   
-    margin-top: 30%;
+.bar-logo{
+    width: 100%;
+    background-color: var(--c1);
+    justify-content: left;
+    align-items: center;
 }
-
-.texto p {
-    font-size: 16px;
-    margin: 20px 0;
-   
+.bar-logo img{
+    margin: 10px 0 10px 15px;
 }
-
-.contenedor .register-section {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(100% - 58%);
-    height: 100%;
-    color: var(--b);
-    border: 3px blue solid;
-}
-
-.register-section .form-box {
-    position: absolute;
+.text{
+    width: 100%;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+.text p{
+    width: 450px;
+}
+.form-register-dealer{
+    margin-top: 15px;
     width: 100%;
-    height: 100%;
- 
+
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: 300px 300px ;
+    grid-template-rows: 70px 70px 70px 70px 70px;
 
 }
-
-.register-section .form-box h1 {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 3%;
-
-
+.forms-input{
+    display: flex;
+    flex-direction: column;
 }
 
-.inpunt-box label {
-    top: 50%;
-    left: 0;
-    font-size: 16px;
-    font-weight: 300;
-    margin-left: 3.5%;
-}
-
-.form-box.inpunt-box {
-    padding-top: 30px;
-    width: 340px;
-    height: 50px;
-    margin: 30px 0;
-    position: relative;
-
-}
-
-.inpunt-box input {
-    width: 90%;
-    height: 80%;
-    outline: none;
-    padding: 7px;
-    margin-bottom: 15px;
-    margin-left: 3%;
-    border-radius: 6px;
-    border: 1px var(--b) solid;
-    transition: all .6s;
-    opacity: 0.9;
-
-}
-
-.inpunt-box input::placeholder {
-    font-size: 14px;
-    font-family: 'Times New Roman';
-}
-
-.inpunt-box input:focus {
-    border: 1px var(--c1)solid;
-}
-
-.inpunt-box input:hover {
-    border: 1px var(--c1)solid;
-}
-
-.button {
-    background: var(--c1);
-    width: 80%;
-    height: 45px;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    color: var(--w);
-    margin: 8px 0 0 10%;
-    transition: all 0.2s;
-}
-
-.button:hover {
-    background-color: var(--c2);
-    color: var(--b);
-}
-
-.iniciar-sesion {
-    font-size: 14.5px;
-    text-align: center;
-    margin: 25px;
-}
-
-.iniciar-sesion p a {
+label{
+    margin-bottom: 6px;
     color: var(--c1);
-    font-weight: 600px;
+
+}
+.input-dealer{
+    width: 280px;
+    border-radius: 4px;
+    padding-left: 5px;
+}
+.input-dealer:focus{
+    outline: none;
+    border: 2px var(--c1) solid;
+}
+.Button-Register-Dealer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/3;
+}
+.Button-Register-Dealer button{
+    margin: 40px 0 0 0;
+    border: 2px var(--c1) solid;
+    background-color: var(--w);
+    border-radius: 30px;
+    padding: 8px 24px; 
+    color: var(--c1);
+    cursor: pointer;
     text-decoration: none;
-
 }
+.Button-Register-Dealer button:hover{
+    border: 2px #1fadff solid;
+     background-color:#1fadff;
+     color: #000000;
+     filter: invert(100%);
+     transition: all .1s ease-in;
 
-.iniciar-sesion p :hover {
-    text-decoration: underline;
-}
+ }

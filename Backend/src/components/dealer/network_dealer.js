@@ -37,7 +37,7 @@ router.get('/dealerProbability', (req, res) =>{
 
 
 router.post('/', (req, res) =>{
-    
+    console.log("Network")
     controller.addDealer(req.body)
         .then(()=>{
             response.success(req, res,"creado correctamente",201)

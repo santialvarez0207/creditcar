@@ -46,10 +46,7 @@ export class FormComponent implements OnInit {
 
   }
 
-  Send(){
-    console.log("Sexo0")
-
-    
+  Send(){ 
     let reason3 = document.querySelector('#CardsSlides');
     let reason4 = document.querySelector('#results1');
     
