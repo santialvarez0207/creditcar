@@ -1,4 +1,5 @@
 const express = require("express");
+const multer = require('multer')
 const bodyParser = require("body-parser");
 const router = require('./network/routes');
 const app = express();
@@ -15,6 +16,21 @@ const options = {
   }
 }
 
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+      cb(null, 'uploads')
+  },
+  filename: function (req, file, cb) {
+      cb(null, `${Date.now()}-${file.originalname}`)
+      nameImage = `${Date.now()}-${file.originalname}`
+      console.log(nameImage)
+  }
+})
+
+ 
+app.use(multer({storage}).single('image'))
+ 
 app.set('trust proxy', true);
 app.use(cors(options));
 

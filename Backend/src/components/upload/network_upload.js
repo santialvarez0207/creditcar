@@ -17,10 +17,9 @@ router.get('/:name', (req, res) =>{
         })
 })
 
-router.post('/' , controller.upload.single('myFile'), (req, res) => {
-    console.log("ss")
-    res.send({ name: controller.nameImage })
-    
+router.post('/', (req, res) => {
+    console.log(req.file,"hola")
+    res.send(req.file)
 })
     
 
