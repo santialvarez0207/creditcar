@@ -35,7 +35,7 @@ async function checkDealer(email, contraseña){
     console.log(email,contraseña)
     try {
 
-        let dealer = await store.getDealers({email: email, password: contraseña});
+        let dealer = await store.getDealer({email: email, password: contraseña});
         if(email && contraseña && dealer != null){
             let sesion = {
                 name: dealer.user,
