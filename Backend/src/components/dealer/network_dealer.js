@@ -5,7 +5,8 @@ const router = express.Router()
 
 
 router.get('/check', (req, res) =>{
-    controller.checkDealer(req.query.name, req.query.password)
+
+    controller.checkDealer(req.query.email, req.query.password)
         .then((sesion)=>{
             response.success(req, res,sesion,201)
         })
@@ -46,6 +47,7 @@ router.post('/', (req, res) =>{
             response.error(req, res,"informacion invalida","error para logear")
         })
 })
+
 
 
 module.exports = router

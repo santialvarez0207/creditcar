@@ -39,6 +39,7 @@ export class RegisterComponent implements OnInit {
 
     this.dealersService.createDealer(data).subscribe(res => {
       if (res) {
+        window.location.replace("http://localhost:4200/home");
         console.log("xfue registrado")
       }else{
         console.log("No fue registrado")

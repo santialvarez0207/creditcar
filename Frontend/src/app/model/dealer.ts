@@ -1,4 +1,5 @@
 export class Dealer {
+      _id:String = "";
       user:  String = ""
       password: String = ""
       email: String = ""

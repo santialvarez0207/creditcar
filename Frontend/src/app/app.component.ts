@@ -10,8 +10,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Frontend';
   name:String = "";
+  user:string = "";
 
-  idUser:string = ""; 
+  idUser:string = "";
+  idDealer:string = "";
 
   constructor(){
 
@@ -20,6 +22,8 @@ export class AppComponent {
   ngOnInit(): void {
       this.CheckUser()
       console.log(this.idUser, "hola")
+      this.CheckDealer()
+      
   }
 
   CheckUser(){
@@ -37,10 +41,26 @@ export class AppComponent {
       }
     }
   }
+  CheckDealer(){
+    let x = localStorage.getItem("Dealer");
+
+    if(x!=null){
+      let Dealer = JSON.parse(x);
+      this.idDealer = Dealer._id;
+      if(Dealer){
+        this.user = Dealer.user;
+        let element = document.getElementById("Dealer");
+        element!.style.display = "flex";
+        let elementLogin = document.getElementById("Log-in");
+        elementLogin!.style.display="none";
+      }
+    }
+  }
 
 
   CloseSession(){
     localStorage.removeItem("User");
+    localStorage.removeItem("Dealer");
     window.location.replace("http://localhost:4200/home");
   }
 

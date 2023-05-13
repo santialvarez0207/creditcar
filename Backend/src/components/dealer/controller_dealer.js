@@ -31,12 +31,14 @@ function addDealer(body){
 
 
 
-async function checkDealer(name, contraseña){
+async function checkDealer(email, contraseña){
+    console.log(email,contraseña)
     try {
-        let dealer = await store.getDealers({name: name, password: contraseña});
-        if(name && contraseña && dealer != null){
+
+        let dealer = await store.getDealers({email: email, password: contraseña});
+        if(email && contraseña && dealer != null){
             let sesion = {
-                name: dealer.name,
+                name: dealer.user,
                 id: dealer.id,
                 session: true
             };

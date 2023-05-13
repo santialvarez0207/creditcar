@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Dealer } from '../model/dealer';
-import { Temporal } from '../model/temporal';
 
 
 @Injectable({
@@ -18,10 +17,14 @@ export class DealersService {
       .set('email',email)
       .set('password', password);
     console.log(params);
-    return this.http.get<Temporal>(this.apiUrl + "/check", {params});
+    return this.http.get<Dealer>(this.apiUrl + "/check", {params});
   }
 
   createDealer(dealer:Dealer){
     return this.http.post(this.apiUrl, dealer);
+  }
+
+  getDealer(id:string){
+    return this.http.get<Dealer>(this.apiUrl + `/${id}`);
   }
 }

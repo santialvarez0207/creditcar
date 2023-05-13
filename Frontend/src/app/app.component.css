@@ -6,6 +6,12 @@
     justify-content: center;
     align-items: center;
 }
+#Dealer{
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+
 i{
     cursor: pointer;
     margin: 0px 8px;
@@ -27,7 +33,7 @@ i{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    
+    overflow: hidden;
     width: 50%;
     box-sizing:border-box;
     align-items: center;
@@ -65,8 +71,8 @@ i{
     color: var(--b);
     text-decoration: none;
     font-weight: 500;
-    
-    
+    border-radius: 30px;
+    padding: 8px 16px; 
 }
 .Log-in a:hover,.Search a:hover,.Credit a:hover,.Compare a:hover,.Announce a:hover{  
     background-color:#1fadff;

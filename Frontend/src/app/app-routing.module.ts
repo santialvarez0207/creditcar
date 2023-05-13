@@ -9,6 +9,7 @@ import { FinancingComponent } from './financing/financing.component';
 import { FormComponent } from './form/form.component';
 import { AnnounceComponent } from './announce/announce.component';
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
+import { LoginDealerComponent } from './login-dealer/login-dealer.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'form', component: FormComponent},
   {path: 'announce', component: AnnounceComponent},
   {path: 'perfil-user/:id', component: PerfilUserComponent},
+  {path: 'login-dealer', component: LoginDealerComponent},
 ];
 
 @NgModule({

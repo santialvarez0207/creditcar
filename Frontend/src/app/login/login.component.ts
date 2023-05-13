@@ -66,8 +66,8 @@ export class LoginComponent implements OnInit {
         }
       })
       this.formRegister.reset()
-  
   }
+
   sendL():any{
     let email = this.formLogin.value.email
     let password = this.formLogin.value.password
@@ -78,12 +78,10 @@ export class LoginComponent implements OnInit {
       if (usuarioTemporal) {
         localStorage.setItem('User', JSON.stringify(usuarioTemporal));
         window.location.replace("http://localhost:4200/home");
-      
       }else{
-        console.log("no existe el correo digitado")
+        console.log("no existe el correo digitado");
       }
-    }) 
+    })
     this.formLogin.reset()
   }
-
 }
