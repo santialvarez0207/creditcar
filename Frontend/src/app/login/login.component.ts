@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
 
   CheckUser(){
     let x = localStorage.getItem("User");
-
-    if(x!=null){
+    let y = localStorage.getItem("Dealer");
+    if(x!=null || y!=null){
       window.location.replace("http://localhost:4200/home");
     }
   }

@@ -19,7 +19,18 @@ export class LoginDealerComponent implements OnInit {
   constructor(private dealerService:DealersService) { }
 
   ngOnInit(): void {
+    this.Checkdealer();
   }
+
+  
+  Checkdealer(){
+    let x = localStorage.getItem("User");
+    let y = localStorage.getItem("Dealer");
+    if(x!=null || y!=null){
+      window.location.replace("http://localhost:4200/home");
+    }
+  }
+
 
   SendD():any{
     let email = this.formLoginDealer.value.email;

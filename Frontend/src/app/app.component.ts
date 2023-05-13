@@ -46,9 +46,9 @@ export class AppComponent {
 
     if(x!=null){
       let Dealer = JSON.parse(x);
-      this.idDealer = Dealer._id;
+      this.idDealer = Dealer.id;
       if(Dealer){
-        this.user = Dealer.user;
+        this.user = Dealer.name;
         let element = document.getElementById("Dealer");
         element!.style.display = "flex";
         let elementLogin = document.getElementById("Log-in");
