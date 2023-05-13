@@ -31,17 +31,18 @@ function addDealer(body){
 
 
 
-async function checkDealer(email, contraseña){
-    console.log(email,contraseña)
+async function checkDealer(email, password){
     try {
-
-        let dealer = await store.getDealers({email: email, password: contraseña});
-        if(email && contraseña && dealer != null){
+        let dealer = await store.getDealer({email: email, password: password});
+        
+        if(email && password && dealer != null){
+            console.log(dealer.user)
             let sesion = {
                 name: dealer.user,
-                id: dealer.id,
+                id: dealer._id,
                 session: true
             };
+            console.log(sesion)
             return sesion;
         } else {
             throw new Error("datos incorrectos");
