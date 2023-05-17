@@ -1,7 +1,7 @@
 .publicar-datos {
   height: fit-content;
-  padding: 60px 0 15px 0;
-  margin: 400px  ;
+width: 100%;
+margin: 200px 0 200px 0;
 
 }
 .title{
@@ -15,13 +15,12 @@ legend {
 }
 
 .form-container {
-  position: absolute;
+  
   width: 843px;
   height: 300px;
-  left: 160px;
-  right: 160px;
-  top: 160px;
-  margin: auto  ;
+  
+  
+ margin: 0 auto;
 }
 
 .f1 {
