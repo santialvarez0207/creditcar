@@ -99,8 +99,6 @@ section{
 }
 
 
-
-
 .login-section .form-box h2 {
   text-align: center;
   font-size: 2em;
@@ -131,9 +129,7 @@ section{
 .inpunt-box input {
   width: 90%;
   height: 80%;
-
   outline: none;
-
   padding: 7px;
   margin-bottom: 13px;
   margin-left: 3%;

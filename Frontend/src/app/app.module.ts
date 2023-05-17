@@ -11,6 +11,7 @@ import { FinancingComponent } from './financing/financing.component';
 import { FormComponent } from './form/form.component';
 import { AnnounceComponent } from './announce/announce.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileDealerComponent } from './profile-dealer/profile-dealer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     FinancingComponent,
     FormComponent,
-    AnnounceComponent
+    AnnounceComponent,
+    ProfileDealerComponent
   ],
   imports: [
     BrowserModule,

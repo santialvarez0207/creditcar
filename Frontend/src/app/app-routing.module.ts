@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { FinancingComponent } from './financing/financing.component';
 import { FormComponent } from './form/form.component';
 import { AnnounceComponent } from './announce/announce.component';
+import { ProfileDealerComponent } from './profile-dealer/profile-dealer.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,8 @@ const routes: Routes = [
   {path: 'financing', component: FinancingComponent},
   {path: 'form', component: FormComponent},
   {path: 'announce', component: AnnounceComponent},
+ {path:'profile-dealer',component:ProfileDealerComponent}
+  
 ];
 
 @NgModule({
