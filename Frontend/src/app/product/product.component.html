@@ -19,9 +19,18 @@
 <div class="DivMax">
     <section class="Section1">
         <div class="section1-backgroundCar">
+            <div class="Gradient"></div>
             <img class="CarProduct" src="../../assets/Audi.svg" alt="">
         </div>
         <div class="section1-Photo-InfoImportant">
+            <div class="InfoImportant">
+                <div class="InfoImp">
+                    <h2>Nombre: {{Cars.information.name}}</h2>
+                </div>
+                <div class="InfoImp">
+                    <h2>Precio: ${{Cars.information.price}}</h2>
+                </div>
+            </div>
             <div class="Photo">
                 <div class="Bigphoto">
                     <img src="../../assets/Audi.svg" alt="">
@@ -43,189 +52,164 @@
                 </div>
             </div>
             <div class="InfoImportant">
-                <div class="InfoImp1">
+                <div class="InfoImp">
                     <h2>Concesionario: {{Cars.information.nameDealer}}</h2>
               
                 </div>
-                <div class="InfoImp2">
-                    <h2>Nombre: {{Cars.information.name}}</h2>
-                  
-                </div>
-                <div class="InfoImp3">
-                    <h2>Precio: {{Cars.information.price}}</h2>
-      
-                </div>
-                <div class="InfoImp4">
+                <div class="InfoImp">
                     <h2>Ubicación: {{Cars.information.way.state}} - {{Cars.information.way.city}}</h2>
-  
                 </div>
-                <div class="button"><button (click)="Hidden()" class="ContactDealer">
-                        <h2>Contactar</h2>
-                    </button></div>
             </div> 
         </div>
-    </section>
-    <section class="Section2">
-        <div>
-            <div class="Especification-Section2">
-                <div class="Especification-title1">
-                    <h2>Especificaciones</h2>
-                    <div class="rectangle"></div>
-                </div>
-            </div>
-            <div class="Especification-details-Section2">
-                <ol>
-                    <li class="EachDetail">
-                        <p>Millaje: {{Cars.pspecifications.mileage}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Color del exterior: {{Cars.pspecifications.outsideColor}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Consumo: {{Cars.pspecifications.consumption}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Tipo de combustible: {{Cars.pspecifications.fueltype}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Tracción: {{Cars.pspecifications.traction}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Color del interior: {{Cars.pspecifications.insidecolour}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Motor: {{Cars.pspecifications.engine}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Transmisión: {{Cars.pspecifications.transmission}}</p>
-                        <p></p>
-                    </li>
-                </ol>
-            </div>
+        <div class="buttonO">
+            <button (click)="Hidden()">
+            <h2>Contactar</h2>
+            </button>
         </div>
     </section>
-    <section class="section2-SpecificationMoreDetails">
-        <div class="SpecificationMoreDetails">
-            <div class="dropdown-details">
-                <div class="rectangle2" (click)="Dropdown('DropdownFun4')">
-                    <h3>Consumo</h3>
-                </div>
-                <ol class="Details" id="DropdownFun4">
-                    <li class="EachDetail" >
-                        <p>Consumo combinado: {{Cars.consumption.Combinedconsumption}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Consumo en ciudad: {{Cars.consumption.Consumptioncity}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Consumo en carretera: {{Cars.consumption.Consumptionroad}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Tamaño del tanque de combustible: {{Cars.consumption.tanksize}}</p>
-                        <p></p>
-                    </li>
-                </ol>
-            </div>
-            <div class="dropdown-details" >
-                <div class="rectangle2" (click)="Dropdown('DropdownFun3')">
-                    <h3>Desempeño</h3>
-                </div>
-                <ol class="Details" id="DropdownFun3"> 
-                    <li class="EachDetail">
-                        <p>Transmisión: {{Cars.performace.Transmission}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Tracción: {{Cars.performace.Traction}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Motor: {{Cars.performace.Engine}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Potencia: {{Cars.performace.Power}}</p>
-                        <p></p>
-                    </li>
-                </ol>
-            </div>
-            <div class="dropdown-details">
-                <div class="rectangle2"  (click)="Dropdown('DropdownFun2')">
-                    <h3>Seguridad</h3>
-                </div>
-                <ol class="Details" id="DropdownFun2">
-                    <li class="EachDetail">
-                        <p>Camara de retroceso: {{Cars.security.Reversingcamera}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Monitoreo de puntos ciegos: {{Cars.security.Blindspot}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Velocidad automatica adaptable: {{Cars.security.Adaptivespeed}}</p>
-                        <p></p>
-                    </li>
-                </ol>
-            </div>
+    <section class="details-items">
+        <div class="TitleEspecfic">
+            <h2>Especificaciones</h2>
         </div>
-        <div class="SpecificationMoreDetails">
-            <div class="dropdown-detailsC" (click)="Dropdown('DropdownFun1')">
-                <div class="rectangle2">
-                    <h3>Medidas</h3>
-                </div>
-                <ol class="Details" id="DropdownFun1">
-                    <li class="EachDetail">
-                        <p>Puertas: {{Cars.measures.doors}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Volumen de carga: {{Cars.measures.cargovolume}}</p>
-                        <p></p>
-                    </li>
-                </ol>
-            </div>
-            <div class="dropdown-details">
-                <div class="rectangle2" (click)="Dropdown('DropdownFun')">
-                    <h3>Adicionales</h3>
-                </div>
-                <ol class="Details" id="DropdownFun">
-                    <li class="EachDetail">
-                        <p>Asientos calefaccionados: {{Cars.additional.Heatedseats}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Bluetooth: {{Cars.additional.Bluetooth}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Encendido remoto: {{Cars.additional.remotestart}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Sist. de navegación: {{Cars.additional.Systemnavigation}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Techo corredizo/escotillo: {{Cars.additional.SunroofHatch}}</p>
-                        <p></p>
-                    </li>
-                    <li class="EachDetail">
-                        <p>Tercera fila de asientos: {{Cars.additional.hatch}}</p>
-                        <p></p>
-                    </li>
-                </ol>
-            </div>
+        <div class="Nav-details-items">
+            <p class="Per" (click)="Hide(1)">Generales</p>
+            <p class="Per" (click)="Hide(2)">Consumo</p>
+            <p class="Per" (click)="Hide(3)">Desempeño</p>
+            <p class="Per" (click)="Hide(4)">Seguridad</p>
+            <p class="Per" (click)="Hide(5)">Medidas</p>
+            <p class="Per" (click)="Hide(6)">Adicionales</p>
+        </div>
+        <div class="Squares-items" *ngIf="visibleVar==1">
+            <ol>
+                <li>
+                    <p>Millaje: {{Cars.pspecifications.mileage}}</p>
+                    
+                </li>
+                <li>
+                    <p>Color del exterior: {{Cars.pspecifications.outsideColor}}</p>
+                    
+                </li>
+                <li>
+                    <p>Consumo: {{Cars.pspecifications.consumption}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Tipo de combustible: {{Cars.pspecifications.fueltype}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Tracción: {{Cars.pspecifications.traction}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Color del interior: {{Cars.pspecifications.insidecolour}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Motor: {{Cars.pspecifications.engine}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Transmisión: {{Cars.pspecifications.transmission}}</p>
+                    
+                </li>
+            </ol>
+        </div>
+        <div class="Squares-items" *ngIf="visibleVar==2">
+            <ol class="Details" id="DropdownFun4">
+                <li class="EachDetail" >
+                    <p>Consumo combinado: {{Cars.consumption.Combinedconsumption}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Consumo en ciudad: {{Cars.consumption.Consumptioncity}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Consumo en carretera: {{Cars.consumption.Consumptionroad}}</p>
+                    
+                </li>
+            </ol>
+        </div>
+        <div class="Squares-items" *ngIf="visibleVar==3">
+            <ol class="Details" id="DropdownFun3"> 
+                <li class="EachDetail">
+                    <p>Transmisión: {{Cars.performace.Transmission}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Tracción: {{Cars.performace.Traction}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Motor: {{Cars.performace.Engine}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Potencia: {{Cars.performace.Power}}</p>
+                    
+                </li>
+            </ol>
+        </div>
+        <div class="Squares-items" *ngIf="visibleVar==4">
+            <ol class="Details" id="DropdownFun2">
+                <li class="EachDetail">
+                    <p>Camara de retroceso: {{Cars.security.Reversingcamera}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Monitoreo de puntos ciegos: {{Cars.security.Blindspot}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Velocidad automatica adaptable: {{Cars.security.Adaptivespeed}}</p>
+                    
+                </li>
+            </ol>
+        </div>
+        <div class="Squares-items" *ngIf="visibleVar==5">
+            <ol class="Details" id="DropdownFun1">
+                <li class="EachDetail">
+                    <p>Cantidad de puertas: {{Cars.measures.doors}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Volumen de carga: {{Cars.measures.cargovolume}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Tanque de combustible: {{Cars.consumption.tanksize}}</p>
+                </li>
+            </ol>
+        </div>
+        <div class="Squares-items" *ngIf="visibleVar==6">
+            <ol class="Details" id="DropdownFun">
+                <li class="EachDetail">
+                    <p>Asientos calefaccionados: {{Cars.additional.Heatedseats}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Bluetooth: {{Cars.additional.Bluetooth}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Encendido remoto: {{Cars.additional.remotestart}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Sist. de navegación: {{Cars.additional.Systemnavigation}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Techo corredizo/escotillo: {{Cars.additional.SunroofHatch}}</p>
+                    
+                </li>
+                <li class="EachDetail">
+                    <p>Tercera fila de asientos: {{Cars.additional.hatch}}</p>
+                    
+                </li>
+            </ol>
         </div>
     </section>
 </div>
+    

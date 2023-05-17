@@ -1,0 +1,34 @@
+<section>
+    <div class="contenedor">
+       <div class="item">
+          <img src="../../assets/Logotipoblanco.svg" class="img">
+          <div class="texto">
+             <h2>BIENVENIDO <br><span>
+                </span></h2>
+             <p>¡Estas en el portal de inicio para ingresar como un deealer registrado. Recuerda que si no estas registrado con nosotros comunicate y te registramos en un segundo!</p>
+          </div>
+       </div>
+       <div class="login-section">
+          <div class="form-box login">
+             <form [formGroup]="formLoginDealer" (submit)="SendD()">
+                <h2>INICIAR SESIÓN COMO DEALER</h2>
+                <div class="inpunt-box">
+                   <label for="">Email</label>
+                   <input type="email" formControlName="email" required>
+ 
+                </div>
+                <div class="inpunt-box">
+                   <label for="">contraseña</label>
+                   <input type="password" formControlName="password" required>
+ 
+                </div>
+                <div class="remember-password">
+                   <label for=""><input type="checkbox">Recuerdame</label>
+                   <a href="R">Olvidaste tu contraseña</a>
+                </div>
+                <button class="button" [disabled]="!formLoginDealer.valid">INICIAR SESIÓN</button>
+            </form>
+        </div>
+    </div> 
+</div>   
+</section>

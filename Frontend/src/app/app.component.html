@@ -14,11 +14,20 @@
         </div>
     </div>
     <div class="NavSecondHalf">
-        <div class="Log-in">
+        <div class="Log-in" id="Log-in">
             <a routerLink="/login">Iniciar sesión</a>
+        </div>
+        <div class="Log-in" id="User">
+            <a routerLink="/perfil-user/{{idUser}}">{{name}}</a>
+            <i (click)="CloseSession()" class="material-icons" >logout</i>
+        </div>
+        <div class="Log-in" id="Dealer">
+            <a routerLink="/perfil-user/{{idDealer}}">{{user}}</a>
+            <i (click)="CloseSession()" class="material-icons" >logout</i>
         </div>
     </div>
 </nav>
+
 <div class="router"><router-outlet></router-outlet></div>
 <footer class="BodyFooter">
     <div class="Logotipo"><img src="../assets/CreditCarLogotipo.svg" alt=""></div>

@@ -32,17 +32,28 @@ function addUser(body){
 
 }
 
-
-
-async function checkUser(user, contraseña){
+async function getUser(id) {
     try {
-        let user = await store.getUser({user: user, password: contraseña});
-        if(user && contraseña && user != null){
+        let user = await store.getUser({_id: id});
+        console.log(user);
+        return user
+    } catch (error) {
+        throw error;
+    }
+}
+
+
+async function checkUser(email, password) {
+    try {
+        console.log(email,password)
+        let user = await store.getUser({email: email, password: password});
+        if(email && password && user != null){
             let sesion = {
-                user: user.user,
+                name: user.name,
                 id: user.id,
                 session: true
             };
+            console.log(sesion)
             return sesion;
         } else {
             throw new Error("datos incorrectos");
@@ -55,5 +66,7 @@ async function checkUser(user, contraseña){
 
 module.exports = {
     addUser,
-    checkUser 
+    checkUser,
+    getUser,
+    
 }

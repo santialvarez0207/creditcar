@@ -12,6 +12,11 @@ import { FormComponent } from './form/form.component';
 import { AnnounceComponent } from './announce/announce.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileDealerComponent } from './profile-dealer/profile-dealer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PerfilUserComponent } from './perfil-user/perfil-user.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginDealerComponent } from './login-dealer/login-dealer.component';
+import { PerfilAdministradorComponent } from './perfil-administrador/perfil-administrador.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +28,18 @@ import { ProfileDealerComponent } from './profile-dealer/profile-dealer.componen
     FinancingComponent,
     FormComponent,
     AnnounceComponent,
-    ProfileDealerComponent
+    ProfileDealerComponent,
+    PerfilUserComponent,
+    RegisterComponent,
+    LoginDealerComponent,
+    PerfilAdministradorComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   
   ],
   providers: [],

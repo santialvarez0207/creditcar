@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 router.get('/check', (req, res) =>{
-    controller.checkUser(req.query.user, req.query.password)
+    controller.checkUser(req.query.email, req.query.password)
         .then((sesion)=>{
             response.success(req, res,sesion,201)
         })
@@ -23,6 +23,17 @@ router.post('/', (req, res) =>{
         })
         .catch(()=>{
             response.error(req, res,"informacion invalida","error para logear")
+        })
+})
+
+router.get('/:id', (req, res) =>{
+    let id = req.params.id
+    controller.getUser(id)
+        .then((user)=>{
+            response.success(req, res,user,201)
+        })
+        .catch(()=>{
+            response.error(req, res,"no se obtuvieron los datos")
         })
 })
 

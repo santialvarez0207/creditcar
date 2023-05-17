@@ -54,42 +54,35 @@
 <section class="Section2">
     <div class="Section2-title-compare">
         <div class="title-relation">
-            <h2>Carros relacionados:</h2>
-            <img src="../../assets/SeparatorOpposite.svg" alt="">
+            <h2>Carros relacionados</h2>
         </div>
-        <div class="compare">
-            <button>
-                <h2>Comparar</h2>
-            </button>
-            <img src="../../assets/SeparatorlLittle.svg" alt="">
-        </div>
+    </div>
+    <div class="compare">
+        <button>
+            <h2>Comparar</h2>
+        </button>
     </div>
     <div class="CarrouselProducts">
         <div class="Cards">
-            <div class="Cardsproducts">
+            <div class="Cardsproducts" *ngFor="let Card of Cards">
                 <div class="ImageProduct">
                     <div class="ImageCarProduct">
                         <img src="../../assets/Audi.svg" alt="">
                     </div>
                     <div class="textCards">
-                        <p>$23'000.000</p>
+                        <p>{{Card.information.name}}
+                        </p>
                     </div>
                     <div class="textCards">
-                        <p>Audi R8 Coupe</p>
+                        <img src="../../assets/DollarIcon.svg" alt="">
+                        <p>${{Card.information.price}}</p>
                     </div>
                     <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                        <p class="Textlocate">California, minesota</p>
+                        <p class="Textlocate">{{Card.information.way.state}}, {{Card.information.way.city}}</p>
                     </div>
-                    <div class="ButtonShowMore"><a routerLink="/product">Ver más</a></div>
+                    <div class="ButtonShowMore"><a routerLink="/product/{{Card._id}}">Ver más</a></div>
                 </div>
             </div>
-        </div>
-        <div class="Circles">
-            <div class="Circles1"></div>
-            <div class="Circles2"></div>
-            <div class="Circles3"></div>
-            <div class="Circles4"></div>
-            <div class="Circles5"></div>
         </div>
     </div>
 </section>

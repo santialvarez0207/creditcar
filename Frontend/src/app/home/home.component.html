@@ -57,7 +57,7 @@
     <section class="Section2">
         <div class="TitlePopular">
             <h2>Carros más populares</h2>
-            <div><img src="../../assets/Separator.svg" alt=""></div>
+            <div></div>
         </div>
         <div class="CarrouselProducts">
             <div class="Cards" >
@@ -70,10 +70,11 @@
                             <p>{{Card.information.name}}</p>
                         </div>
                         <div class="textCards">
-                            <p>{{Card.information.price}}</p>
+                            <img src="../../assets/DollarIcon.svg" alt="">
+                            <p>${{Card.information.price}}</p>
                         </div>
                         <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                            <p class="Textlocate">{{Card.information.way.state}}, {{Card.information.way.city}}</p>
+                            <p class="Textlocate"> {{Card.information.way.state}}, {{Card.information.way.city}}</p>
                         </div>
                         <div class="ButtonShowMore"><a routerLink="/product/{{Card._id}}">Ver más</a></div>
                     </div>
@@ -86,7 +87,6 @@
             <div class="TitleChoose">
                 <h2>¡Escogenos!</h2>
             </div>
-            <img src="../../assets/SeparatorOpposite.svg" alt="">
         </div>
         <div class="Section3-Funtion-CarVector">
             <div class="Funtion">
@@ -128,7 +128,7 @@
             <div>
                 <h2>Sobre nosotros</h2>
             </div>
-            <img src="../../assets/Separator.svg" alt="">
+            
         </div>
         <div class="Section4-Mision-Vision">
             <div class="Vision">

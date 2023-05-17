@@ -52,23 +52,23 @@
       <div class="login-section">
          <div class="form-box login">
 
-            <form action="">
+            <form [formGroup]="formLogin" (submit)="sendL()">
                <h2>INICIAR SESIÓN</h2>
                <div class="inpunt-box">
                   <label for="">Email</label>
-                  <input type="email" required>
+                  <input type="email" formControlName="email" required>
 
                </div>
                <div class="inpunt-box">
                   <label for="">contraseña</label>
-                  <input type="password" required>
+                  <input type="password" formControlName="password" required>
 
                </div>
                <div class="remember-password">
                   <label for=""><input type="checkbox">Recuerdame</label>
                   <a href="R">Olvidaste tu contraseña</a>
                </div>
-               <button class="button">INICIAR SESIÓN</button>
+               <button class="button" [disabled]="!formLogin.valid">INICIAR SESIÓN</button>
                <div class="crear-cuenta">
 
                   <p>¿No tienes cuenta? <a routerLink="#" class="Register-link"> Crear Cuenta</a></p>
@@ -83,29 +83,29 @@
 
          <div class="form-box register">
 
-            <form action="">
+            <form [formGroup]="formRegister" (submit)="sendR()">
                <h2>Registrate</h2>
 
                <div class="inpunt-box">
                   <label for="">Nombres y Apellidos </label>
-                  <input type="text" required placeholder=" Ej:Santiago Cardona">
+                  <input type="text" required formControlName="name" placeholder=" Ej:Santiago Cardona">
 
                </div>
 
                <div class="inpunt-box">
                   <label for="">Numero de Telefono</label>
-                  <input type="text" required placeholder="Ej:3216546572">
+                  <input type="text" required formControlName="cellphone" placeholder="Ej:3216546572">
 
                </div>
 
                <div class="inpunt-box">
                   <label for="">Correo electronico</label>
-                  <input type="email" required placeholder="Tunombre@gmail.com">
+                  <input type="email" required formControlName="email" placeholder="Tunombre@gmail.com">
 
                </div>
                <div class="inpunt-box">
                   <label for="">contraseña</label>
-                  <input type="password" required>
+                  <input type="password" formControlName="password" required>
 
                </div>
                <!--
@@ -119,10 +119,10 @@
                </div>-->
 
 
-               <button class="button">REGISTRATE</button>
+               <button class="button" [disabled]="!formRegister.valid">REGISTRATE</button>
                <div class="crear-cuenta">
 
-                  <p>¿Ya tienes cuenta? <a routerLink="#" class="login-link"> Iniciar Sesión</a></p>
+                  
                </div>
 
             </form>

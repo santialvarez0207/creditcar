@@ -1,6 +1,21 @@
 .logo img{
     width:120px;
 }
+#User{
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+#Dealer{
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+
+i{
+    cursor: pointer;
+    margin: 0px 8px;
+}
 .BodyNav{
     background-color: var(--sw);
     display: flex;
@@ -11,14 +26,14 @@
     height: 60px;
     border-bottom: 4px var(--c2) solid;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    position: relative;
-    z-index: 200;
+    position: sticky;
+    z-index: 5000;
 }
 .NavFirstHalf{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    
+    overflow: hidden;
     width: 50%;
     box-sizing:border-box;
     align-items: center;
@@ -56,8 +71,8 @@
     color: var(--b);
     text-decoration: none;
     font-weight: 500;
-    
-    
+    border-radius: 30px;
+    padding: 8px 16px; 
 }
 .Log-in a:hover,.Search a:hover,.Credit a:hover,.Compare a:hover,.Announce a:hover{  
     background-color:#1fadff;
@@ -87,6 +102,8 @@
 }
 .router{
     min-height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 .BodyFooter{
     background-color: var(--w);

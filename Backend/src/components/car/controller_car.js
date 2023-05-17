@@ -27,6 +27,20 @@ function addCar(body){
 
 }
 
+
+async function getCars() {
+    try {
+        let cars = await store.getCars();
+        console.log(cars);
+        return cars
+    } catch (error) {
+        throw error;
+    }
+}
+
+
+
+
 async function getCar(id) {
     try {
         let car = await store.getCar({_id: id});
@@ -55,5 +69,6 @@ async function getPopularCars(){
 module.exports = {
     addCar,
     getPopularCars,
-    getCar
+    getCar,
+    getCars,
 }

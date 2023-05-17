@@ -1,10 +1,14 @@
 .Section1-CarBackground{
     box-sizing: border-box;
     width: 100%;
-    object-fit: cover;
+    height: 584px;
+    border-bottom: 4px var(--c2) solid;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .Carhome{
     width: 100%;
+    object-fit: cover;
+    height: 580px;
 }
 .DivSearch{
     width: 100%;
@@ -25,6 +29,7 @@
     overflow-y: hidden;
     box-sizing: border-box;
     border-radius: 5px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 .Advance-New-Used p{
     margin-bottom: 8px;
@@ -64,19 +69,24 @@
     grid-template-columns:auto auto auto;
     padding: 0 30px;
     width: 40%;
-    
+}
+.Info-search{
+    width: 500px;
 }
 .Section2{
     width: 100%;
-    margin: 160px 0 0 0;
+    margin: 200px 0 0 0;
 }
 .TitlePopular, .Section4-titleAboutUs{
-    display: grid;
-    grid-template-areas: auto auto;
-    padding: 0 0 0 670px; 
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px var(--c2) solid;
 }
 .TitlePopular h2, .Section4-titleAboutUs div h2{
-    margin:0 0 2px 30px;
+    
     color: var(--c1);
 }
 .CarrouselProducts{
@@ -88,6 +98,7 @@
     justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
+    padding: 0 50px;
     
 }
 .Cardsproducts{
@@ -95,7 +106,8 @@
     height: 515px;
     border-bottom: solid var(--c1) 4px;
     border-radius: 15px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
+    margin-bottom:30px ;
 }
 
 .ImageCarProduct{
@@ -109,10 +121,23 @@
     margin: -20px 0 0 0;
     display: flex;
     flex-flow: row wrap;
+    padding-left: 10px;
 }
 .Locate img{
     margin: 0 5px 0 0;
 
+}
+.textCards img{
+    width: 26px;
+    margin-right: 6px;
+
+}
+.textCards{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding-left: 12px;
 }
 .ButtonShowMore a{
     background-color: var(--c1);
@@ -126,36 +151,24 @@
 .ButtonShowMore{
     display: flex;
     justify-content: center;
-    margin: 15px 0 0 0;
+    margin: 5px 0 0 0;
 }
-.Circles{
-    margin: 30px 0 0 0;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Circles1,.Circles2,.Circles3,.Circles4,.Circles5{
-    width: 20px;
-    height: 20px;
-    background-color: var(--c1);
-    border-radius: 100px;
-    margin-left: 10px;
-}
+
 .Section3{
-    margin-top: 90px;
+    margin-top: 130px;
 }
 .titleChooseme{
     width: 100%;
 
 }
-.titleChooseme img{
-   margin-left: -5px;    
-}
 .TitleChoose{
     color: var(--c1);
-    margin: 0 0 -15px 635px;
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px var(--c2) solid;
 }
 .Section3-Funtion-CarVector{
     display: flex;
@@ -177,6 +190,7 @@
     border-radius: 15px;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
 }
 
 .Icon-Funtion{
@@ -192,6 +206,9 @@
 .Text-Funtion{
     width: 320px;
 }
+.section4{
+    margin-top: 200px;
+}
 .Section4-Mision-Vision{
     margin: 90px;
     display: flex;
@@ -203,7 +220,7 @@
     width: 320px;
     height: 400px;
     background-color: var(--sw);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
     align-items: center;
     display: grid;
     justify-content: center;
