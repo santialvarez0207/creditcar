@@ -69,6 +69,16 @@ router.post('/', (req, res) =>{
         })
 })
 
+router.get('/:id', (req, res) =>{
+    let id = req.params.id
+    controller.getDealer(id)
+        .then((Dealer)=>{
+            response.success(req, res,Dealer,201)
+        })
+        .catch(()=>{
+            response.error(req, res,"no se obtuvieron los datos")
+        })
+})
 
 
 module.exports = router

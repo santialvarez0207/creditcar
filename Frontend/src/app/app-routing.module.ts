@@ -9,9 +9,9 @@ import { FinancingComponent } from './financing/financing.component';
 import { FormComponent } from './form/form.component';
 import { AnnounceComponent } from './announce/announce.component';
 import { ProfileDealerComponent } from './profile-dealer/profile-dealer.component';
-
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
 import { LoginDealerComponent } from './login-dealer/login-dealer.component';
+import { ProfileDealerPublicComponent } from './profile-dealer-public/profile-dealer-public.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -22,9 +22,10 @@ const routes: Routes = [
   {path: 'financing', component: FinancingComponent},
   {path: 'form', component: FormComponent},
   {path: 'announce', component: AnnounceComponent},
- {path:'profile-dealer',component:ProfileDealerComponent},
+  {path:'profile-dealer/:id',component:ProfileDealerComponent},
   {path: 'perfil-user/:id', component: PerfilUserComponent},
   {path: 'login-dealer', component: LoginDealerComponent},
+  {path: 'profile-dealer-public', component:ProfileDealerPublicComponent},
 ];
 
 @NgModule({

@@ -119,11 +119,20 @@ function evaluateDealer(dealer,data){
     return respuesta
 }
 
-
+async function getDealer(id) {
+    try {
+        let Dealer = await store.getDealer({_id: id});
+        console.log(Dealer);
+        return user
+    } catch (error) {
+        throw error;
+    }
+}
 
 module.exports = {
     addDealer,
     checkDealer,
     recommendedDealers,
-    evaluateOneDealer 
+    evaluateOneDealer,
+    getDealer
 }

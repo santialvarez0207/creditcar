@@ -9,7 +9,7 @@ export class DataFinance{
     typeofcontract:string;
     income:number;  
     zip:string;
-    state: string
+    state: string;
     city:string;
 
     constructor(age:number= 0, amount:number = 0, price:number = 0, amountfinance:number =0,

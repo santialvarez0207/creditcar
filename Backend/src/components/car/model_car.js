@@ -9,7 +9,7 @@ const CarSchema = new Schema(
         nameDealer: String,
         id_dealer: {type: 'String', required: true},
         name: String,
-        price: String,
+        price: Number,
         way:{state: String, city: String},
         url:String,},
 
