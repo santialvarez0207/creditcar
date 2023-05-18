@@ -27,7 +27,7 @@ function addUser(body){
             password: body.password,
         };
         store.addUser(user)
-        return resolve("user agregado correctamente")
+        return resolve(true)
 
     })
 

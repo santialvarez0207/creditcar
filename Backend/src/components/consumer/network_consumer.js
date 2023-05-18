@@ -18,11 +18,11 @@ router.get('/check', (req, res) =>{
 router.post('/', (req, res) =>{
     
     controller.addUser(req.body)
-        .then(()=>{
-            response.success(req, res,"creado correctamente",201)
+        .then((val)=>{
+            response.success(req, res,val,201)
         })
         .catch(()=>{
-            response.error(req, res,"informacion invalida","error para logear")
+            response.error(req, res,val,"error para logear")
         })
 })
 

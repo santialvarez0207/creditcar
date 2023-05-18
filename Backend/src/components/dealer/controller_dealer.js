@@ -8,6 +8,9 @@ function addDealer(body){
         if(!body){
             return reject("no hay datos")
         }
+        if(store.getDealer({email: body.email})){
+            return resolve(false)
+        }
 
         fecha = new Date();
         let dealer = {
@@ -23,7 +26,7 @@ function addDealer(body){
             percent: body.percent
         };
         store.addDealer(dealer)
-        return resolve("Dealer agregado correctamente")
+        return resolve(true)
 
     })
 

@@ -60,12 +60,12 @@ export class LoginComponent implements OnInit {
       this.userService.createUser(new_user).subscribe(res => {
         if (res) {
           window.location.replace("http://localhost:4200/login");
-          
+          this.formRegister.reset()
         }else{
-          console.log("no existe el correo digitado")
+          window.alert("ya existe un usuario con este correo")
         }
       })
-      this.formRegister.reset()
+      
   }
 
   sendL():any{
