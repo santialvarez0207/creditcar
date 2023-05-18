@@ -15,6 +15,10 @@ export class ProductService {
   constructor(private http: HttpClient) {
     
   }
+
+  CreateCar(car:Car){
+    return this.http.post(this.apiUrl, car);
+  }
   GetCars() {
     let message = this.http.get<Car[]>(this.apiUrl);
     console.log(message)
