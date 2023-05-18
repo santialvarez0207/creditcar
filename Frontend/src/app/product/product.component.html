@@ -1,16 +1,59 @@
 <section class="Modal" id="MyModal">
     <div class="ModalBox">
         <div>
-            <h2>¡Aquí estan los datos actualizados para ti!</h2>
+            <h2>¡Pre-financia este carro!</h2>
         </div>
-        <div>
-            <h3 class="ModalContact">Correo electronico:</h3>
-            <h3></h3>
-            <h3 class="ModalContact">Telefono:</h3>
-            <h3></h3>
-            <h3 class="ModalContact">Celular:</h3>
-            <h3></h3>
-        </div>
+        <form class="Formuniquedealer">
+            <div class="ContentInputs">
+
+                <label for="">Edad</label>
+                <input type="number">
+
+                <label for="">Estado</label>
+                <input type="text">
+
+                <label for="">Tipo de credito</label>
+                <select class="aCredit1" formControlName="credit">
+                    <option value="">Excelente (720 - 850)</option>
+                    <option value="">Bueno (680 - 719)</option>
+                    <option value="">Justo (640 - 679)</option>
+                    <option value="">Pobre (0 - 639)</option>
+                </select>
+
+                <label for="">Zip</label>
+                <input type="text">
+
+                <label for="">Ingresos anuales</label>
+                <input type="text">
+            </div>
+            <div class="ContentInputs">
+
+                <label for="">Ciudad</label>
+                <input type="text">
+                
+                <label for="">Tipo de residencia</label>
+                <select formControlName="typeofresidence">
+                    <option value="">Residencia propia</option>
+                    <option value="">Residencia alquilada</option>
+                </select>
+
+                <label for="">Cuota inicial</label>
+                <input type="number">
+
+                <label for="">Tipo de contrato</label>
+                <select class="aContract" formControlName="typeofcontract">
+                    <option value="">Tiempo completo</option>
+                    <option value="">Mitad de tiempo</option>
+                    <option value="">Independiente</option>
+                    <option value="">Desempleado</option>
+                    <option value="">Otro </option>
+                </select>
+
+          
+                
+            </div>
+            
+        </form>
         <div class="ButtonModal">
             <button (click)="Hidden()" class="CloseModal">Cerrar</button>
         </div>

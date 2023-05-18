@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'financing', component: FinancingComponent},
   {path: 'form', component: FormComponent},
   {path: 'announce', component: AnnounceComponent},
- {path:'profile-dealer',component:ProfileDealerComponent},
+ {path:'profile-dealer/:id',component:ProfileDealerComponent},
   {path: 'perfil-user/:id', component: PerfilUserComponent},
   {path: 'login-dealer', component: LoginDealerComponent},
 ];

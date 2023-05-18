@@ -189,19 +189,14 @@
                 <div class="caja">
 
                     <button >Subir Fotos</button>
-<<<<<<< HEAD
-=======
                 </div>
 
                 <div>
-                    <button class="c">ENVIAR</button>
->>>>>>> d78d7c4d9955f30588f919d74b1b2ffcf9565054
+                    <button  [disabled]="!FormCar.valid"class="c">ENVIAR</button>
                 </div>
 
             </fieldset>
-            <fieldset class="Send">
-                <button  [disabled]="!FormCar.valid">Crear</button>
-            </fieldset>
+
         </form>
 
     </div>

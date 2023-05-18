@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, ControlContainer, FormControl,Validators } from '@angular/forms';
 import { ProductService } from '../service/product.service';
 import { Car } from '../model/product';
+import { DealersService } from '../service/dealers.service';
+import { Router,ActivatedRoute } from '@angular/router';
+import { Dealer } from '../model/dealer';
 @Component({
   selector: 'app-profile-dealer',
   templateUrl: './profile-dealer.component.html',
@@ -43,10 +46,15 @@ export class ProfileDealerComponent implements OnInit {
    })
 
 
-
-  constructor( private productService:ProductService) { }
+   Dealer:Dealer = new Dealer();
+  constructor( private productService:ProductService, private dealerService:DealersService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+      var idsession = params['id'];
+
+      this.dealerService.getDealer(idsession).subscribe((res) => {this.Dealer = res as Dealer})
+    })
     this.FormCar.reset();
   }
 

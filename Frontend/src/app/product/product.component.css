@@ -134,9 +134,10 @@
     background-color: var(--sw);
     border-bottom: solid var(--c1) 4px;
     border-radius: 15px;
-    width: 300px;
-    height: 300px;
-    padding: 30px 90px;
+    width: 500px;
+    overflow: scroll;
+    height: fit-content;
+    padding: 5px 40px;
 }
 .ModalContact{
     background-color: var(--c1);
@@ -150,7 +151,23 @@
     color: var(--c1);
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
+
+}
+.Formuniquedealer{
+    display: grid;
+    grid-template-columns: 230px 230px;
+}
+input{
+    width: 180px;
+    margin-bottom: 8px;
+}
+select{
+    width: 188px;
+    margin-bottom: 8px;
+}
+.ContentInputs{
+    display: flex;
+    flex-direction: column;
 }
 .Per{
     padding: 6px 20px;
@@ -160,7 +177,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    margin-bottom: 65px;
     
 }
 .CloseModal{
