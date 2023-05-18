@@ -1,6 +1,4 @@
-
-
-
+<!--
 <section class="publicar-datos">
 
     <h1 class="title">AGREGAR VEHICULO</h1>
@@ -170,6 +168,7 @@
                 <div class="caja">
 
                     <button >Subir Fotos</button>
+                
                 </div>
 
                 <div>
@@ -183,3 +182,111 @@
     </div>
 
 </section>
+-->
+
+<div class="Body">
+    <section class="Body-perfil-dealer">
+        <div class="perfil-dealer-CommonData">
+            <div>
+                <p>josman</p>
+            </div>
+            <div>
+                <p>ubicacion</p>
+            </div>
+            <img class="imgPerfil" src="../../assets/Perfilphoto.svg" alt="">
+            <div>
+                <p>josman@gmail.com</p>
+            </div>
+            <div>
+                <p>32422433</p>
+            </div>
+        </div>
+
+
+        <div class="perfil-dealer-Nav">
+            <p class="Per" (click)="hide(1)">Datos dealer</p>
+            <p class="Per" (click)="hide(2)">Agregar vehiculo</p>
+
+        </div>
+
+
+        <div class="perfil-dealer-totalinfo" *ngIf="visibleVar==1">
+            <div class="content">
+                <p>3244344</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+
+            <div class="content">
+                <p>oelod</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+
+            <div class="content">
+                <p>nombre</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+
+            <div class="content">
+                <p>estado</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>zip</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+
+            <div class="content">
+                <p>ciudad</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+
+        </div>
+        <div class="Perfil-dealer-totalinfo" *ngIf="visibleVar==2">
+            <div class="content">
+
+
+                <div class="contenido">
+                    <img src="../../assets/Audi.svg" alt="">
+                </div>
+
+
+
+
+
+
+
+
+
+                <!--
+            <div class="content">
+                <p>{{User.typeofcontract}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.typeofresidence}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.credit}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+            <div class="content">
+                <p>{{User.income}}</p>
+                <img src="../../assets/editicon.svg" alt="">
+            </div>
+        </div>
+        <div class="Perfil-dealer-totalinfo-Password" *ngIf="visibleVar==3"> 
+            <div class="totalinfo-h2">
+                <h2>Cambiar contraseña</h2>
+            </div>
+            <form class="password">
+                <label class="label" for="">Nueva contraseña</label>
+                <label  class="label" for="">Confirme contraseña</label>
+                <input class="inputPass" type="text" name="" id="">
+                <input class="inputPass" type="text" name="" id="">
+            </form>
+            <a>Cambiar</a>
+        </div>
+    </section>
+</div>
+-->
