@@ -12,10 +12,10 @@ import { DataFinance, infoDealer } from '../model/financeAccount';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  contador:number = 1;
+  contador:number = 0;
   visibleVar:number = 1;
   Cars:Car = new Car();
-  Financing: infoDealer[] = [];
+  Financing:infoDealer = new infoDealer() ;
 
   FinancingFormUnique = new FormGroup({
     amount: new FormControl("",[Validators.required]),
@@ -79,19 +79,23 @@ export class ProductComponent implements OnInit {
 
     data.age = this.FinancingFormUnique.value.age;
     data.amount = this.FinancingFormUnique.value.amount;
-    data.amountfinance = 1;
+    data.amountfinance = this.Cars.information.price - data.amount;
     data.city = this.FinancingFormUnique.value.city;
     data.credit = this.FinancingFormUnique.value.credit;
     data.income = this.FinancingFormUnique.value.income;
-    data.price = 1;
+    data.price = this.Cars.information.price;
     data.state = this.FinancingFormUnique.value.state;
     data.typeofcontract = this.FinancingFormUnique.value.typeofcontract;
     data.typeofresidence = this.FinancingFormUnique.value.typeofresidence;
     data.zip = this.FinancingFormUnique.value.zip;
 
-    this.formSliderService.dealersRecommended(data).subscribe(res => {this.Financing = res as infoDealer[]
+    this.formSliderService.getFinanceOneDealer(data,this.Cars.information.id_dealer).
+    subscribe(res => {this.Financing = res as infoDealer
+      
     console.log(this.Financing)
   });
+
+  this.FinancingFormUnique.reset()
   }
 
 
