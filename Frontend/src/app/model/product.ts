@@ -128,7 +128,7 @@ export class Car {
       nameDealer:string;
       id_dealer: string;
       name: string;
-      price: string;
+      price: number;
       way: { state: string; city: string };
       url: string;
     };
@@ -178,14 +178,14 @@ export class Car {
         nameDealer:string;
         id_dealer: string;
         name: string;
-        price: string;
+        price: number;
         way: { state: string; city: string };
         url: string;
         } = {
         nameDealer: "",
         id_dealer: "",
         name: "",
-        price: "",
+        price: 0,
         way: { state: "", city: "" },
         url: "",
         },

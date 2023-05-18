@@ -17,6 +17,7 @@ import { PerfilUserComponent } from './perfil-user/perfil-user.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginDealerComponent } from './login-dealer/login-dealer.component';
 import { PerfilAdministradorComponent } from './perfil-administrador/perfil-administrador.component';
+import { ProfileDealerPublicComponent } from './profile-dealer-public/profile-dealer-public.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PerfilAdministradorComponent } from './perfil-administrador/perfil-admi
     RegisterComponent,
     LoginDealerComponent,
     PerfilAdministradorComponent,
+    ProfileDealerPublicComponent,
   ],
   imports: [
     BrowserModule,
