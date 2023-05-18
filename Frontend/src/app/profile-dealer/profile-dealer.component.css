@@ -104,15 +104,8 @@ legend {
   margin-top: -250px;
   border: 2px black dashed;
 }
-<<<<<<< HEAD
-
-.caja button{
-
-  margin: 48% 0 0 34%;
-=======
 .caja button{
   margin: 180px 0 0 60px;
->>>>>>> d78d7c4d9955f30588f919d74b1b2ffcf9565054
   background: var(--c1);
   width: 120px;
   height: 35px;

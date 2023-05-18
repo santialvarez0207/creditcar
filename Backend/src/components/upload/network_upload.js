@@ -8,14 +8,17 @@ const router = express.Router()
 
 router.get('/:name', (req, res) =>{
     let name = req.params.name
-    controller.getImage(name)
+    console.log(name)
+    controller.getImagen(name)
         .then((pathImagen)=>{
-            response.success(req, res.sendFile(pathImagen),pathImagen,201)
+            res.sendFile(pathImagen)
+            console.log(pathImagen)
         })
         .catch(()=>{
             response.error(req, res,"no se obtuvieron los datos")
         })
 })
+
 
 router.post('/', (req, res) => {
     console.log(req.file,"hola")

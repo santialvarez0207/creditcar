@@ -36,15 +36,36 @@ router.get('/dealerProbability', (req, res) =>{
         })
 })
 
+router.get('/ProbabilityOneDealer', (req, res) =>{
+    data={
+        'age': req.query.age, 
+        'amount': req.query.amount,
+        'price' : req.query.price,
+        'amountfinance' : req.query.amountfinance,
+        typeofresidence : req.query.typeofresidence, 
+        credit : req.query.credit,
+        typeofcontract : req.query.typeofcontract,
+        income : req.query.income,
+        zip : req.query.zip
+    }
+    controller.evaluateOneDealer(req.query.idDealer, data)
+        .then((sesion)=>{
+            response.success(req, res,sesion,201)
+        })
+        .catch((e)=>{
+            response.error(req, res,"informacion incorrecta",e)
+        })
+})
+
 
 router.post('/', (req, res) =>{
     console.log("Network")
     controller.addDealer(req.body)
-        .then(()=>{
-            response.success(req, res,"creado correctamente",201)
+        .then((val)=>{
+            response.success(req, res,val,201)
         })
         .catch(()=>{
-            response.error(req, res,"informacion invalida","error para logear")
+            response.error(req, res,val,"error para logear")
         })
 })
 

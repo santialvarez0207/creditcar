@@ -21,7 +21,7 @@ export class DealersService {
   }
 
   createDealer(dealer:Dealer){
-    return this.http.post(this.apiUrl, dealer);
+    return this.http.post<boolean>(this.apiUrl, dealer);
   }
 
   getDealer(id:string){

@@ -39,13 +39,13 @@ export class RegisterComponent implements OnInit {
 
     this.dealersService.createDealer(data).subscribe(res => {
       if (res) {
-        window.location.replace("http://localhost:4200/home");
-        console.log("xfue registrado")
+        window.alert("registrado")
+        this.formDealer.reset()
       }else{
-        console.log("No fue registrado")
+        window.alert("ya existe un usuario con el mismo correo o nit")
       }
     });
-    this.formDealer.reset()
+    
   }
 
 }
