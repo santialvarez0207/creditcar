@@ -28,9 +28,9 @@ function addCar(body){
 }
 
 
-async function getCars() {
+async function getCars(params = {}) {
     try {
-        let cars = await store.getCars();
+        let cars = await store.getCars(params);
         console.log(cars);
         return cars
     } catch (error) {
