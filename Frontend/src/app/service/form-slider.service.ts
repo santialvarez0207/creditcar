@@ -72,7 +72,7 @@ export class FormSliderService {
       .set('zip', form.zip)
       .set('country', form.state)
       .set('city', form.city)
-
+    console.log(params)
       return this.http.get<infoDealer>(this.apiUrl + "/ProbabilityOneDealer" , {params}); 
   }
  

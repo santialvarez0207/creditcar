@@ -20,7 +20,7 @@
                 <input type="text" formControlName="zip">
 
                 <label for="">Ingresos anuales</label>
-                <input type="text" formControlName="income">
+                <input type="number" formControlName="income">
             </div>
             <div class="ContentInputs">
 
@@ -52,9 +52,31 @@
                     <option value="">Otro </option>
                 </select>  
             </div>
+            <div class="ButtonModal">
+                <button [disabled]="!FinancingFormUnique.valid" class="CloseModal">Enviar</button>
+            </div>
         </form>
-        <div class="ButtonModal">
-            <button [disabled]="!FinancingFormUnique.valid" class="CloseModal">Enviar</button>
+    
+    </div>
+</section>
+<section class="Modal"  id="MyModal1">
+    <div class="ModalBox">
+        <div>
+            <h2>Estos son los resultados</h2>
+        </div>
+        <div>
+            <h2>75%</h2>
+        </div>
+        <div>
+            <p>Hemos analizado tu información y aquí el resultado con el concecionario
+            {{Cars.information.nameDealer}} si quieres comunicarte con dicho concesionario y persiona "Ir al concesionario" 
+            ahí te saldra toda la información de contacto</p>
+        </div>
+        <div>
+            <div class="ButtonModal">
+                <button class="CloseModal">Cerrar</button>
+                <a class="CloseModal">Ir con el concesionario</a>
+            </div>
         </div>
     </div>
 </section>
@@ -108,7 +130,7 @@
             <h2>Pre-financiar</h2>
             </button>
             <a routerLink="/profile-dealer-public">
-                <h2>Ir al dealer</h2>
+                <h2>Ir al concecionario</h2>
             </a>
         </div>
     </section>
