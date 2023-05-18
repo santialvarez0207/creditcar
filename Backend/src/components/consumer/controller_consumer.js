@@ -7,7 +7,8 @@ function addUser(body){
         if(!body){
             return reject("no hay datos")
         }
-
+        let usuario = store.getUser({email : body.email})
+        console.log(usuario)
         fecha = new Date();
         let user = {
             amount: body.amount,
