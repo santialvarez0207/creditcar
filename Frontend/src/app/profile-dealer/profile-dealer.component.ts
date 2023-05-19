@@ -43,6 +43,7 @@ export class ProfileDealerComponent implements OnInit {
     Systemnavigation: new FormControl("",[]),
     SunroofHatch: new FormControl("",[]),
     hatch: new FormControl("",[]),
+   
    })
 
 
@@ -60,6 +61,8 @@ export class ProfileDealerComponent implements OnInit {
 
   Send(){
     let Dealer = localStorage.getItem("Dealer")!;
+
+    
 
     let data = new Car();
     data.information.id_dealer = JSON.parse(Dealer).id;
@@ -95,13 +98,22 @@ export class ProfileDealerComponent implements OnInit {
     data.additional.hatch = this.FormCar.value.hatch;
     data.additional.remotestart = this.FormCar.value.remotestart;
 
-    this.productService.CreateCar(data).subscribe(res => {
-      if(res){
-        window.location.replace("http://localhost:4200/home");
-      }else{
-        console.log("No fue registrado")
-      }
+    let imagenes = <HTMLInputElement> document.getElementById("imagenes")
+    console.log(imagenes.files,"hlola")
+    
+    this.productService.postimg(imagenes.files).subscribe((res) => {
+      
+      data.information.urls = res  
+      
+      this.productService.CreateCar(data).subscribe(res => {
+        if(res){
+          window.location.replace("http://localhost:4200/home");
+        }else{
+          console.log("No fue registrado")
+        }
+      })
     })
+
     this.FormCar.reset();
   }
 }

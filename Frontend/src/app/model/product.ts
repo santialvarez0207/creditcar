@@ -130,7 +130,7 @@ export class Car {
       name: string;
       price: number;
       way: { state: string; city: string };
-      url: string;
+      urls: string[];
     };
     pspecifications: {
       mileage: string;
@@ -180,14 +180,14 @@ export class Car {
         name: string;
         price: number;
         way: { state: string; city: string };
-        url: string;
+        urls: string[];
         } = {
         nameDealer: "",
         id_dealer: "",
         name: "",
         price: 0,
         way: { state: "", city: "" },
-        url: "",
+        urls: [""],
         },
          pspecifications: {
         mileage: string;

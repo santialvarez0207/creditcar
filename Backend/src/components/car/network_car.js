@@ -28,8 +28,9 @@ router.get('/', (req, res) =>{
         })
 })
 
-router.get('/:idDealer', (req, res) =>{
-    let id = req.params.idDealer
+router.get('/dealer/:id', (req, res) =>{
+    let id = req.params.id
+    console.log(id)
     controller.getCars({information: {id_dealer: id}})
         .then((cars)=>{
             response.success(req, res,cars,201)

@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
 })
 
  
-app.use(multer({storage}).single('image'))
+app.use(multer({storage}).array('image'))
  
 app.set('trust proxy', true);
 app.use(cors(options));

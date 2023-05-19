@@ -9,6 +9,7 @@ const router = express.Router()
 router.get('/:name', (req, res) =>{
     let name = req.params.name
     console.log(name)
+
     controller.getImagen(name)
         .then((pathImagen)=>{
             res.sendFile(pathImagen)
@@ -21,8 +22,10 @@ router.get('/:name', (req, res) =>{
 
 
 router.post('/', (req, res) => {
-    console.log(req.file,"hola")
-    res.send(req.file)
+    let names = req.files.map((file)=>{
+        return file.filename
+    })
+    res.send(names)
 })
     
 

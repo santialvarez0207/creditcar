@@ -16,6 +16,16 @@ export class ProductService {
     
   }
 
+  postimg(imagenes: any) {
+    console.log(imagenes)
+    const fd = new FormData();
+    for (var i = 0; i <= imagenes.length-1; i++) {
+      fd.append('image', imagenes[i]);
+    }
+    return this.http.post<Array<string>>("http://localhost:3000/api/image", fd);
+  }
+
+
   CreateCar(car:Car){
     return this.http.post(this.apiUrl, car);
   }
