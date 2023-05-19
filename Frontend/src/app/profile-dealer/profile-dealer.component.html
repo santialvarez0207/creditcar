@@ -240,29 +240,30 @@
 
         <div class="perfil-dealer-totalinfo" *ngIf="visibleVar==1">
             <div class="content">
-                <p>{{Dealer.user}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p >Nombre:</p>
+                    <input type="text"  value="{{Dealer.user}}" id="user" placeholder="Modificar Nombre">
             </div>
 
             <div class="content">
-                <p>{{Dealer.email}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>email:</p>
+                <input type="text"  value="{{Dealer.email}}" id="email" placeholder="Modificar email">
             </div>
 
             <div class="content">
-                <p>{{Dealer.location.state}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>estado</p>
+                <input type="text"  value="{{Dealer.location.state}}" id="state" placeholder="Modificar estado">
             </div>
 
             <div class="content">
-                <p>{{Dealer.location.city}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>ciudad:</p>
+                <input type="text"  value="{{Dealer.location.city}}" id="city" placeholder="Modificar ciudad">
             </div>
             <div class="content">
-                <p>{{Dealer.nit}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>nit:</p>
+                <input type="text"  value="{{Dealer.nit}}" id="nit" placeholder="Modificar nit">
             </div>
-
+ 
+            <div> <button class="boton1"(click)="SendFirst()">ENVIAR</button></div>
 
         </div>
         
@@ -304,10 +305,14 @@
             <form class="password">
                 <label class="label1" for="">Nueva contraseña</label>
                 <label  class="label1" for="">Confirme contraseña</label>
-                <input class="inputPass" type="text" name="" id="">
-                <input class="inputPass" type="text" name="" id="">
+                <input class="inputPass" type="password" name="" id="">
+                <input class="inputPass" type="password" name="" id="">
             </form>
-            <a>Cambiar</a>
+
+            <div class="EditButtonDiv">
+                <button class="EditButton" (click)="sendSecond()">Cambiar</button>
+            </div>
+          
         </div>
     </section>
 </div>
