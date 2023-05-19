@@ -47,7 +47,6 @@ Cards:Car[]=[];
     Systemnavigation: new FormControl("",[]),
     SunroofHatch: new FormControl("",[]),
     hatch: new FormControl("",[]),
-   
    })
    
   Dealer:Dealer = new Dealer();
@@ -74,8 +73,6 @@ reason[visible-1].classList.add('visto');
 
   Send(){
     let Dealer = localStorage.getItem("Dealer")!;
-
-    
 
     let data = new Car();
     data.information.id_dealer = JSON.parse(Dealer).id;
@@ -111,22 +108,13 @@ reason[visible-1].classList.add('visto');
     data.additional.hatch = this.FormCar.value.hatch;
     data.additional.remotestart = this.FormCar.value.remotestart;
 
-    let imagenes = <HTMLInputElement> document.getElementById("imagenes")
-    console.log(imagenes.files,"hlola")
-    
-    this.productService.postimg(imagenes.files).subscribe((res) => {
-      
-      data.information.urls = res  
-      
-      this.productService.CreateCar(data).subscribe(res => {
-        if(res){
-          window.location.replace("http://localhost:4200/home");
-        }else{
-          console.log("No fue registrado")
-        }
-      })
+    this.productService.CreateCar(data).subscribe(res => {
+      if(res){
+        window.location.replace("http://localhost:4200/home");
+      }else{
+        console.log("No fue registrado")
+      }
     })
-
     this.FormCar.reset();
   }
   open(){
@@ -135,4 +123,48 @@ reason[visible-1].classList.add('visto');
   close(){
     document.getElementById("modal")?.classList.remove("vista")
   }
-}
+  SendFirst(){
+
+    const user = document.getElementById("user") as HTMLInputElement;
+    this.Dealer.user = user.value;
+
+    const email = document.getElementById("email") as HTMLInputElement;
+    this.Dealer.email = email.value;
+
+    const state = document.getElementById("state") as HTMLInputElement;
+    this.Dealer.location.state = state.value;
+
+    const city = document.getElementById("city") as HTMLInputElement;
+    this.Dealer.location.city = city.value;
+
+    const nit = document.getElementById("nit") as HTMLInputElement;
+    this.Dealer.nit = nit.value;
+
+   
+    this.dealerService.putDealer(this.Dealer).subscribe(res => {
+      if(res){
+        window.alert("Datos modificados")
+      }else{
+        window.alert("No se pudo enviar")
+      }
+    })
+  }
+  sendSecond(){
+
+
+      const password = document.getElementById("password") as HTMLInputElement;
+      const passwordCon = document.getElementById("passwordCon") as HTMLInputElement;
+  
+      if(password.value == passwordCon.value){
+        this.Dealer.password = password.value;
+  
+        this.dealerService.putDealer(this.Dealer).subscribe(res => {})
+      }else{
+        window.alert("Erroneo")
+        console.log("Erroneo")
+      }
+    }
+  }
+
+
+

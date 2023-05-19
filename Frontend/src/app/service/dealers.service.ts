@@ -27,4 +27,8 @@ export class DealersService {
   getDealer(id:string){
     return this.http.get<Dealer>(this.apiUrl + `/${id}`);
   }
+putDealer(dealer:Dealer){
+  return this.http.put(this.apiUrl+`/${dealer._id}`, dealer);
+}
+
 }
