@@ -2,17 +2,17 @@
     <section class="Body-DealerUser">
         <div class="DealerUser-CommonData">
             <div>
-                <p>ssss</p>
+                <p>{{Dealer.user}}</p>
             </div>
             <div>
-                <p>sssss</p>
+                <p>{{Dealer.email}}</p>
             </div>
             <img class="imgDealer" src="../../assets/Perfilphoto.svg" alt="">
             <div>
-                <p>ssss</p>
+                <p>{{Dealer.phone_number}}</p>
             </div>
             <div>
-                <p>ssss</p>
+                <p>{{Dealer.location.state}}, {{Dealer.location.city}}</p>
             </div>
         </div>
         <div class="DealerUser-Nav">
@@ -21,20 +21,20 @@
         <div class="DealerUser-totalinfo">
             <div class="CarrouselProducts">
                 <div class="Cards" >
-                    <div class="Cardsproducts" >
+                    <div class="Cardsproducts" *ngFor="let Card of Cards">
                         <div class="ImageProduct">
                             <div class="ImageCarProduct">
                                 <img src="../../assets/Audi.svg" alt="">
                             </div>
                             <div class="textCards">
-                                <p>Se</p>
+                                <p>{{Card.information.name}}</p>
                             </div>
                             <div class="textCards">
                                 <img src="../../assets/DollarIcon.svg" alt="">
-                                <p>$Sex</p>
+                                <p>${{Card.information.price}}</p>
                             </div>
                             <div class="Locate"><img src="../../assets/Locate.svg" alt="">
-                                <p class="Textlocate"> s, s</p>
+                                <p class="Textlocate"> {{Card.information.way.state}}, {{Card.information.way.city}}</p>
                             </div>
                             <div class="ButtonShowMore"><a routerLink="/product/s">Ver más</a></div>
                         </div>

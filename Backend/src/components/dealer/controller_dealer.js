@@ -124,7 +124,7 @@ async function getDealer(id) {
     try {
         let Dealer = await store.getDealer({_id: id});
         console.log(Dealer);
-        return user
+        return Dealer
     } catch (error) {
         throw error;
     }

@@ -11,6 +11,8 @@ import { Dealer } from '../model/dealer';
   styleUrls: ['./profile-dealer.component.css']
 })
 export class ProfileDealerComponent implements OnInit {
+visibleVar:number=1;
+
 
    FormCar = new FormGroup({
     name: new FormControl("",[Validators.required]),
@@ -45,9 +47,9 @@ export class ProfileDealerComponent implements OnInit {
     hatch: new FormControl("",[]),
    
    })
+   
+  Dealer:Dealer = new Dealer();
 
-
-   Dealer:Dealer = new Dealer();
   constructor( private productService:ProductService, private dealerService:DealersService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -58,6 +60,14 @@ export class ProfileDealerComponent implements OnInit {
     })
     this.FormCar.reset();
   }
+hide(visible:number){
+this.visibleVar=visible;
+let reason=document.getElementsByClassName("Per");
+for(let index=0;index<reason.length;index++){
+  reason[index].classList.remove('visto');
+}
+reason[visible-1].classList.add('visto');
+}
 
   Send(){
     let Dealer = localStorage.getItem("Dealer")!;
@@ -115,5 +125,11 @@ export class ProfileDealerComponent implements OnInit {
     })
 
     this.FormCar.reset();
+  }
+  open(){
+    document.getElementById("modal")?.classList.add("vista")
+  }
+  close(){
+    document.getElementById("modal")?.classList.remove("vista")
   }
 }

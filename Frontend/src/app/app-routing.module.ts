@@ -25,7 +25,7 @@ const routes: Routes = [
   {path:'profile-dealer/:id',component:ProfileDealerComponent},
   {path: 'perfil-user/:id', component: PerfilUserComponent},
   {path: 'login-dealer', component: LoginDealerComponent},
-  {path: 'profile-dealer-public', component:ProfileDealerPublicComponent},
+  {path: 'profile-dealer-public/:id', component:ProfileDealerPublicComponent},
 ];
 
 @NgModule({

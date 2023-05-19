@@ -15,20 +15,18 @@ export class ProductComponent implements OnInit {
   contador:number = 0;
   visibleVar:number = 1;
   Cars:Car = new Car();
-  Financing:infoDealer = new infoDealer() ;
+  Financing:infoDealer = new infoDealer();
 
   FinancingFormUnique = new FormGroup({
-    amount: new FormControl("",[Validators.required]),
-    typeofcontract: new FormControl("",[Validators.required]),
-    typeofresidence: new FormControl("",[Validators.required]),
-    credit: new FormControl("",[Validators.required]),
-    typeofcredit: new FormControl("",[Validators.required]),
-    income: new FormControl("",[Validators.required]),
+    amount: new FormControl(0,[Validators.required]),
+    typeofcontract: new FormControl(""),
+    typeofresidence: new FormControl(""),
+    credit: new FormControl(""),
+    income: new FormControl(0,[Validators.required]),
     zip: new FormControl("",[Validators.required]),
     state: new FormControl("",[Validators.required]),
     city: new FormControl("",[Validators.required]),
-    age: new FormControl("",[Validators.required])
-
+    age: new FormControl(0,[Validators.required])
   });
 
   constructor(private formSliderService:FormSliderService,private productService:ProductService, private activatedRoute:ActivatedRoute) {
@@ -46,12 +44,15 @@ export class ProductComponent implements OnInit {
   Hidden(){
     if(this.contador==0){
         document.querySelector("#MyModal")?.classList.add("visto"),
-        this.contador=1}
+        this.contador=1}else if(this.contador==1){
+          document.querySelector("#MyModal")?.classList.remove("visto")
+          document.querySelector("#MyModal2")?.classList.add("visto")
+          this.contador=0;
+        }
+  }
 
-    else{
-        document.querySelector("#MyModal")?.classList.remove("visto"),
-        this.contador=0
-    }
+  Close(){
+    document.querySelector("#MyModal2")?.classList.remove("visto")
   }
 
   Hide(visible:number){
@@ -67,16 +68,10 @@ export class ProductComponent implements OnInit {
   }
 
   Send(){
-    if(this.contador==0){
-      document.querySelector("#MyModal")?.classList.add("visto"),
-      this.contador=1}
+    this.Hidden()
 
-  else{
-      document.querySelector("#MyModal")?.classList.remove("visto"),
-      this.contador=0
-  }
     let data = new DataFinance();
-
+    
     data.age = this.FinancingFormUnique.value.age;
     data.amount = this.FinancingFormUnique.value.amount;
     data.amountfinance = this.Cars.information.price - data.amount;
@@ -89,13 +84,9 @@ export class ProductComponent implements OnInit {
     data.typeofresidence = this.FinancingFormUnique.value.typeofresidence;
     data.zip = this.FinancingFormUnique.value.zip;
 
-    this.formSliderService.getFinanceOneDealer(data,this.Cars.information.id_dealer).
-    subscribe(res => {this.Financing = res as infoDealer
-      
-    console.log(this.Financing)
-  });
-
-  this.FinancingFormUnique.reset()
+    this.formSliderService.getFinanceOneDealer(data,this.Cars.information.id_dealer).subscribe(res => {this.Financing = res as infoDealer
+      console.log(res)});
+      this.FinancingFormUnique.reset();
   }
 
 
