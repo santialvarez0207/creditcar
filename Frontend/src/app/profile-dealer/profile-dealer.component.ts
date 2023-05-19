@@ -46,9 +46,9 @@ visibleVar:number=1;
     SunroofHatch: new FormControl("",[]),
     hatch: new FormControl("",[]),
    })
+   
+  Dealer:Dealer = new Dealer();
 
-
-   Dealer:Dealer = new Dealer();
   constructor( private productService:ProductService, private dealerService:DealersService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
