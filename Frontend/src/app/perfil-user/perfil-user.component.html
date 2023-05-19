@@ -54,28 +54,45 @@
         </form>
         <div class="PerfilUser-totalinfo" *ngIf="visibleVar==2">
             <div class="content">
-                <p>Monto inicial</p>
+                <p>Monto inicial:</p>
                 <input type="number" value="{{User.amount}}" id="amount" placeholder="Modificar monto inical">
             </div>
             <div class="content">
-                <p>{{User.price}}</p>
-                <input type="number" value="{{User.amount}}" id="amount" placeholder="Modificar precio">
+                <p>Precio del vehiculo</p>
+                <input type="number" value="{{User.price}}" id="price" placeholder="Modificar precio">
             </div>
             <div class="content">
-                <p>{{User.typeofcontract}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>Tipo de contrato:</p>
+                <select class="aContract" value="{{User.typeofcontract}}" id="typeofcontract" >
+                    <option value="Tiempo completo">Tiempo completo</option>
+                    <option value="Mitad de tiempo">Mitad de tiempo</option>
+                    <option value="Independiente">Independiente</option>
+                    <option value="Desempleado">Desempleado</option>
+                    <option value="Otro">Otro </option>
+                </select>
             </div>
             <div class="content">
-                <p>{{User.typeofresidence}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>Tipo de residencia:</p>
+                <select value="{{User.typeofresidence}}" id="typeofresidence">
+                    <option value="propia">Residencia propia</option>
+                    <option value="alquilada">Residencia alquilada</option>
+                </select>
             </div>
             <div class="content">
-                <p>{{User.credit}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>Tipo de credito</p>
+                <select class="aCredit1" value="{{User.credit}}" id="credit">
+                    <option value="Excelente">Excelente (720 - 850)</option>
+                    <option value="Bueno">Bueno (680 - 719)</option>
+                    <option value="Justo">Justo (640 - 679)</option>
+                    <option value="Pobre">Pobre (0 - 639)</option>
+                </select>
             </div>
             <div class="content">
-                <p>{{User.income}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>Salario anual</p>
+                <input type="number" value="{{User.income}}" id="income" placeholder="Modificar salario anual">
+            </div>
+            <div class="EditButtonDiv">
+                <button class="EditButton" (click)="SendSecond()">Modificar</button>
             </div>
         </div>
         <div class="PerfilUser-totalinfo-Password" *ngIf="visibleVar==3"> 
@@ -83,12 +100,14 @@
                 <h2>Cambiar contraseña</h2>
             </div>
             <form class="password">
-                <label class="label" for="">Nueva contraseña</label>
-                <label  class="label" for="">Confirme contraseña</label>
-                <input class="inputPass" type="text" name="" id="">
-                <input class="inputPass" type="text" name="" id="">
+                <label class="label">Nueva contraseña</label>
+                <label  class="label">Confirme contraseña</label>
+                <input class="inputPass" type="password"  id="password">
+                <input class="inputPass" type="password" id="passwordCon">
             </form>
-            <a>Cambiar</a>
+            <div class="EditButtonDiv">
+                <button class="EditButton" (click)="Sendthirt()">Cambiar</button>
+            </div>
         </div>
     </section>
 </div>

@@ -58,7 +58,48 @@ export class PerfilUserComponent implements OnInit {
       }
     })
   }
+  SendSecond(){
 
+    const amount = document.getElementById("amount") as HTMLInputElement;
+    this.User.amount = amount.value;
+
+    const price = document.getElementById("price") as HTMLInputElement;
+    this.User.price = price.value;
+
+    const typeofcontract = document.getElementById("typeofcontract") as HTMLInputElement;
+    this.User.typeofcontract = typeofcontract.value;
+
+    const typeofresidence = document.getElementById("typeofresidence") as HTMLInputElement;
+    this.User.typeofresidence = typeofresidence.value;
+
+    const credit = document.getElementById("credit") as HTMLInputElement;
+    this.User.credit = credit.value;
+
+    const income = document.getElementById("income") as HTMLInputElement;
+    this.User.income = income.value;
+   
+    this.userService.putUser(this.User).subscribe(res => {
+      if(res){
+        window.alert("Datos modificados")
+      }else{
+        window.alert("No se pudo enviar")
+      }
+    })
+  }
+
+  Sendthirt(){
+
+    const password = document.getElementById("password") as HTMLInputElement;
+    const passwordCon = document.getElementById("passwordCon") as HTMLInputElement;
+    const formpassword = document.getElementById("formpassword") as HTMLFormElement;
+    if(password.value == passwordCon.value){
+      this.User.password = password.value;
+      this.userService.putUser(this.User).subscribe(res => {})
+    }else{
+      window.alert("Erroneo")
+      console.log("Erroneo")
+    }
+  }
   CheckUser(){
     let x = localStorage.getItem("User");
 
