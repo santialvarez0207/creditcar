@@ -1,27 +1,41 @@
+.vista {
+  display: flex !important;
 
-/*
-.publicar-datos {
-  height: fit-content;
-  margin: 50px 0 100px 0;
-
-  
 }
-.title{
+
+.publicar-datos {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  flex-direction: column;
+  background-color: rgba(246, 246, 246, 0.90);
+  padding-top: 30px;
+
+}
+
+.title {
   text-align: center;
   font-size: 22px;
 
-
 }
+
 legend {
   color: var(--c1);
   font-weight: 600;
 }
 
 .form-container {
-
   width: 843px;
   height: fit-content;
   margin: 0 auto;
+  overflow: scroll;
+  background: var(--w);
 }
 
 .f1 {
@@ -38,8 +52,8 @@ legend {
   font-size: 22px;
   color: var(--c1);
   padding: 10px 10px 10px 325px;
-  
- 
+
+
 }
 
 .form-item__label {
@@ -55,7 +69,7 @@ legend {
   display: inline-block;
   text-align: right;
   width: 17%;
-  
+
 }
 
 .form-item__input {
@@ -97,19 +111,19 @@ legend {
   border: 1px var(--c1) solid;
 }
 
-.caja{
+.caja {
   display: block;
   width: 390px;
   height: 240px;
-  position: absolute;
+margin-left: 400px;
   left: 730px;
   margin-top: -250px;
   border: 2px black dashed;
 }
-.caja button{
-  margin: 180px 0 0 60px;
-  background: var(--c1);
-  width: 120px;
+
+.caja input {
+ margin: 180px 0 80px  140px;
+  width: 200px;
   height: 35px;
   outline: none;
   border: none;
@@ -122,7 +136,16 @@ legend {
   transition: all 0.2s;
 }
 
-.c{
+.en{
+display:flex;
+justify-content: center;
+flex-direction: row;
+width: 100%;
+
+}
+
+
+.c {
   background: var(--c1);
   outline: none;
   border: none;
@@ -132,12 +155,10 @@ legend {
   font-size: 16px;
   color: var(--w);
   box-shadow: 600;
-  margin: 30px 0 20px 310px;
+  margin: 20px 15px;
   width: 200px;
   height: 35px;
 }
-
-
 
 
 .caja button:hover {
@@ -150,8 +171,8 @@ button:hover {
   color: var(--b);
 }
 
-*/
-.Body{
+
+.Body {
   width: 100%;
   min-height: 100vh;
   height: 100%;
@@ -160,23 +181,26 @@ button:hover {
   align-items: center;
   background-color: var(--sw);
 }
-.imgPerfil{
+
+.imgPerfil {
   width: 120px;
   height: 120px;
   top: -50px;
   z-index: 2;
   border: 4px var(--c1) solid;
   border-radius: 100px;
-  background-color:rgba(218, 218, 218, 1);
+  background-color: rgba(218, 218, 218, 1);
   position: relative;
 }
-.content img{
+
+.content img {
   width: 28px;
   height: 28px;
   object-fit: cover;
   cursor: pointer;
 }
-.Body-perfil-dealer{
+
+.Body-perfil-dealer {
   width: 100%;
   height: fit-content;
   display: flex;
@@ -185,27 +209,31 @@ button:hover {
   align-items: center;
   margin: 120px 0;
 }
-.perfil-dealer-CommonData div{
+
+.perfil-dealer-CommonData div {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 200px;
 }
-.perfil-dealer-CommonData p{
+
+.perfil-dealer-CommonData p {
   width: 160px;
   text-overflow: ellipsis ellipsis;
   overflow: hidden;
   text-align: center;
   text-decoration: underline;
-  
+
 }
-.content p{
+
+.content p {
   width: 140px;
   text-overflow: ellipsis ellipsis;
   overflow: hidden;
 
 }
-.perfil-dealer-CommonData{
+
+.perfil-dealer-CommonData {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -218,7 +246,7 @@ button:hover {
   border: 2px var(--c1) solid;
 }
 
-.perfil-dealer-Nav{
+.perfil-dealer-Nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -230,36 +258,37 @@ button:hover {
   background-color: var(--sw);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
-.perfil-dealer-Nav p{
+
+.perfil-dealer-Nav p {
   cursor: pointer;
   padding: 8px 15px;
 }
-.perfil-dealer-Nav p:hover{
-  background-color:#1fadff;
+
+.perfil-dealer-Nav p:hover {
+  background-color: #1fadff;
   filter: invert(100%);
   transition: all .1s ease-out;
   border-radius: 30px;
-  padding: 8px 15px; 
+  padding: 8px 15px;
 }
 
 
-.button  {
+.button {
   background-color: var(--c1);
   border: 40px;
   color: var(--w);
   border-radius: 30px;
-  padding: 8px 16px; 
+  padding: 8px 16px;
   margin: 40px 0 0 420px;
+  cursor: pointer;
 }
- .button a{
+
+.button a {
   text-decoration: none;
   color: var(--w);
- }
+}
 
-
-
-
-.perfil-dealer-totalinfo{
+.perfil-dealer-totalinfo {
   width: 600px;
   border-radius: 15px;
   border-bottom: 3px var(--c1) solid;
@@ -273,7 +302,7 @@ button:hover {
   margin: 10px;
 }
 
-.content{
+.content {
   height: 56px;
   display: flex;
   justify-content: space-around;
@@ -283,19 +312,19 @@ button:hover {
   margin: 5px 5px;
 }
 
-.visto{
+.visto {
   background-color: var(--c1);
   color: var(--sw);
   border-radius: 30px;
 }
 
-.contenido{
+.contenido {
   border: 3px red solid;
   width: 600px;
   height: 600px;
 }
 
-.contenido img{
+.contenido img {
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -304,77 +333,83 @@ button:hover {
 
 
 
-.Perfil-dealer-totalinfo{
+.Perfil-dealer-totalinfo {
   border: 2px var(--c1) solid;
   width: 1000px;
   border-radius: 10px;
 }
 
-.CarrouselProducts{
-    margin: 40px 0 0 0;
-    width: 100%;
+.CarrouselProducts {
+  margin: 40px 0 0 0;
+  width: 100%;
 }
-.Cards{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
-    padding: 0 50px;
-    
+
+.Cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0 50px;
+
 }
-.Cardsproducts{
-    width: 275px;
-    height: 515px;
-    border-bottom: solid var(--c1) 4px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
-    margin-bottom:30px ;
+
+.Cardsproducts {
+  width: 275px;
+  height: 515px;
+  border-bottom: solid var(--c1) 4px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
+  margin-bottom: 30px;
 }
 
 
 
-.ImageCarProduct{
-    width: 275px;
-    height: 310px;
-    overflow: hidden;
-    object-fit: cover;
-    box-sizing: border-box;
-}
-.Locate{
-    margin: -20px 0 0 0;
-    display: flex;
-    flex-flow: row wrap;
-    padding-left: 10px;
-}
-.Locate img{
-    margin: 0 5px 0 0;
-
-}
-.textCards img{
-    width: 26px;
-    margin-right: 6px;
-
-}
-.textCards{
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-    padding-left: 12px;
+.ImageCarProduct {
+  width: 275px;
+  height: 310px;
+  overflow: hidden;
+  object-fit: cover;
+  box-sizing: border-box;
 }
 
-.ButtonShowMore a{
+.Locate {
+  margin: -20px 0 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 10px;
+}
+
+.Locate img {
+  margin: 0 5px 0 0;
+
+}
+
+.textCards img {
+  width: 26px;
+  margin-right: 6px;
+
+}
+
+.textCards {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding-left: 12px;
+}
+
+.ButtonShowMore a {
   background-color: var(--c1);
   border: 40px;
   text-decoration: none;
   color: var(--w);
   border-radius: 30px;
-  padding: 8px 16px; 
+  padding: 8px 16px;
 
 }
-.ButtonShowMore{
+
+.ButtonShowMore {
   display: flex;
   justify-content: center;
   margin: 5px 0 0 0;
 }
-

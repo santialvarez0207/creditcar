@@ -114,4 +114,10 @@ reason[visible-1].classList.add('visto');
     })
     this.FormCar.reset();
   }
+  open(){
+    document.getElementById("modal")?.classList.add("vista")
+  }
+  close(){
+    document.getElementById("modal")?.classList.remove("vista")
+  }
 }

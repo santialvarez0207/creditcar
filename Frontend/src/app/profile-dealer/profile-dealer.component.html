@@ -1,5 +1,5 @@
-<!--
-<section class="publicar-datos">
+
+<section class="publicar-datos" id="modal">
 
     <h1 class="title">AGREGAR VEHICULO</h1>
 
@@ -189,13 +189,17 @@
 
                 <div class="caja">
 
-                    <button >Subir Fotos</button>
+                    <input type="file">
                 
                 </div>
 
-                <div>
+                <div class="en">
                     <button  [disabled]="!FormCar.valid" class="c">ENVIAR</button>
+                    <button (click)="close()" class="c">CANCELAR</button>
                 </div>
+                
+               
+                
 
             </fieldset>
 
@@ -204,7 +208,7 @@
     </div>
 
 </section>
--->
+
 
 <div class="Body">
     <section class="Body-perfil-dealer">
@@ -267,9 +271,10 @@
         <div class="Perfil-dealer-totalinfo" *ngIf="visibleVar==2">
 
             <div> 
-                <button class="button">  <a routerLink="#">Agregar vehiculo</a> </button>
+                <button class="button" (click)="open()">Agregar vehiculo </button >
                          
             </div>
+
             <div class="CarrouselProducts">
                 <div class="Cards">
                     <div class="Cardsproducts">
