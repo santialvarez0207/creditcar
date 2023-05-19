@@ -4,7 +4,7 @@
     <h1 class="title">AGREGAR VEHICULO</h1>
 
     <div class=" form-container">
-        <form>
+        <form [formGroup]="FormCar" (submit)="Send()">
 
             <fieldset>
 
@@ -13,11 +13,11 @@
                 <div class="form-item">
 
                     <label class="form-item__label">Millaje</label>
-                    <input class="form-item__input" type="search" required>
+                    <input class="form-item__input" type="text" formControlName="mileage" required>
 
 
                     <label class="form-item__label--active">Traccion</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active" formControlName="traction" type="text">
 
                 </div>
 
@@ -25,31 +25,53 @@
 
                 <div class="form-item">
                     <label class="form-item__label">Color exterior</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="outsideColor" type="text">
 
                     <label class="form-item__label--active">Color interior</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active" formControlName="insidecolour" type="text">
 
                 </div>
 
                 <div class="form-item">
                     <label class="form-item__label">Consumo</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="consumption" type="text">
 
                     <label class="form-item__label--active">Motor</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active" formControlName="engine" type="text">
 
 
                 </div>
 
                 <div class="form-item">
                     <label class="form-item__label">Combustible</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="fueltype" type="text">
 
                     <label class="form-item__label--active">Transmision</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active"formControlName="transmission" type="text">
 
 
+                </div>
+            </fieldset>
+
+            <fieldset>
+                    
+                <div class="form-item">
+
+                    <h1 class="f1">Información</h1> <br>
+                 
+
+                    <label class="form-item__label">Nombre del carro</label>
+                    <input class="form-item__input" formControlName="name" type="text">
+
+
+                    <label class="form-item__label--active">Precio</label>
+                    <input class="form-item__input--active" formControlName="price" type="text">
+
+                    <label class="form-item__label">Estado</label>
+                    <input class="form-item__input" formControlName="state" type="text">
+
+                    <label class="form-item__label--active">Ciudad</label>
+                    <input class="form-item__input--active" formControlName="city" type="text">
                 </div>
             </fieldset>
 
@@ -61,11 +83,11 @@
                     <h1 class="f2">Desempeño</h1> <br>
 
                     <label class="form-item__label">Consumo combinado</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="Combinedconsumption" type="text">
 
 
                     <label class="form-item__label--active">Transmision</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active" formControlName="Transmission" type="text">
 
                 </div>
 
@@ -74,22 +96,22 @@
                 <div class="form-item">
 
                     <label class="form-item__label">Consumo en ciudad</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="Consumptioncity" type="text">
 
 
                     <label class="form-item__label--active">Traccion</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active"  formControlName="Traction" type="text">
 
                 </div>
 
                 <div class="form-item">
 
                     <label class="form-item__label">Consumo en carretera</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" type="text" formControlName="Consumptionroad">
 
 
                     <label class="form-item__label--active">Motor</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active" formControlName="Engine" type="text">
 
                 </div>
 
@@ -97,11 +119,11 @@
                 <div class="form-item">
 
                     <label class="form-item__label">Tamaño del tanque </label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="tanksize" type="text">
 
 
                     <label class="form-item__label--active">Potencia</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active" formControlName="Power" type="text">
 
                 </div>
 
@@ -111,11 +133,11 @@
                     <h1 class="f2">Medidas</h1> <br>
 
                     <label class="form-item__label">Camara de retroceso</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="Reversingcamera" type="text">
 
 
                     <label class="form-item__label--active">Puertas</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active" formControlName="doors" type="text">
 
                 </div>
 
@@ -123,11 +145,11 @@
                 <div class="form-item">
 
                     <label class="form-item__label">Monitoreo de puntos ciegos</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="Blindspot" type="text">
 
 
                     <label class="form-item__label--active">Volumen de carga</label>
-                    <input class="form-item__input--active" type="text">
+                    <input class="form-item__input--active" formControlName="cargovolume" type="text">
 
                 </div>
 
@@ -137,29 +159,29 @@
                     <h1 class="f2">Agregar Fotos</h1> <br>
 
                     <label class="form-item__label">Asientos calefaccionados</label>
-                    <input class="form-item__input" type="text">
+                    <input class="form-item__input" formControlName="Heatedseats" type="text">
 
                     <div>
                         <label class="form-item__label">Bluetooh</label>
-                        <input class="form-item__input" type="text">
+                        <input class="form-item__input" formControlName="Bluetooth" type="text">
                     </div>
 
                     <div>
                         <label class="form-item__label">Encendido remoto</label>
-                        <input class="form-item__input" type="text">
+                        <input class="form-item__input" formControlName="remotestart" type="text">
                     </div>
                     <div>
                         <label class="form-item__label">Sist. de navegacion</label>
-                        <input class="form-item__input" type="text">
+                        <input class="form-item__input" formControlName="Systemnavigation" type="text">
                     </div>
                     <div>
                         <label class="form-item__label">Techo corredizo</label>
-                        <input class="form-item__input" type="text">
+                        <input class="form-item__input" formControlName="SunroofHatch" type="text">
                     </div>
 
                     <div>
                         <label class="form-item__label">Tercera fila de Asientos</label>
-                        <input class="form-item__input" type="text">
+                        <input class="form-item__input" formControlName="hatch" type="text">
                     </div>
 
                 </div>
@@ -172,7 +194,7 @@
                 </div>
 
                 <div>
-                    <button class="c">ENVIAR</button>
+                    <button  [disabled]="!FormCar.valid"class="c">ENVIAR</button>
                 </div>
 
             </fieldset>
@@ -241,13 +263,35 @@
             </div>
 
         </div>
+        
         <div class="Perfil-dealer-totalinfo" *ngIf="visibleVar==2">
-            <div class="content">
 
-
-                <div class="contenido">
-                    <img src="../../assets/Audi.svg" alt="">
+            <div> 
+                <button class="button">  <a routerLink="#">Agregar vehiculo</a> </button>
+                         
+            </div>
+            <div class="CarrouselProducts">
+                <div class="Cards">
+                    <div class="Cardsproducts">
+                        <div class="ImageProduct">
+                            <div class="ImageCarProduct">
+                                <img src="../../assets/Audi.svg" alt="">
+                            </div>
+                            <div class="textCards">
+                                <p>tesla</p>
+                            </div>
+                            <div class="textCards">
+                                <img src="../../assets/DollarIcon.svg" alt="">
+                                <p>$222222</p>
+                            </div>
+                            <div class="Locate"><img src="../../assets/Locate.svg" alt="">
+                                <p class="Textlocate"> medellin colombia</p>
+                            </div>
+                            <div class="ButtonShowMore"><a routerLink="#">Ver más</a></div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
 
 
@@ -257,7 +301,14 @@
 
 
 
-                <!--
+
+
+
+
+
+
+
+            <!--
             <div class="content">
                 <p>{{User.typeofcontract}}</p>
                 <img src="../../assets/editicon.svg" alt="">

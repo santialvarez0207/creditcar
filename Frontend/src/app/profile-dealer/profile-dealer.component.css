@@ -170,7 +170,7 @@ button:hover {
   background-color:rgba(218, 218, 218, 1);
   position: relative;
 }
-img{
+.content img{
   width: 28px;
   height: 28px;
   object-fit: cover;
@@ -242,6 +242,23 @@ img{
   padding: 8px 15px; 
 }
 
+
+.button  {
+  background-color: var(--c1);
+  border: 40px;
+  color: var(--w);
+  border-radius: 30px;
+  padding: 8px 16px; 
+  margin: 40px 0 0 420px;
+}
+ .button a{
+  text-decoration: none;
+  color: var(--w);
+ }
+
+
+
+
 .perfil-dealer-totalinfo{
   width: 600px;
   border-radius: 15px;
@@ -272,11 +289,92 @@ img{
   border-radius: 30px;
 }
 
-.caja{
-  width: 250px;
-  height: 250px;
-  border: 2px black ridge;
-  margin: auto;
-  background: #1fadff;
+.contenido{
+  border: 3px red solid;
+  width: 600px;
+  height: 600px;
+}
+
+.contenido img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding: 30px;
+}
+
+
+
+.Perfil-dealer-totalinfo{
+  border: 2px var(--c1) solid;
+  width: 1000px;
+  border-radius: 10px;
+}
+
+.CarrouselProducts{
+    margin: 40px 0 0 0;
+    width: 100%;
+}
+.Cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0 50px;
+    
+}
+.Cardsproducts{
+    width: 275px;
+    height: 515px;
+    border-bottom: solid var(--c1) 4px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.40);
+    margin-bottom:30px ;
+}
+
+
+
+.ImageCarProduct{
+    width: 275px;
+    height: 310px;
+    overflow: hidden;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.Locate{
+    margin: -20px 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 10px;
+}
+.Locate img{
+    margin: 0 5px 0 0;
 
 }
+.textCards img{
+    width: 26px;
+    margin-right: 6px;
+
+}
+.textCards{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding-left: 12px;
+}
+
+.ButtonShowMore a{
+  background-color: var(--c1);
+  border: 40px;
+  text-decoration: none;
+  color: var(--w);
+  border-radius: 30px;
+  padding: 8px 16px; 
+
+}
+.ButtonShowMore{
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 0 0;
+}
+

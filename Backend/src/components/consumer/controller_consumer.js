@@ -7,6 +7,10 @@ function addUser(body){
         if(!body){
             return reject("no hay datos")
         }
+        if(store.getUser({email: body.email})){
+            console.log("hola")
+            return resolve(false)
+        }
 
         fecha = new Date();
         let user = {
@@ -26,7 +30,7 @@ function addUser(body){
             password: body.password,
         };
         store.addUser(user)
-        return resolve("user agregado correctamente")
+        return resolve(true)
 
     })
 

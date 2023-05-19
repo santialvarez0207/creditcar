@@ -20,7 +20,7 @@ export class UserService {
     return this.http.get<Temporal>(this.apiUrl + "/check" , {params}); 
   }
   createUser(user: User){
-    return this.http.post(this.apiUrl, user);
+    return this.http.post<boolean>(this.apiUrl, user);
   }
 
   getUser(id:string){

@@ -8,6 +8,9 @@ function addDealer(body){
         if(!body){
             return reject("no hay datos")
         }
+        if(store.getDealer({email: body.email})){
+            return resolve(false)
+        }
 
         fecha = new Date();
         let dealer = {
@@ -23,7 +26,7 @@ function addDealer(body){
             percent: body.percent
         };
         store.addDealer(dealer)
-        return resolve("Dealer agregado correctamente")
+        return resolve(true)
 
     })
 
@@ -105,10 +108,19 @@ function evaluateDealer(dealer,data){
     return respuesta
 }
 
-
+async function getDealer(id) {
+    try {
+        let Dealer = await store.getDealer({_id: id});
+        console.log(Dealer);
+        return user
+    } catch (error) {
+        throw error;
+    }
+}
 
 module.exports = {
     addDealer,
     checkDealer,
-    recommendedDealers 
+    recommendedDealers,
+    getDealer
 }
