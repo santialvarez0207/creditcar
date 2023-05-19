@@ -16,8 +16,13 @@ async function getUsers(){
     return users
 }
 
+async function updateUser(parameter,id){
+    await Model.updateOne({ _id: id}, parameter)
+}
+
 module.exports = {
     getUser,
     addUser,
-    getUsers 
+    getUsers,
+    updateUser 
 }

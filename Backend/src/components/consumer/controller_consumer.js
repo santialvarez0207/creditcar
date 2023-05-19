@@ -36,6 +36,31 @@ async function addUser(body) {
     }
 }
 
+async function updateUser(body,id){
+    try {
+        let user = {
+            amount: body.amount,
+            price: body.price,
+            amountfinance: body.amountfinance,
+            typeofresidence: body.typeofresidence,
+            credit: body.credit,
+            typeofcontract: body.typeofcontract,
+            income: body.income,
+            zip: body.zip,
+            address: body.address,
+            city: body.city,
+            cellphone: body.cellphone,
+            email: body.email,
+            name: body.name,
+            password: body.password,
+        }
+        store.updateUser(user, id)
+        return "se actualizo correctamente"
+    } catch (error) {
+        throw error;
+    }
+}
+
 async function getUser(id) {
     try {
         let user = await store.getUser({_id: id});
@@ -72,5 +97,6 @@ module.exports = {
     addUser,
     checkUser,
     getUser,
+    updateUser
     
 }

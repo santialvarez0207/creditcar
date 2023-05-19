@@ -18,10 +18,15 @@ async function getDealers(parameter){
     return dealers
 }
 
+async function updateDealer(parameter,id){
+    await Model.updateOne({ _id: id}, parameter)
+
+}
 
 
 module.exports = {
     getDealer,
     addDealer,
-    getDealers 
+    getDealers,
+    updateDealer 
 }

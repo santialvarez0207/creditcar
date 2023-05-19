@@ -25,9 +25,14 @@ async function getPopular(){
 
 }
 
+async function updateCar(parameter,id){
+    await model.updateOne({ _id: id}, parameter)
+}
+
 module.exports = {
     getCar,
     addCar,
     getCars,
-    getPopular 
+    getPopular,
+    updateCar 
 }

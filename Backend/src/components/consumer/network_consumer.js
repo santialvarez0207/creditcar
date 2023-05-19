@@ -4,6 +4,18 @@ const controller = require('./controller_consumer')
 const router = express.Router()
 
 
+
+router.put('/:id', (req, res) => {
+    let id = req.params.id
+    controller.updateUser(req.body, id)
+        .then((sesion)=>{
+            response.success(req, res,sesion,201)
+        })
+        .catch((e)=>{
+            response.error(req, res,"informacion incorrecta",e)
+        })
+})
+
 router.get('/check', (req, res) =>{
     controller.checkUser(req.query.email, req.query.password)
         .then((sesion)=>{
