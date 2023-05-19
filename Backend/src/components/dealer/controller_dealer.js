@@ -27,6 +27,7 @@ async function addDealer(body) {
             credit_requirements: body.credit_requirements,
             percent: body.percent
         }
+        console.log(dealer)
         store.addDealer(dealer)
         return true
     } catch (error) {

@@ -5,26 +5,31 @@ export class Dealer {
       email: String = ""
       phone_number:  String = ""
       nit: String = "";
-      location = {
-          address:  String,
-          state: String,
-          city: String
-      }
+      
+      location : location = new location
 
       contact_ids: string[] = []
       registration_date: Date = new Date
   
-      credit_requirements = {
-          age: Number,
-          amount:Number, 
-          price:Number,
-          amountfinance:Number,
-          typeofresidence:String, 
-          credit:String,
-          typeofcontract:String,
-          income:String,  
-          zip:String,
-      }
+      credit_requirements:credit_requirements = new credit_requirements
       percent: Number = 0
+
+      
     }
    
+    class credit_requirements {
+        age: Number = 0
+        amount:Number = 0 
+        price:Number = 0
+        amountfinance:Number = 0
+        typeofresidence:String ="" 
+        credit:String=""
+        typeofcontract:String=""
+        income:number= 0 
+        zip:String=""
+    }
+    class location  {
+        address:  String=""
+        state: String=""
+        city: String=""
+    }
