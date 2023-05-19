@@ -26,13 +26,6 @@ export class ProductService {
   }
 
 
-
-
-
-
-
-
-
   CreateCar(car:Car){
     return this.http.post(this.apiUrl, car);
   }
@@ -52,7 +45,7 @@ export class ProductService {
 
   
   putVisit(id: string,visit: number) {
-    console.log(this.apiUrl +`/visit/${id}`,id)
+    console.log(this.apiUrl +`/visits/${id}`,id)
 
     return this.http.put(this.apiUrl + `/visits/${id}`, {visits: visit})
   }

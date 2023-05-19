@@ -11,7 +11,7 @@ const CarSchema = new Schema(
         name: String,
         price: Number,
         way:{state: String, city: String},
-        url:String,},
+        urls: [String],},
 
     pspecifications: {
         mileage: String,

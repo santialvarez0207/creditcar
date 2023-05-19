@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit {
   });
 
   constructor(private formSliderService:FormSliderService,private productService:ProductService, private activatedRoute:ActivatedRoute) {
-    this.productService.putVisit("643de912d143be51804973a1", 1).subscribe;
+    
    }
 
   ngOnInit(): void {
