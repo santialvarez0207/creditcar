@@ -26,5 +26,10 @@ export class UserService {
   getUser(id:string){
     return this.http.get<User>(this.apiUrl + `/${id}`);
   }
+
+  putUser(User: User){
+    console.log(User)
+    return this.http.put(this.apiUrl + `/${User._id}`, User);
+  }
 }
 
