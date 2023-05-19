@@ -155,7 +155,7 @@ width: 100%;
   font-size: 16px;
   color: var(--w);
   box-shadow: 600;
-  margin: 20px 15px;
+  margin: 20px 10px;
   width: 200px;
   height: 35px;
 }
@@ -393,7 +393,6 @@ button:hover {
 .textCards {
   display: flex;
   align-items: center;
-
   width: 100%;
   padding-left: 12px;
 }
@@ -405,6 +404,7 @@ button:hover {
   color: var(--w);
   border-radius: 30px;
   padding: 8px 16px;
+  margin-top: 3px;
 
 }
 
@@ -412,4 +412,70 @@ button:hover {
   display: flex;
   justify-content: center;
   margin: 5px 0 0 0;
+}
+
+
+.Perfil-dealer-totalinfo-Password{
+  width: 600px;
+  border-radius: 15px;
+  border-bottom: 3px var(--c1) solid;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  padding: 20px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sw);
+  margin: 10px;
+}
+.password{
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto;
+}
+input{
+
+  border: 2px var(--c1) solid;
+  border-radius: 4px;
+  outline: none;
+  padding: 4px;
+  margin-bottom: 13px;
+  margin-left: 3%;
+  border-radius: 6px;
+  border: 1px var(--b) solid;
+  transition: all .4s;
+}
+.label1{
+  position: relative;
+  left: 6px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: fit-content;
+  padding: 2px 8px;
+  color: var(--sw);
+  font-size: 14px;
+  font-weight: 500;
+  background-color: var(--c1);
+}
+a{  
+  margin: 40px 0 0 0;
+  border: 2px var(--c1) solid;
+  background-color: var(--w);
+  border-radius: 30px;
+  padding: 8px 24px; 
+  color: var(--c1);
+  cursor: pointer;
+  text-decoration: none;
+
+}
+a:hover{
+  border: 2px #1fadff solid;
+   background-color:#1fadff;
+   color: #000000;
+   filter: invert(100%);
+   transition: all .1s ease-in;
+
 }

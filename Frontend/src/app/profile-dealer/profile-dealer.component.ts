@@ -13,11 +13,8 @@ import { Dealer } from '../model/dealer';
 export class ProfileDealerComponent implements OnInit {
 visibleVar:number=1;
 
+Cards:Car[]=[];
 
-Dealer:Dealer= new Dealer();
-  constructor( private productService:ProductService, private dealerService:DealersService, private activatedRoute:ActivatedRoute) {
-    
-   }
 
    FormCar = new FormGroup({
     name: new FormControl("",[Validators.required]),
@@ -51,13 +48,15 @@ Dealer:Dealer= new Dealer();
     SunroofHatch: new FormControl("",[]),
     hatch: new FormControl("",[]),
    })
-
-
    
+  Dealer:Dealer = new Dealer();
+
+  constructor( private productService:ProductService, private dealerService:DealersService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       var idsession = params['id'];
+      this.productService.GetCarUniqueDealer(idsession).subscribe((res) => {this.Cards = res as Car[]})
 
       this.dealerService.getDealer(idsession).subscribe((res) => {this.Dealer = res as Dealer})
     })
