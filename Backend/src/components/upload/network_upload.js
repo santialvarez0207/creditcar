@@ -22,6 +22,7 @@ router.get('/:name', (req, res) =>{
 
 
 router.post('/', (req, res) => {
+    console.log(req.files)
     let names = req.files.map((file)=>{
         return file.filename
     })

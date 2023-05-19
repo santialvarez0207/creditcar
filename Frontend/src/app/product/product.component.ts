@@ -16,6 +16,11 @@ export class ProductComponent implements OnInit {
   visibleVar:number = 1;
   Cars:Car = new Car();
   Financing:infoDealer = new infoDealer();
+  urls: String[] = this.Cars.information.urls;
+
+
+
+
 
   FinancingFormUnique = new FormGroup({
     amount: new FormControl(0,[Validators.required]),
@@ -40,6 +45,7 @@ export class ProductComponent implements OnInit {
       this.productService.GetCar(idsession).subscribe(( res ) => { 
         
         this.Cars = res as Car
+        this.urls = this.Cars.information.urls;
         this.productService.putVisit(idsession,this.Cars.visits + 1).subscribe;
       })
     });

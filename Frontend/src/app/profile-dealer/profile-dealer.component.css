@@ -433,15 +433,7 @@ button:hover {
 }
 input{
 
-  border: 2px var(--c1) solid;
-  border-radius: 4px;
-  outline: none;
-  padding: 4px;
-  margin-bottom: 13px;
-  margin-left: 3%;
-  border-radius: 6px;
-  border: 1px var(--b) solid;
-  transition: all .4s;
+
 }
 .label1{
   position: relative;
