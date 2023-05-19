@@ -20,46 +20,46 @@
             <p class="Per" (click)="Hide(2)" >Financiamiento</p>
             <p class="Per" (click)="Hide(3)" >Contraseña</p>
         </div>
-        <form action="" [formGroup]="FormEdit1" (submit)="SendFirst">
+        <form action="">
             <div class="PerfilUser-totalinfo" *ngIf="visibleVar==1">
                 <div class="content">
                     <p >Tel:</p>
-                    <input type="text"  value="{{User.cellphone}}" formControlName="cellphone" placeholder="Modificar telefono">
+                    <input type="text"  value="{{User.cellphone}}" id="cellphone" placeholder="Modificar telefono">
                 </div>
                 <div class="content">
                     <p>Estado:</p>
-                    <input type="text" value="{{User.state}}" formControlName="state" placeholder="Modificar estado">
+                    <input type="text" value="{{User.state}}" id="state" placeholder="Modificar estado">
                 </div>
                 <div class="content">
                     <p>Ciudad:</p>
-                    <input type="text" value="{{User.city}}" formControlName="city" placeholder="Modificar ciudad">
+                    <input type="text" value="{{User.city}}" id="city" placeholder="Modificar ciudad">
                 </div>
                 <div class="content">
                     <p>Email:</p>
-                    <input type="text" value="{{User.email}}" formControlName="email" placeholder="Modificar email">
+                    <input type="text" value="{{User.email}}" id="email" placeholder="Modificar email">
                 </div>
                 <div class="content">
                     <p>Zip:</p>
-                    <input type="text" value="{{User.zip}}" formControlName="zip" placeholder="Modificar zip">
+                    <input type="text" value="{{User.zip}}" id="zip" placeholder="Modificar zip">
                 </div>
                 <div class="content">
                     <p>Edad:</p>
-                    <input type="text" value="{{User.age}}" formControlName="age" placeholder="Modificar edad">
+                    <input type="number" value="{{User.age}}" id="age" placeholder="Modificar edad">
                 </div>
                 <div class="EditButtonDiv">
-                    <button class="EditButton" [disabled]="!FormEdit1.valid">Modificar</button>
+                    <button class="EditButton" (click)="SendFirst()">Modificar</button>
                 </div>
 
             </div>
         </form>
         <div class="PerfilUser-totalinfo" *ngIf="visibleVar==2">
             <div class="content">
-                <p>{{User.amount}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <p>Monto inicial</p>
+                <input type="number" value="{{User.amount}}" id="amount" placeholder="Modificar monto inical">
             </div>
             <div class="content">
                 <p>{{User.price}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+                <input type="number" value="{{User.amount}}" id="amount" placeholder="Modificar precio">
             </div>
             <div class="content">
                 <p>{{User.typeofcontract}}</p>

@@ -15,14 +15,6 @@ export class PerfilUserComponent implements OnInit {
 
   User:User = new User();
 
-  FormEdit1 = new FormGroup({
-    cellphone: new FormControl(""),
-    state: new FormControl(""),
-    city: new FormControl(""),
-    email: new FormControl(""),
-    zip: new FormControl(""),
-    age: new FormControl(""),
-  })
   constructor(private userService:UserService, private activatedRoute:ActivatedRoute) { 
 
   }
@@ -39,15 +31,26 @@ export class PerfilUserComponent implements OnInit {
   }
 
   SendFirst(){
-    let data = new User();
-    data.age = this.FormEdit1.value.age;
-    data.cellphone = this.FormEdit1.value.cellphone;
-    data.city = this.FormEdit1.value.city;
-    data.email = this.FormEdit1.value.email;
-    data.state = this.FormEdit1.value.state;
-    data.zip = this.FormEdit1.value.zip;
 
-    this.userService.putUser(data).subscribe(res => {
+    const age = document.getElementById("age") as HTMLInputElement;
+    this.User.age = parseInt(age.value);
+
+    const cellphone = document.getElementById("cellphone") as HTMLInputElement;
+    this.User.cellphone = cellphone.value;
+
+    const state = document.getElementById("state") as HTMLInputElement;
+    this.User.state = state.value;
+
+    const city = document.getElementById("city") as HTMLInputElement;
+    this.User.city = city.value;
+
+    const email = document.getElementById("email") as HTMLInputElement;
+    this.User.email = email.value;
+
+    const zip = document.getElementById("zip") as HTMLInputElement;
+    this.User.zip = zip.value;
+   
+    this.userService.putUser(this.User).subscribe(res => {
       if(res){
         window.alert("Datos modificados")
       }else{

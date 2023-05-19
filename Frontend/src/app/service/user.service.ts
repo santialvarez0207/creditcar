@@ -28,6 +28,7 @@ export class UserService {
   }
 
   putUser(User: User){
+    console.log(User)
     return this.http.put(this.apiUrl + `/${User._id}`, User);
   }
 }
