@@ -6,6 +6,18 @@ const express = require('express')
 const router = express.Router()
 
 
+
+router.put('/visit/:id', (req, res) => {
+    let id = req.params.id
+    controller.updateVisit(req.body, id)
+        .then((sesion)=>{
+            response.success(req, res,sesion,201)
+        })
+        .catch((e)=>{
+            response.error(req, res,"informacion incorrecta",e)
+        })
+})
+
 router.post('/', (req, res) =>{
     
     controller.addCar(req.body)

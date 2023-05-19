@@ -4,6 +4,18 @@ const controller = require('./controller_dealer')
 const router = express.Router()
 
 
+router.put('/:id', (req, res) => {
+    let id = req.params.id
+    console.log(req.query)
+    controller.updateDealer(req.body, id)
+        .then((sesion)=>{
+            response.success(req, res,sesion,201)
+        })
+        .catch((e)=>{
+            response.error(req, res,"informacion incorrecta",e)
+        })
+})
+
 router.get('/check', (req, res) =>{
     console.log(req.query.email,req.query.password)
     controller.checkDealer(req.query.email, req.query.password)

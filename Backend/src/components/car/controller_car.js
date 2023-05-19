@@ -67,9 +67,22 @@ async function getPopularCars(){
     }
 }
 
+async function updateVisit(body,id){
+    try {
+        store.updateCar({visits: body.visits},id)
+        return "se actualizo correctamente"
+
+    } catch (error) {
+        throw error;
+    }
+
+}
+
+
 module.exports = {
     addCar,
     getPopularCars,
     getCar,
     getCars,
+    updateVisit
 }

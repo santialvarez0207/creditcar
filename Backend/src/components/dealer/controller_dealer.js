@@ -130,10 +130,32 @@ async function getDealer(id) {
     }
 }
 
+
+async function updateDealer(body,id){
+    try {
+        let dealer = {
+            user:  body.user,
+            password: body.password,
+            email: body.email,
+            nit: body.nit,
+            phone_number:  body.phone_number,
+            location: body.location,
+            contact_ids:  body.contact_ids,
+            registration_date: body.fecha,
+            credit_requirements: body.credit_requirements,
+            percent: body.percent
+        }
+        store.updateDealer(dealer, id)
+        return "se actualizo correctamente"
+    } catch (error) {
+        throw error;
+    }
+}
 module.exports = {
     addDealer,
     checkDealer,
     recommendedDealers,
     evaluateOneDealer,
-    getDealer
+    getDealer,
+    updateDealer
 }
