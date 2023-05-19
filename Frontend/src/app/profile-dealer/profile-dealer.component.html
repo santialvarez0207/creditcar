@@ -214,10 +214,10 @@
     <section class="Body-perfil-dealer">
         <div class="perfil-dealer-CommonData">
             <div>
-                <p>josman</p>
+                <p>{{Dealer.user}}</p>
             </div>
             <div>
-                <p>ubicacion</p>
+                <p>{{Dealer.email}}</p>
             </div>
             <img class="imgPerfil" src="../../assets/Perfilphoto.svg" alt="">
             <div>
@@ -238,7 +238,7 @@
 
         <div class="perfil-dealer-totalinfo" *ngIf="visibleVar==1">
             <div class="content">
-                <p>3244344</p>
+                <p>{{Dealer.amount}}</p>
                 <img src="../../assets/editicon.svg" alt="">
             </div>
 

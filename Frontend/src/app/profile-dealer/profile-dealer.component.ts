@@ -14,6 +14,11 @@ export class ProfileDealerComponent implements OnInit {
 visibleVar:number=1;
 
 
+Dealer:Dealer= new Dealer();
+  constructor( private productService:ProductService, private dealerService:DealersService, private activatedRoute:ActivatedRoute) {
+    
+   }
+
    FormCar = new FormGroup({
     name: new FormControl("",[Validators.required]),
     price: new FormControl("",[Validators.required]),
@@ -48,8 +53,7 @@ visibleVar:number=1;
    })
 
 
-   Dealer:Dealer = new Dealer();
-  constructor( private productService:ProductService, private dealerService:DealersService, private activatedRoute:ActivatedRoute) { }
+   
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
