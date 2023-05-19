@@ -16,10 +16,8 @@ export class ProductComponent implements OnInit {
   visibleVar:number = 1;
   Cars:Car = new Car();
   Financing:infoDealer = new infoDealer();
-  urls: String[] = this.Cars.information.urls;
-
-
-
+  urls: String[] = ["http://localhost:3000/api/image/default.png", "http://localhost:3000/api/image/default.png", "http://localhost:3000/api/image/default.png"];
+  urlapi: string = "http://localhost:3000/api/image";
 
 
   FinancingFormUnique = new FormGroup({
@@ -35,7 +33,7 @@ export class ProductComponent implements OnInit {
   });
 
   constructor(private formSliderService:FormSliderService,private productService:ProductService, private activatedRoute:ActivatedRoute) {
-    
+    this.productService.putVisit("643de912d143be51804973a1", 1).subscribe;
    }
 
   ngOnInit(): void {
@@ -44,8 +42,11 @@ export class ProductComponent implements OnInit {
 
       this.productService.GetCar(idsession).subscribe(( res ) => { 
         
-        this.Cars = res as Car
-        this.urls = this.Cars.information.urls;
+        this.Cars = res as Car;
+        if (this.Cars.information.urls.length>0) {
+          this.urls = this.Cars.information.urls.map((url) => { return this.urlapi+`/${url}`}); 
+        }
+       
         this.productService.putVisit(idsession,this.Cars.visits + 1).subscribe;
       })
     });

@@ -19,6 +19,9 @@
     height: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 100%);
 }
+.TextModal2{
+    text-align: center;
+}
 .CarProduct{
     object-fit: cover;
     object-position: 0 -800px;
@@ -240,6 +243,7 @@ label{
     align-items: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    grid-column: 1/3;
     
 }
 .CloseModal{
@@ -248,7 +252,7 @@ label{
    background-color: var(--w);
    border-radius: 30px;
    height: 55px;
-   padding: 8px 16px; 
+   padding: .2px 16px; 
    color: var(--c1);
    display: flex;
    justify-content: center;

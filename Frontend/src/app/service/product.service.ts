@@ -25,7 +25,6 @@ export class ProductService {
     return this.http.post<Array<string>>("http://localhost:3000/api/image", fd);
   }
 
-
   CreateCar(car:Car){
     return this.http.post(this.apiUrl, car);
   }

@@ -30,26 +30,26 @@
                 
                 <label for="">Tipo de residencia</label>
                 <select formControlName="typeofresidence">
-                    <option value="">Residencia propia</option>
-                    <option value="">Residencia alquilada</option>
+                    <option value="propia">Residencia propia</option>
+                    <option value="alquilada">Residencia alquilada</option>
                 </select>
 
                
                 <label for="">Tipo de credito</label>
                 <select class="aCredit1" formControlName="credit">
-                    <option value="">Excelente (720 - 850)</option>
-                    <option value="">Bueno (680 - 719)</option>
-                    <option value="">Justo (640 - 679)</option>
-                    <option value="">Pobre (0 - 639)</option>
+                    <option value="Excelente">Excelente (720 - 850)</option>
+                    <option value="Bueno">Bueno (680 - 719)</option>
+                    <option value="Justo">Justo (640 - 679)</option>
+                    <option value="Pobre">Pobre (0 - 639)</option>
                 </select>
 
                 <label for="">Tipo de contrato</label>
                 <select class="aContract" formControlName="typeofcontract">
-                    <option value="">Tiempo completo</option>
-                    <option value="">Mitad de tiempo</option>
-                    <option value="">Independiente</option>
-                    <option value="">Desempleado</option>
-                    <option value="">Otro </option>
+                    <option value="Tiempo completo">Tiempo completo</option>
+                    <option value="Mitad de tiempo">Mitad de tiempo</option>
+                    <option value="Independiente">Independiente</option>
+                    <option value="Desempleado">Desempleado</option>
+                    <option value="Otro">Otro </option>
                 </select>  
             </div>
             <div class="ButtonModal">
@@ -65,9 +65,9 @@
             <h2>Estos son los resultados</h2>
         </div>
         <div>
-            <h2>75%</h2>
+            <h2>%{{Financing.percent}}</h2>
         </div>
-        <div>
+        <div class="TextModal2">
             <p>Hemos analizado tu información y aquí el resultado con el concecionario
             {{Cars.information.nameDealer}} si quieres comunicarte con dicho concesionario y persiona "Ir al concesionario" 
             ahí te saldra toda la información de contacto</p>
@@ -75,7 +75,7 @@
         <div>
             <div class="ButtonModal">
                 <button (click)="Close()" class="CloseModal">Cerrar</button>
-                <a class="CloseModal">Ir con el concesionario</a>
+                <a class="CloseModal" routerLink="/profile-dealer-public/{{Cars.information.id_dealer}}">Ir con el concesionario</a>
             </div>
         </div>
     </div>
@@ -97,19 +97,12 @@
             </div>
             <div class="Photo" >
                 <div class="Bigphoto">
-                    <img src="../../assets/Audi.svg" alt="">
+                    <img src="{{urls[0]}}" alt="">
                 </div>
                 <div class="Content-MaskChangePhoto" *ngFor="let url of urls">
                     <div class="MaskChangePhoto">
-                        <img src="../../assets/AudiSecondPhoto.svg" alt="">
+                        <img src="{{url}}" alt="">
                     </div>
-                    <div class="MaskChangePhoto">
-                        <img src="../../assets/AudiThirtPhoto.svg" alt="">
-                    </div>
-                    <div class="MaskChangePhoto">
-                        <img src="../../assets/AudiThirtPhoto.svg" alt="">
-                    </div>
-
                 </div>
             </div>
             <div class="InfoImportant">
