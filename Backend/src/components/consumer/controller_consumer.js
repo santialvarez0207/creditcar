@@ -1,15 +1,15 @@
 const store = require("./store_consumer");
 
 
-function addUser(body){
-    return new Promise((resolve, reject) => {
-        console.log(body)
+
+async function addUser(body) {
+    try {
         if(!body){
-            return reject("no hay datos")
+            return false
         }
-        if(store.getUser({email: body.email})){
-            console.log("hola")
-            return resolve(false)
+        let ExistingUser = await store.getUser({email : body.email})
+        if(ExistingUser){
+            return false
         }
 
         fecha = new Date();
@@ -30,10 +30,10 @@ function addUser(body){
             password: body.password,
         };
         store.addUser(user)
-        return resolve(true)
-
-    })
-
+        return true
+    } catch (error) {
+        throw error;
+    }
 }
 
 async function getUser(id) {

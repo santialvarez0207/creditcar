@@ -28,8 +28,20 @@ router.get('/', (req, res) =>{
         })
 })
 
+router.get('/dealer/:id', (req, res) =>{
+    let id = req.params.id
+    console.log("IdeDealr")
+    controller.getCars({"information.id_dealer":id})
+        .then((cars)=>{
+            response.success(req, res,cars,201)
+        })
+        .catch(()=>{
+            response.error(req, res,"no se obtuvieron los datos")
+        })
+})
+
 router.get('/popular', (req, res) =>{
-    
+    console.log("net")
     controller.getPopularCars()
         .then((cars)=>{
             response.success(req, res,cars,201)

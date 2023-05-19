@@ -28,9 +28,9 @@ function addCar(body){
 }
 
 
-async function getCars() {
+async function getCars(params = {}) {
     try {
-        let cars = await store.getCars();
+        let cars = await store.getCars(params);
         console.log(cars);
         return cars
     } catch (error) {
@@ -54,8 +54,9 @@ async function getCar(id) {
 
 async function getPopularCars(){
     try {
+        console.log("controller")
         let cars = await store.getPopular()
-
+       
         if(cars.length > 0){
             return cars
         }else {

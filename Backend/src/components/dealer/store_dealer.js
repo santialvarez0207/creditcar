@@ -2,7 +2,7 @@ const Model = require('./model_dealer');
 
 
 async function getDealer(parameter){
-    let dealer = Model.findOne(parameter)
+    let dealer = await Model.findOne(parameter)
     return dealer
 }
 

@@ -57,5 +57,23 @@ export class FormSliderService {
 
       return this.http.get<infoDealer[]>(this.apiUrl + "/dealerProbability" , {params}); 
   }
+  
+  getFinanceOneDealer(form:DataFinance, idDealer: string){
+    const params = new HttpParams()
+      .set('idDealer', idDealer)
+      .set('age', form.age)
+      .set('amount', form.amount)
+      .set('price', form.price)
+      .set('amountfinance', form.amountfinance)
+      .set('typeofresidence', form.typeofresidence)
+      .set('credit', form.credit)
+      .set('typeofcontract', form.typeofcontract)
+      .set('income', form.income)
+      .set('zip', form.zip)
+      .set('country', form.state)
+      .set('city', form.city)
+    console.log(params)
+      return this.http.get<infoDealer>(this.apiUrl + "/ProbabilityOneDealer" , {params}); 
+  }
  
 }

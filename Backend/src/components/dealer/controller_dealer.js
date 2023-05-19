@@ -2,14 +2,16 @@ const model_customer = require("../consumer/model_customer");
 const store = require("./store_dealer");
 
 
-function addDealer(body){
-    return new Promise((resolve, reject) => {
-        console.log("Controller")
+
+async function addDealer(body) {
+    try {
         if(!body){
-            return reject("no hay datos")
+            return false
         }
-        if(store.getDealer({email: body.email})){
-            return resolve(false)
+        
+        let ExistingDealer = await store.getDealer({ $or: [ { email: body.email }, { nit: body.nit } ] })
+        if(ExistingDealer){
+            return false
         }
 
         fecha = new Date();
@@ -24,14 +26,13 @@ function addDealer(body){
             registration_date: fecha,
             credit_requirements: body.credit_requirements,
             percent: body.percent
-        };
+        }
         store.addDealer(dealer)
-        return resolve(true)
-
-    })
-
+        return true
+    } catch (error) {
+        throw error;
+    }
 }
-
 
 
 async function checkDealer(email, password){
@@ -68,6 +69,16 @@ async function recommendedDealers(city,data){
     }
 }
 
+async function evaluateOneDealer(id,data){
+    try {
+        let dealer = await store.getDealer({ _id: id });
+        let dealerEvaluado = evaluateDealer(dealer,data)
+        return dealerEvaluado
+     
+    } catch (error) {
+        throw error;
+    }
+}
 
 function evaluateDealer(dealer,data){
     var puntos=0
@@ -122,5 +133,6 @@ module.exports = {
     addDealer,
     checkDealer,
     recommendedDealers,
+    evaluateOneDealer,
     getDealer
 }

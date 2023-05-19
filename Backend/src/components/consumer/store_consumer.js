@@ -2,8 +2,7 @@ const Model = require('./model_customer');
 
 
 async function getUser(parameter){
-    let user = Model.findOne(parameter)
-    console.log(user)
+    let user = await Model.findOne(parameter)
     return user
 }
 

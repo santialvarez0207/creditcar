@@ -3,15 +3,38 @@
         <div>
             <h2>¡Pre-financia este carro!</h2>
         </div>
-        <form class="Formuniquedealer">
+        <form class="Formuniquedealer" [formGroup]="FinancingFormUnique" (submit)="Send()">
             <div class="ContentInputs">
 
                 <label for="">Edad</label>
-                <input type="number">
+                <input type="number" formControlName="age">
+
+                <label for="">Ciudad</label>
+                <input type="text" formControlName="city">
 
                 <label for="">Estado</label>
-                <input type="text">
+                <input type="text" formControlName="state">
 
+
+                <label for="">Zip</label>
+                <input type="text" formControlName="zip">
+
+                <label for="">Ingresos anuales</label>
+                <input type="number" formControlName="income">
+            </div>
+            <div class="ContentInputs">
+
+             
+                <label for="">Cuota inicial</label>
+                <input type="number" formControlName="amount">
+                
+                <label for="">Tipo de residencia</label>
+                <select formControlName="typeofresidence">
+                    <option value="">Residencia propia</option>
+                    <option value="">Residencia alquilada</option>
+                </select>
+
+               
                 <label for="">Tipo de credito</label>
                 <select class="aCredit1" formControlName="credit">
                     <option value="">Excelente (720 - 850)</option>
@@ -20,26 +43,6 @@
                     <option value="">Pobre (0 - 639)</option>
                 </select>
 
-                <label for="">Zip</label>
-                <input type="text">
-
-                <label for="">Ingresos anuales</label>
-                <input type="text">
-            </div>
-            <div class="ContentInputs">
-
-                <label for="">Ciudad</label>
-                <input type="text">
-                
-                <label for="">Tipo de residencia</label>
-                <select formControlName="typeofresidence">
-                    <option value="">Residencia propia</option>
-                    <option value="">Residencia alquilada</option>
-                </select>
-
-                <label for="">Cuota inicial</label>
-                <input type="number">
-
                 <label for="">Tipo de contrato</label>
                 <select class="aContract" formControlName="typeofcontract">
                     <option value="">Tiempo completo</option>
@@ -47,15 +50,33 @@
                     <option value="">Independiente</option>
                     <option value="">Desempleado</option>
                     <option value="">Otro </option>
-                </select>
-
-          
-                
+                </select>  
             </div>
-            
+            <div class="ButtonModal">
+                <button [disabled]="!FinancingFormUnique.valid" class="CloseModal">Enviar</button>
+            </div>
         </form>
-        <div class="ButtonModal">
-            <button (click)="Hidden()" class="CloseModal">Cerrar</button>
+    
+    </div>
+</section>
+<section class="Modal1"  id="MyModal2">
+    <div class="ModalBox">
+        <div>
+            <h2>Estos son los resultados</h2>
+        </div>
+        <div>
+            <h2>75%</h2>
+        </div>
+        <div>
+            <p>Hemos analizado tu información y aquí el resultado con el concecionario
+            {{Cars.information.nameDealer}} si quieres comunicarte con dicho concesionario y persiona "Ir al concesionario" 
+            ahí te saldra toda la información de contacto</p>
+        </div>
+        <div>
+            <div class="ButtonModal">
+                <button (click)="Close()" class="CloseModal">Cerrar</button>
+                <a class="CloseModal">Ir con el concesionario</a>
+            </div>
         </div>
     </div>
 </section>
@@ -106,8 +127,11 @@
         </div>
         <div class="buttonO">
             <button (click)="Hidden()">
-            <h2>Contactar</h2>
+            <h2>Pre-financiar</h2>
             </button>
+            <a routerLink="/profile-dealer-public/{{Cars.information.id_dealer}}">
+                <h2>Ir al concecionario</h2>
+            </a>
         </div>
     </section>
     <section class="details-items">
