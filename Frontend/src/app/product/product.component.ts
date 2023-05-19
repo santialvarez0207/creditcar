@@ -14,7 +14,6 @@ import { DataFinance, infoDealer } from '../model/financeAccount';
 export class ProductComponent implements OnInit {
   contador:number = 0;
   visibleVar:number = 1;
-  visibleVar1:number = 0;
   Cars:Car = new Car();
   Financing:infoDealer = new infoDealer();
 
@@ -42,6 +41,19 @@ export class ProductComponent implements OnInit {
       })
   }
 
+  Hidden(){
+    if(this.contador==0){
+        document.querySelector("#MyModal")?.classList.add("visto"),
+        this.contador=1}else if(this.contador==1){
+          document.querySelector("#MyModal")?.classList.remove("visto")
+          document.querySelector("#MyModal2")?.classList.add("visto")
+          this.contador=0;
+        }
+  }
+
+  Close(){
+    document.querySelector("#MyModal2")?.classList.remove("visto")
+  }
 
   Hide(visible:number){
     this.visibleVar = visible;
@@ -55,19 +67,9 @@ export class ProductComponent implements OnInit {
     reason[visible-1].classList.add('visto3');
   }
 
-  Hide1(visible:number){
-    this.visibleVar1 = visible;
-
-    let reason = document.getElementsByClassName("");
-    
-    for (let index = 0; index < reason.length; index++) {
-      reason[index].classList.remove('visto3');
-      
-    }
-    reason[visible-1].classList.add('visto3');
-  }
-
   Send(){
+    this.Hidden()
+
     let data = new DataFinance();
     
     data.age = this.FinancingFormUnique.value.age;
@@ -84,7 +86,7 @@ export class ProductComponent implements OnInit {
 
     this.formSliderService.getFinanceOneDealer(data,this.Cars.information.id_dealer).subscribe(res => {this.Financing = res as infoDealer
       console.log(res)});
-    
+      this.FinancingFormUnique.reset();
   }
 
 

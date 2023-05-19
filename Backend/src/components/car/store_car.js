@@ -19,7 +19,7 @@ async function getCars(parameter){
 
 
 async function getPopular(){
-
+    console.log("store")
     let cars = await model.aggregate([{$sort: {visits: -1}}]).limit(4)
     return cars
 

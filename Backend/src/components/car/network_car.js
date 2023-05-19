@@ -28,9 +28,10 @@ router.get('/', (req, res) =>{
         })
 })
 
-router.get('/:idDealer', (req, res) =>{
-    let id = req.params.idDealer
-    controller.getCars({information: {id_dealer: id}})
+router.get('/dealer/:id', (req, res) =>{
+    let id = req.params.id
+    console.log("IdeDealr")
+    controller.getCars({"information.id_dealer":id})
         .then((cars)=>{
             response.success(req, res,cars,201)
         })
@@ -40,7 +41,7 @@ router.get('/:idDealer', (req, res) =>{
 })
 
 router.get('/popular', (req, res) =>{
-    
+    console.log("net")
     controller.getPopularCars()
         .then((cars)=>{
             response.success(req, res,cars,201)

@@ -59,7 +59,7 @@
     
     </div>
 </section>
-<section class="Modal"  id="MyModal1">
+<section class="Modal1"  id="MyModal2">
     <div class="ModalBox">
         <div>
             <h2>Estos son los resultados</h2>
@@ -74,7 +74,7 @@
         </div>
         <div>
             <div class="ButtonModal">
-                <button class="CloseModal">Cerrar</button>
+                <button (click)="Close()" class="CloseModal">Cerrar</button>
                 <a class="CloseModal">Ir con el concesionario</a>
             </div>
         </div>
@@ -129,7 +129,7 @@
             <button (click)="Hidden()">
             <h2>Pre-financiar</h2>
             </button>
-            <a routerLink="/profile-dealer-public">
+            <a routerLink="/profile-dealer-public/{{Cars.information.id_dealer}}">
                 <h2>Ir al concecionario</h2>
             </a>
         </div>

@@ -28,4 +28,8 @@ export class ProductService {
     return this.http.get<Car>(this.apiUrl + `/${id}`);
 
   }
+
+  GetCarUniqueDealer(id:string){
+    return this.http.get<Car[]>(this.apiUrl+`/dealer/${id}`);
+  }
 }

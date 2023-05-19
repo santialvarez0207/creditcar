@@ -54,8 +54,9 @@ async function getCar(id) {
 
 async function getPopularCars(){
     try {
+        console.log("controller")
         let cars = await store.getPopular()
-
+       
         if(cars.length > 0){
             return cars
         }else {
