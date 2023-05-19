@@ -1,6 +1,50 @@
-<section>
-    <div class="DataAdministrador">
+
+<div class="Body">
+    <section class="Body-perfil-administrador">
+        <div class="Perfil-administrador-CommonData">
+            <div>
+                <p>nombre</p>
+            </div>
+            <div>
+                <p>nombre@gmail.com</p>
+            </div>
+            <img class="imgPerfil" src="../../assets/Perfilphoto.svg" alt="">
+            <div>
+                <p>ouyyt</p>
+            </div>
+            <div>
+                <p>2323242</p>
+            </div>
+        </div>
+
+        <div class="Perfil-administrador-Nav">
+            <p class="Per" (click)="press(1)">Editar usuario</p>
+            <p class="Per"(click)="press(2)">Editar concesionario</p>
+            <p class="Per"(click)="press(3)">Agregar concesionario</p>
+        </div>
+
+        <div class="Perfil-administrador-totalinfo" *ngIf="visibleVar==1">
+          
+    
+        </div>
+
+
         
-    </div>
-    <div class="grapics"></div>
-</section>
+        <div class="Perfil-administrador-totalinfo" *ngIf="visibleVar==2">
+            
+         
+        </div>
+
+        <div class="Perfil-administrador-totalinfo" *ngIf="visibleVar==3">
+           
+            <div> <button class="agre">Agregar nuevo concesionario</button></div>
+    
+        </div>
+
+
+
+
+   </section>
+        
+
+</div>      

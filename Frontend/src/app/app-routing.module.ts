@@ -12,7 +12,7 @@ import { ProfileDealerComponent } from './profile-dealer/profile-dealer.componen
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
 import { LoginDealerComponent } from './login-dealer/login-dealer.component';
 import { ProfileDealerPublicComponent } from './profile-dealer-public/profile-dealer-public.component';
-
+import { PerfilAdministradorComponent } from './perfil-administrador/perfil-administrador.component';
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path:'login',component: LoginComponent},
@@ -26,6 +26,7 @@ const routes: Routes = [
   {path: 'perfil-user/:id', component: PerfilUserComponent},
   {path: 'login-dealer', component: LoginDealerComponent},
   {path: 'profile-dealer-public/:id', component:ProfileDealerPublicComponent},
+  {path:'perfil-administrador',component:PerfilAdministradorComponent},
 ];
 
 @NgModule({
