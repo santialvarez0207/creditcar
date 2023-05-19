@@ -20,28 +20,38 @@
             <p class="Per" (click)="Hide(2)" >Financiamiento</p>
             <p class="Per" (click)="Hide(3)" >Contraseña</p>
         </div>
-        <div class="PerfilUser-totalinfo" *ngIf="visibleVar==1">
-            <div class="content">
-                <p>{{User.cellphone}}</p>
-                <img src="../../assets/editicon.svg" alt="">
+        <form action="" [formGroup]="FormEdit1" (submit)="SendFirst">
+            <div class="PerfilUser-totalinfo" *ngIf="visibleVar==1">
+                <div class="content">
+                    <p >Tel:</p>
+                    <input type="text"  value="{{User.cellphone}}" formControlName="cellphone" placeholder="Modificar telefono">
+                </div>
+                <div class="content">
+                    <p>Estado:</p>
+                    <input type="text" value="{{User.state}}" formControlName="state" placeholder="Modificar estado">
+                </div>
+                <div class="content">
+                    <p>Ciudad:</p>
+                    <input type="text" value="{{User.city}}" formControlName="city" placeholder="Modificar ciudad">
+                </div>
+                <div class="content">
+                    <p>Email:</p>
+                    <input type="text" value="{{User.email}}" formControlName="email" placeholder="Modificar email">
+                </div>
+                <div class="content">
+                    <p>Zip:</p>
+                    <input type="text" value="{{User.zip}}" formControlName="zip" placeholder="Modificar zip">
+                </div>
+                <div class="content">
+                    <p>Edad:</p>
+                    <input type="text" value="{{User.age}}" formControlName="age" placeholder="Modificar edad">
+                </div>
+                <div class="EditButtonDiv">
+                    <button class="EditButton" [disabled]="!FormEdit1.valid">Modificar</button>
+                </div>
+
             </div>
-            <div class="content">
-                <p>{{User.state}}</p>
-                <img src="../../assets/editicon.svg" alt="">
-            </div>
-            <div class="content">
-                <p>{{User.city}}</p>
-                <img src="../../assets/editicon.svg" alt="">
-            </div>
-            <div class="content">
-                <p>{{User.email}}</p>
-                <img src="../../assets/editicon.svg" alt="">
-            </div>
-            <div class="content">
-                <p>{{User.zip}}</p>
-                <img src="../../assets/editicon.svg" alt="">
-            </div>
-        </div>
+        </form>
         <div class="PerfilUser-totalinfo" *ngIf="visibleVar==2">
             <div class="content">
                 <p>{{User.amount}}</p>

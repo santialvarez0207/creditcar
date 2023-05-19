@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../model/customer';
 import { UserService } from '../service/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { ControlContainer,FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-perfil-user',
   templateUrl: './perfil-user.component.html',
@@ -15,6 +15,14 @@ export class PerfilUserComponent implements OnInit {
 
   User:User = new User();
 
+  FormEdit1 = new FormGroup({
+    cellphone: new FormControl(""),
+    state: new FormControl(""),
+    city: new FormControl(""),
+    email: new FormControl(""),
+    zip: new FormControl(""),
+    age: new FormControl(""),
+  })
   constructor(private userService:UserService, private activatedRoute:ActivatedRoute) { 
 
   }
@@ -27,6 +35,24 @@ export class PerfilUserComponent implements OnInit {
       var idsession = params['id'];
 
       this.userService.getUser(idsession).subscribe(( res ) => { this.User = res as User });
+    })
+  }
+
+  SendFirst(){
+    let data = new User();
+    data.age = this.FormEdit1.value.age;
+    data.cellphone = this.FormEdit1.value.cellphone;
+    data.city = this.FormEdit1.value.city;
+    data.email = this.FormEdit1.value.email;
+    data.state = this.FormEdit1.value.state;
+    data.zip = this.FormEdit1.value.zip;
+
+    this.userService.putUser(data).subscribe(res => {
+      if(res){
+        window.alert("Datos modificados")
+      }else{
+        window.alert("No se pudo enviar")
+      }
     })
   }
 
