@@ -31,7 +31,7 @@ function addCar(body){
 async function getCars(params = {}) {
     try {
         let cars = await store.getCars(params);
-        console.log(cars);
+        
         return cars
     } catch (error) {
         throw error;
@@ -44,7 +44,7 @@ async function getCars(params = {}) {
 async function getCar(id) {
     try {
         let car = await store.getCar({_id: id});
-        console.log(car);
+        
         return car
     } catch (error) {
         throw error;

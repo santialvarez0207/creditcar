@@ -7,14 +7,15 @@ const router = express.Router()
 
 
 
-router.put('/visit/:id', (req, res) => {
+router.put('/visits/:id', (req, res) => {
     let id = req.params.id
+    console.log(id, "hola")
     controller.updateVisit(req.body, id)
-        .then((sesion)=>{
-            response.success(req, res,sesion,201)
+        .then((sesion) => {
+            response.success(req, res, sesion, 201)
         })
-        .catch((e)=>{
-            response.error(req, res,"informacion incorrecta",e)
+        .catch((e) => {
+            response.error(req, res, "informacion incorrecta", e)
         })
 })
 
@@ -42,7 +43,7 @@ router.get('/', (req, res) =>{
 
 router.get('/dealer/:id', (req, res) =>{
     let id = req.params.id
-    console.log("IdeDealr")
+    
     controller.getCars({"information.id_dealer":id})
         .then((cars)=>{
             response.success(req, res,cars,201)
@@ -53,7 +54,7 @@ router.get('/dealer/:id', (req, res) =>{
 })
 
 router.get('/popular', (req, res) =>{
-    console.log("net")
+    
     controller.getPopularCars()
         .then((cars)=>{
             response.success(req, res,cars,201)

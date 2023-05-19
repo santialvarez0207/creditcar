@@ -26,6 +26,13 @@ export class ProductService {
   }
 
 
+
+
+
+
+
+
+
   CreateCar(car:Car){
     return this.http.post(this.apiUrl, car);
   }
@@ -41,5 +48,12 @@ export class ProductService {
 
   GetCarUniqueDealer(id:string){
     return this.http.get<Car[]>(this.apiUrl+`/dealer/${id}`);
+  }
+
+  
+  putVisit(id: string,visit: number) {
+    console.log(this.apiUrl +`/visit/${id}`,id)
+
+    return this.http.put(this.apiUrl + `/visits/${id}`, {visits: visit})
   }
 }

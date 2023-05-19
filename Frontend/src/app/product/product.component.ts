@@ -30,16 +30,23 @@ export class ProductComponent implements OnInit {
   });
 
   constructor(private formSliderService:FormSliderService,private productService:ProductService, private activatedRoute:ActivatedRoute) {
-    
+    this.productService.putVisit("643de912d143be51804973a1", 1).subscribe;
    }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => { 
       var idsession= params['id'];
 
-      this.productService.GetCar(idsession).subscribe(( res ) => { this.Cars = res as Car});
+      this.productService.GetCar(idsession).subscribe(( res ) => { 
+        
+        this.Cars = res as Car
+        this.productService.putVisit(idsession,this.Cars.visits + 1).subscribe;
       })
-  }
+    });
+
+      }
+      
+  
 
   Hidden(){
     if(this.contador==0){
